@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2B857953-CA18-46E7-B796-95ABAF56A10B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QLBHVatLieuXayDung</RootNamespace>
+    <AssemblyName>QLBHVatLieuXayDung</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ACTION\DataProvider.cs" />
+    <Compile Include="ACTION\KhachHangAC.cs" />
+    <Compile Include="ACTION\LoaiSPAC.cs" />
+    <Compile Include="ACTION\QuanLyAC.cs" />
+    <Compile Include="ACTION\SanPhamAC.cs" />
+    <Compile Include="FormChonKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChonKhachHang.Designer.cs">
+      <DependentUpon>FormChonKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKhachHang.Designer.cs">
+      <DependentUpon>FormKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoaiSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoaiSanPham.Designer.cs">
+      <DependentUpon>FormLoaiSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLy.Designer.cs">
+      <DependentUpon>FormQuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSanPham.Designer.cs">
+      <DependentUpon>FormSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStart.Designer.cs">
+      <DependentUpon>FormStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThanhToan.Designer.cs">
+      <DependentUpon>FormThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="INFO\ChiTietHoaDOn.cs" />
+    <Compile Include="INFO\Datarow.cs" />
+    <Compile Include="INFO\HoaDon.cs" />
+    <Compile Include="INFO\LoaiSanPham.cs" />
+    <Compile Include="INFO\SanPham.cs" />
+    <Compile Include="LoginDAO.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormChonKhachHang.resx">
+      <DependentUpon>FormChonKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKhachHang.resx">
+      <DependentUpon>FormKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoaiSanPham.resx">
+      <DependentUpon>FormLoaiSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLy.resx">
+      <DependentUpon>FormQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSanPham.resx">
+      <DependentUpon>FormSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStart.resx">
+      <DependentUpon>FormStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThanhToan.resx">
+      <DependentUpon>FormThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\DataSources\QLBHVatLieuXayDung.DAO.DataProvider.datasource" />
+    <None Include="Properties\DataSources\QLBHVatLieuXayDung.DAO.KhachHangAC.datasource" />
+    <None Include="Properties\DataSources\QLBHVatLieuXayDung.DAO.LoaiSPAC.datasource" />
+    <None Include="Properties\DataSources\QLBHVatLieuXayDung.DAO.QuanLyAC.datasource" />
+    <None Include="Properties\DataSources\QLBHVatLieuXayDung.DAO.SanPhamAC.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Add_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash Can_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign Out_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash Can_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Invoice_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\People_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Package_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login1_32px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
