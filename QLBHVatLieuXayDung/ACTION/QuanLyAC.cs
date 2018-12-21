@@ -15,15 +15,21 @@ namespace QLBHVatLieuXayDung.DAO
 
         private QuanLyAC() { }
 
-        public DataTable LoadListMaHD()
+        //public DataTable LoadListMaHD()
+        //{
+        //    string query = "EXEC dbo.Show_SoHoaDon";
+        //    return DataProvider.Instance.ExecuteQuery(query);
+        //}
+
+        public DataTable LoadListHoaDon()
         {
             string query = "EXEC dbo.Show_SoHoaDon";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        public DataTable LoadListHoaDon()
+        public DataTable LoadListCTHD()
         {
-            string query = "SHOW_HoaDon";
+            string query = "EXEC dbo.Show_CTHD";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 

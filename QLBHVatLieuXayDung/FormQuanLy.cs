@@ -14,6 +14,7 @@ namespace QLBHVatLieuXayDung
     public partial class FormQuanLy : Form
     {
         BindingSource listHoaDon = new BindingSource();
+        BindingSource listCTHD = new BindingSource();
         public FormQuanLy()
         {
             InitializeComponent();
@@ -47,22 +48,24 @@ namespace QLBHVatLieuXayDung
         }
         void LoadMaHDIntoCombobox(ComboBox box)
         {
-            box.DataSource = QuanLyAC.Instance.LoadListMaHD();
-            box.DisplayMember = "soHoaDon";
-            box.ValueMember = "soHoaDon";
+            box.DataSource = QuanLyAC.Instance.LoadListHoaDon();
+            box.DisplayMember = "Số hóa đơn";
+            //box.ValueMember = "Số hóa đơn";
         }
         void HoaDonBinding()
         {
             txbMaHD.DataBindings.Add(new Binding("Text", dgvHoaDon.DataSource, "Số hóa đơn", true, DataSourceUpdateMode.Never));
             dtpNgayHD.DataBindings.Add(new Binding("Value", dgvHoaDon.DataSource, "Ngày hóa đơn", true, DataSourceUpdateMode.Never));
-            numUpDMaSPOfHD.DataBindings.Add(new Binding("Value", dgvHoaDon.DataSource, "Số lượng", true, DataSourceUpdateMode.Never));
-            txbDonGiaOfHD.DataBindings.Add(new Binding("Text", dgvHoaDon.DataSource, "Đơn giá", true, DataSourceUpdateMode.Never));
+            numUpDMaSPOfHD.DataBindings.Add(new Binding("Value", dgvCTHD.DataSource, "Số lượng", true, DataSourceUpdateMode.Never));
+            txbDonGiaOfHD.DataBindings.Add(new Binding("Text", dgvCTHD.DataSource, "Đơn giá", true, DataSourceUpdateMode.Never));
         }
 
         void LoadList()
         {
+            dgvCTHD.DataSource = listCTHD;
             dgvHoaDon.DataSource = listHoaDon;
             LoadListHoaDon();
+            LoadListCTHD();
             LoadMaKHIntoCombobox(cbxMaKHOfHD);
             LoadMaSPIntoCombobox(cbxMaSPOfCTHD);
             //HoaDonBinding();
@@ -71,6 +74,10 @@ namespace QLBHVatLieuXayDung
         void LoadListHoaDon()
         {
             listHoaDon.DataSource = QuanLyAC.Instance.LoadListHoaDon();
+        }
+        void LoadListCTHD()
+        {
+            listCTHD.DataSource = QuanLyAC.Instance.LoadListCTHD();
         }
 
         #endregion
@@ -157,16 +164,38 @@ namespace QLBHVatLieuXayDung
                 txbMaHD.Text = dgvHoaDon.SelectedRows[0].Cells[0].Value.ToString();
                 cbxMaKHOfHD.SelectedValue = dgvHoaDon.SelectedRows[0].Cells[1].Value.ToString();
                 dtpNgayHD.Value = Convert.ToDateTime(dgvHoaDon.SelectedRows[0].Cells[2].Value);
-                cbxMaCTHD.SelectedValue = dgvHoaDon.SelectedRows[0].Cells[3].Value.ToString();
-                cbxMaSPOfCTHD.SelectedValue = dgvHoaDon.SelectedRows[0].Cells[4].Value.ToString();
-                numUpDMaSPOfHD.Value = Convert.ToInt32(dgvHoaDon.SelectedRows[0].Cells[5].Value);
-                txbDonGiaOfHD.Text = dgvHoaDon.SelectedRows[0].Cells[6].Value.ToString();
+            }
+            else if(e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvHoaDon.Rows[e.RowIndex];
+                txbMaHD.Text = row.Cells[0].Value.ToString();
+                cbxMaKHOfHD.SelectedValue = row.Cells[1].Value.ToString();
+                dtpNgayHD.Value = Convert.ToDateTime(row.Cells[2].Value.ToString());
             }
         }
 
         private void tabPageHoaDon_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvCTHD_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvCTHD.SelectedRows.Count > 0)
+            {
+                txbMaCTHD.Text = dgvCTHD.SelectedRows[0].Cells[0].Value.ToString();
+                cbxMaSPOfCTHD.SelectedValue = dgvCTHD.SelectedRows[0].Cells[1].Value.ToString();
+                numUpDMaSPOfHD.Value = Convert.ToInt32(dgvCTHD.SelectedRows[0].Cells[2].Value);
+                txbDonGiaOfHD.Text = dgvCTHD.SelectedRows[0].Cells[3].Value.ToString();
+            }
+            else if (e.RowIndex >= 0)
+            {
+                //DataGridViewRow row = dgvHoaDon.Rows[e.RowIndex];
+                //txbMaCTHD.Text = row.Cells[0].Value.ToString();
+                //cbxMaSPOfCTHD.SelectedValue = row.Cells[1].Value.ToString();
+                //numUpDMaSPOfHD.Value = Convert.ToInt32(row.Cells[2].Value);
+                //txbDonGiaOfHD.Text = row.Cells[3].Value.ToString();
+            }
         }
     }
 }
