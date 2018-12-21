@@ -21,12 +21,14 @@ namespace QLBHVatLieuXayDung.DAO
 
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
-            DataTable data = new DataTable();
+            DataTable data = new DataTable();   // Tạo datatable
 
-            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            using (SqlConnection connection = new SqlConnection(connectionSTR)) // Khi lệnh thực thi kết thúc --> giải phóng bộ nhớ
             {
-                connection.Open();
-                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();  // Mở kết nối sql
+                SqlCommand command = new SqlCommand(query, connection); // Thực thi lệnh trong kết nối
+
+                // Kiểu parameter truyền vào có dạng @...
 
                 if (parameter != null)
                 {
