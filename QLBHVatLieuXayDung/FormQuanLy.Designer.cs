@@ -46,7 +46,6 @@
             this.cbxMaSPOfCTHD = new System.Windows.Forms.ComboBox();
             this.btnShowSanPhamQL = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.numUpDMaSPOfHD = new System.Windows.Forms.NumericUpDown();
             this.txbDonGiaOfHD = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -90,12 +89,13 @@
             this.button6 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRefreshCTHD = new System.Windows.Forms.Button();
             this.dgvCTHD = new System.Windows.Forms.DataGridView();
+            this.numericUpDownSLCTHD = new System.Windows.Forms.NumericUpDown();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numUpDMaSPOfHD)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
@@ -108,6 +108,7 @@
             this.panel6.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTHD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSLCTHD)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -115,14 +116,15 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Noto Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.Color.LightGray;
+            this.label1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(18, 9);
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(320, 28);
+            this.label1.Size = new System.Drawing.Size(356, 107);
             this.label1.TabIndex = 0;
             this.label1.Text = "QUẢN LÝ VẬT LIỆU XÂY DỰNG";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
             // 
@@ -139,6 +141,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.btnShowLoaiSP);
             this.panel2.Controls.Add(this.btnFormThanhToan);
             this.panel2.Controls.Add(this.btnShowSPQL);
@@ -156,7 +159,7 @@
             this.btnShowLoaiSP.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowLoaiSP.Image = global::QLBHVatLieuXayDung.Properties.Resources.Package_32px;
             this.btnShowLoaiSP.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnShowLoaiSP.Location = new System.Drawing.Point(38, 212);
+            this.btnShowLoaiSP.Location = new System.Drawing.Point(10, 236);
             this.btnShowLoaiSP.Name = "btnShowLoaiSP";
             this.btnShowLoaiSP.Size = new System.Drawing.Size(280, 75);
             this.btnShowLoaiSP.TabIndex = 25;
@@ -187,7 +190,7 @@
             this.btnShowSPQL.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowSPQL.Image = global::QLBHVatLieuXayDung.Properties.Resources.Product_32px;
             this.btnShowSPQL.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnShowSPQL.Location = new System.Drawing.Point(38, 130);
+            this.btnShowSPQL.Location = new System.Drawing.Point(10, 147);
             this.btnShowSPQL.Name = "btnShowSPQL";
             this.btnShowSPQL.Size = new System.Drawing.Size(280, 75);
             this.btnShowSPQL.TabIndex = 24;
@@ -203,7 +206,7 @@
             this.btnShowKhachHang.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowKhachHang.Image = global::QLBHVatLieuXayDung.Properties.Resources.People_32px;
             this.btnShowKhachHang.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnShowKhachHang.Location = new System.Drawing.Point(38, 295);
+            this.btnShowKhachHang.Location = new System.Drawing.Point(10, 326);
             this.btnShowKhachHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnShowKhachHang.Name = "btnShowKhachHang";
             this.btnShowKhachHang.Size = new System.Drawing.Size(280, 75);
@@ -264,12 +267,12 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.numericUpDownSLCTHD);
             this.groupBox2.Controls.Add(this.txbMaCTHD);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.cbxMaSPOfCTHD);
             this.groupBox2.Controls.Add(this.btnShowSanPhamQL);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.numUpDMaSPOfHD);
             this.groupBox2.Controls.Add(this.txbDonGiaOfHD);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
@@ -331,27 +334,9 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "VNĐ";
             // 
-            // numUpDMaSPOfHD
-            // 
-            this.numUpDMaSPOfHD.Location = new System.Drawing.Point(123, 85);
-            this.numUpDMaSPOfHD.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numUpDMaSPOfHD.Name = "numUpDMaSPOfHD";
-            this.numUpDMaSPOfHD.Size = new System.Drawing.Size(209, 24);
-            this.numUpDMaSPOfHD.TabIndex = 2;
-            this.numUpDMaSPOfHD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numUpDMaSPOfHD.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // txbDonGiaOfHD
             // 
-            this.txbDonGiaOfHD.Location = new System.Drawing.Point(123, 115);
+            this.txbDonGiaOfHD.Location = new System.Drawing.Point(124, 115);
             this.txbDonGiaOfHD.Name = "txbDonGiaOfHD";
             this.txbDonGiaOfHD.Size = new System.Drawing.Size(171, 24);
             this.txbDonGiaOfHD.TabIndex = 6;
@@ -496,7 +481,6 @@
             // btnRefreshHD
             // 
             this.btnRefreshHD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRefreshHD.Enabled = false;
             this.btnRefreshHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefreshHD.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnRefreshHD.Image = global::QLBHVatLieuXayDung.Properties.Resources.Refresh_32px;
@@ -504,6 +488,7 @@
             this.btnRefreshHD.Name = "btnRefreshHD";
             this.btnRefreshHD.Size = new System.Drawing.Size(50, 40);
             this.btnRefreshHD.TabIndex = 30;
+            this.btnRefreshHD.TabStop = false;
             this.btnRefreshHD.UseVisualStyleBackColor = true;
             this.btnRefreshHD.Click += new System.EventHandler(this.btnRefreshHD_Click);
             // 
@@ -833,7 +818,7 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.label17);
-            this.groupBox4.Controls.Add(this.button1);
+            this.groupBox4.Controls.Add(this.btnRefreshCTHD);
             this.groupBox4.Controls.Add(this.dgvCTHD);
             this.groupBox4.Location = new System.Drawing.Point(6, 162);
             this.groupBox4.Name = "groupBox4";
@@ -855,18 +840,19 @@
             this.label17.TabIndex = 31;
             this.label17.Text = "Làm mới";
             // 
-            // button1
+            // btnRefreshCTHD
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Enabled = false;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Image = global::QLBHVatLieuXayDung.Properties.Resources.Refresh_32px;
-            this.button1.Location = new System.Drawing.Point(6, 324);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 40);
-            this.button1.TabIndex = 30;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnRefreshCTHD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefreshCTHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefreshCTHD.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnRefreshCTHD.Image = global::QLBHVatLieuXayDung.Properties.Resources.Refresh_32px;
+            this.btnRefreshCTHD.Location = new System.Drawing.Point(6, 324);
+            this.btnRefreshCTHD.Name = "btnRefreshCTHD";
+            this.btnRefreshCTHD.Size = new System.Drawing.Size(50, 40);
+            this.btnRefreshCTHD.TabIndex = 30;
+            this.btnRefreshCTHD.TabStop = false;
+            this.btnRefreshCTHD.UseVisualStyleBackColor = true;
+            this.btnRefreshCTHD.Click += new System.EventHandler(this.btnRefreshCTHD_Click);
             // 
             // dgvCTHD
             // 
@@ -878,6 +864,33 @@
             this.dgvCTHD.Size = new System.Drawing.Size(521, 295);
             this.dgvCTHD.TabIndex = 0;
             this.dgvCTHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTHD_CellClick);
+            // 
+            // numericUpDownSLCTHD
+            // 
+            this.numericUpDownSLCTHD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDownSLCTHD.Location = new System.Drawing.Point(124, 85);
+            this.numericUpDownSLCTHD.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownSLCTHD.Name = "numericUpDownSLCTHD";
+            this.numericUpDownSLCTHD.Size = new System.Drawing.Size(179, 24);
+            this.numericUpDownSLCTHD.TabIndex = 19;
+            this.numericUpDownSLCTHD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDownSLCTHD.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.LightGray;
+            this.panel7.Location = new System.Drawing.Point(0, 106);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(10, 502);
+            this.panel7.TabIndex = 32;
             // 
             // FormQuanLy
             // 
@@ -901,12 +914,10 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormQuanLy_FormClosing);
             this.Load += new System.EventHandler(this.FormQuanLy_Load);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numUpDMaSPOfHD)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -926,6 +937,7 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTHD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSLCTHD)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -947,7 +959,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnShowSanPhamQL;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.NumericUpDown numUpDMaSPOfHD;
         private System.Windows.Forms.TextBox txbDonGiaOfHD;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -980,7 +991,7 @@
         private System.Windows.Forms.TabPage tabPageCTHD;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRefreshCTHD;
         private System.Windows.Forms.DataGridView dgvCTHD;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button2;
@@ -995,6 +1006,8 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox txbMaCTHD;
+        private System.Windows.Forms.NumericUpDown numericUpDownSLCTHD;
+        private System.Windows.Forms.Panel panel7;
     }
 }
 

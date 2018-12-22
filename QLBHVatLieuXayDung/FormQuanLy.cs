@@ -56,8 +56,10 @@ namespace QLBHVatLieuXayDung
         {
             txbMaHD.DataBindings.Add(new Binding("Text", dgvHoaDon.DataSource, "Số hóa đơn", true, DataSourceUpdateMode.Never));
             dtpNgayHD.DataBindings.Add(new Binding("Value", dgvHoaDon.DataSource, "Ngày hóa đơn", true, DataSourceUpdateMode.Never));
-            numUpDMaSPOfHD.DataBindings.Add(new Binding("Value", dgvCTHD.DataSource, "Số lượng", true, DataSourceUpdateMode.Never));
+            //numUpDMaSPOfHD.DataBindings.Add(new Binding("Value", dgvCTHD.DataSource, "Số lượng", true, DataSourceUpdateMode.Never));
             txbDonGiaOfHD.DataBindings.Add(new Binding("Text", dgvCTHD.DataSource, "Đơn giá", true, DataSourceUpdateMode.Never));
+            //txbSoLuongCTHD.DataBindings.Add(new Binding("Text", dgvCTHD.DataSource, "Số lượng", true, DataSourceUpdateMode.Never));
+            txbMaCTHD.DataBindings.Add(new Binding("Text", dgvCTHD.DataSource, "Mã hóa đơn", true, DataSourceUpdateMode.Never));
         }
 
         void LoadList()
@@ -139,7 +141,7 @@ namespace QLBHVatLieuXayDung
 
         private void btnRefreshHD_Click(object sender, EventArgs e)
         {
-            dgvHoaDon.DataSource = QuanLyAC.Instance.LoadListHoaDon();
+            LoadListHoaDon();
             //HoaDonBinding();
         }
 
@@ -150,8 +152,6 @@ namespace QLBHVatLieuXayDung
             f.ShowDialog();
             this.Show();
         }
-        #endregion
-
         private void dgvHoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //HoaDonBinding();
@@ -159,18 +159,29 @@ namespace QLBHVatLieuXayDung
 
         private void dgvHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(dgvHoaDon.SelectedRows.Count > 0)
+            try
             {
-                txbMaHD.Text = dgvHoaDon.SelectedRows[0].Cells[0].Value.ToString();
-                cbxMaKHOfHD.SelectedValue = dgvHoaDon.SelectedRows[0].Cells[1].Value.ToString();
-                dtpNgayHD.Value = Convert.ToDateTime(dgvHoaDon.SelectedRows[0].Cells[2].Value);
+                if (dgvHoaDon.SelectedRows.Count > 0)
+                {
+                    txbMaHD.Text = dgvHoaDon.SelectedRows[0].Cells[0].Value.ToString();
+                    cbxMaKHOfHD.SelectedValue = dgvHoaDon.SelectedRows[0].Cells[1].Value.ToString();
+                    dtpNgayHD.Value = Convert.ToDateTime(dgvHoaDon.SelectedRows[0].Cells[2].Value);
+                }
+                else if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow row = dgvHoaDon.Rows[e.RowIndex];
+                    txbMaHD.Text = row.Cells[0].Value.ToString();
+                    cbxMaKHOfHD.SelectedValue = row.Cells[1].Value.ToString();
+                    dtpNgayHD.Value = Convert.ToDateTime(row.Cells[2].Value.ToString());
+                }
             }
-            else if(e.RowIndex >= 0)
+            catch (NullReferenceException)
             {
-                DataGridViewRow row = dgvHoaDon.Rows[e.RowIndex];
-                txbMaHD.Text = row.Cells[0].Value.ToString();
-                cbxMaKHOfHD.SelectedValue = row.Cells[1].Value.ToString();
-                dtpNgayHD.Value = Convert.ToDateTime(row.Cells[2].Value.ToString());
+
+            }
+            catch (FormatException)
+            {
+
             }
         }
 
@@ -181,21 +192,43 @@ namespace QLBHVatLieuXayDung
 
         private void dgvCTHD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvCTHD.SelectedRows.Count > 0)
+            try
             {
-                txbMaCTHD.Text = dgvCTHD.SelectedRows[0].Cells[0].Value.ToString();
-                cbxMaSPOfCTHD.SelectedValue = dgvCTHD.SelectedRows[0].Cells[1].Value.ToString();
-                numUpDMaSPOfHD.Value = Convert.ToInt32(dgvCTHD.SelectedRows[0].Cells[2].Value);
-                txbDonGiaOfHD.Text = dgvCTHD.SelectedRows[0].Cells[3].Value.ToString();
+                if (dgvCTHD.SelectedRows.Count > 0)
+                {
+                    txbMaCTHD.Text = dgvCTHD.SelectedRows[0].Cells[0].Value.ToString();
+                    cbxMaSPOfCTHD.SelectedValue = dgvCTHD.SelectedRows[0].Cells[1].Value.ToString();
+                    numericUpDownSLCTHD.Value = Convert.ToInt32(dgvCTHD.SelectedRows[0].Cells[2].Value);
+                    txbDonGiaOfHD.Text = dgvCTHD.SelectedRows[0].Cells[3].Value.ToString();
+                }
+                else if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow row = dgvCTHD.Rows[e.RowIndex];
+                    txbMaCTHD.Text = row.Cells[0].Value.ToString();
+                    cbxMaSPOfCTHD.SelectedValue = row.Cells[1].Value.ToString();
+                    numericUpDownSLCTHD.Value = Convert.ToInt32(row.Cells[2].Value);
+                    txbDonGiaOfHD.Text = row.Cells[3].Value.ToString();
+                }
             }
-            else if (e.RowIndex >= 0)
+            catch (NullReferenceException)
             {
-                DataGridViewRow row = dgvHoaDon.Rows[e.RowIndex];
-                txbMaCTHD.Text = row.Cells[0].Value.ToString();
-                cbxMaSPOfCTHD.SelectedValue = row.Cells[1].Value.ToString();
-                numUpDMaSPOfHD.Value = Convert.ToInt32(row.Cells[2].Selected);
-                txbDonGiaOfHD.Text = row.Cells[3].Value.ToString();
+
+            }
+            catch (FormatException)
+            {
+
+            }
+            catch (InvalidCastException)
+            {
+
             }
         }
+
+        private void btnRefreshCTHD_Click(object sender, EventArgs e)
+        {
+            LoadListCTHD();
+        }
+        #endregion
+        
     }
 }

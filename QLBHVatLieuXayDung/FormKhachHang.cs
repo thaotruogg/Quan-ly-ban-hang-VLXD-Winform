@@ -138,7 +138,7 @@ namespace QLBHVatLieuXayDung
                 catch (System.Data.SqlClient.SqlException)
                 {
                     
-                    if(txbTenKHOfKH.Text == string.Empty || txbSdtOfKH.Text == string.Empty)
+                    if(txbTenKHOfKH.Text == string.Empty || txbSdtOfKH.Text == string.Empty || txbTenKHOfKH.Text == "KH")
                     {
                         lbThemTB.Text = string.Empty;
                         lbThemTB.Text = "<\\ Vui lòng nhập đầy đủ thông tin >";
@@ -184,7 +184,7 @@ namespace QLBHVatLieuXayDung
         private void btnDeleteKhachHang_Click(object sender, EventArgs e)
         {
             string maKH = txbMaKHOfKH.Text;
-            DialogResult delete = MessageBox.Show("Bạn có muốn xóa " + txbTenKHOfKH.Text + " không?", "Chời ơi tin được hong", MessageBoxButtons.YesNo);
+            DialogResult delete = MessageBox.Show("\tBạn có muốn xóa " + txbTenKHOfKH.Text + " không?\n\n<\\ Dữ liệu khách hàng trong [HÓA ĐƠN] cũng sẽ bị xóa >", "Chời ơi tin được hong", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (delete == System.Windows.Forms.DialogResult.Yes)
             {
                 if (KhachHangAC.Instance.XoaKhachHang(maKH))
