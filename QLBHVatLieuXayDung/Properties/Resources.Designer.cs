@@ -73,6 +73,16 @@ namespace QLBHVatLieuXayDung.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add_32px1 {
+            get {
+                object obj = ResourceManager.GetObject("Add_32px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Add_64px {
             get {
                 object obj = ResourceManager.GetObject("Add_64px", resourceCulture);
@@ -103,6 +113,16 @@ namespace QLBHVatLieuXayDung.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cash__32px {
+            get {
+                object obj = ResourceManager.GetObject("Cash _32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Delete_32px {
             get {
                 object obj = ResourceManager.GetObject("Delete_32px", resourceCulture);
@@ -116,6 +136,16 @@ namespace QLBHVatLieuXayDung.Properties {
         internal static System.Drawing.Bitmap Edit_32px {
             get {
                 object obj = ResourceManager.GetObject("Edit_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Edit_32px1 {
+            get {
+                object obj = ResourceManager.GetObject("Edit_32px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,6 +193,16 @@ namespace QLBHVatLieuXayDung.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap New_Product_48px {
+            get {
+                object obj = ResourceManager.GetObject("New Product_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Package_32px {
             get {
                 object obj = ResourceManager.GetObject("Package_32px", resourceCulture);
@@ -173,9 +213,29 @@ namespace QLBHVatLieuXayDung.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Payment_History_48px {
+            get {
+                object obj = ResourceManager.GetObject("Payment History_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap People_32px {
             get {
                 object obj = ResourceManager.GetObject("People_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap People_48px {
+            get {
+                object obj = ResourceManager.GetObject("People_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +256,16 @@ namespace QLBHVatLieuXayDung.Properties {
         internal static System.Drawing.Bitmap Product_32px {
             get {
                 object obj = ResourceManager.GetObject("Product_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Product_48px {
+            get {
+                object obj = ResourceManager.GetObject("Product_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -246,6 +316,16 @@ namespace QLBHVatLieuXayDung.Properties {
         internal static System.Drawing.Bitmap Trash_Can_32px {
             get {
                 object obj = ResourceManager.GetObject("Trash Can_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Trash_Can_32px1 {
+            get {
+                object obj = ResourceManager.GetObject("Trash Can_32px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

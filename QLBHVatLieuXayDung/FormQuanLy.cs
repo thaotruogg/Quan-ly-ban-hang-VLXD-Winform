@@ -21,6 +21,31 @@ namespace QLBHVatLieuXayDung
         {
             InitializeComponent();
             LoadList();
+            LoadButton();
+        }
+
+        void LoadButton()
+        {
+            btnShowKhachHang.TabStop = false;
+            btnShowKhachHang.FlatAppearance.BorderSize = 0;
+            btnShowSPQL.TabStop = false;
+            btnShowSPQL.FlatAppearance.BorderSize = 0;
+            btnShowLoaiSP.TabStop = false;
+            btnShowLoaiSP.FlatAppearance.BorderSize = 0;
+            btnShowThanhToan.TabStop = false;
+            btnShowThanhToan.FlatAppearance.BorderSize = 0;
+            btnFormThanhToan.TabStop = false;
+            btnFormThanhToan.FlatAppearance.BorderSize = 0;
+            btnAddHD.TabStop = false;
+            btnAddHD.FlatAppearance.BorderSize = 0;
+            btnEditHD.TabStop = false;
+            btnEditHD.FlatAppearance.BorderSize = 0;
+            btnDeleteHD.TabStop = false;
+            btnDeleteHD.FlatAppearance.BorderSize = 0;
+            btnSaveHoaDon.TabStop = false;
+            btnClearHoaDon.TabStop = false;
+            btnClearHoaDon.FlatAppearance.BorderSize = 0;
+            btnSaveHoaDon.FlatAppearance.BorderSize = 0;
         }
 
         #region Methods Hóa đơn
@@ -373,6 +398,7 @@ namespace QLBHVatLieuXayDung
 
         #endregion
 
+        #region Events Chi tiết hóa đơn
         private void btnAddCTHD_Click(object sender, EventArgs e)
         {
             SetBtnLockCTHD(true);
@@ -484,5 +510,8 @@ namespace QLBHVatLieuXayDung
                 }
             }
         }
+        #endregion
+
+
     }
 }

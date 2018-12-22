@@ -118,64 +118,88 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Delete_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Delete_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Edit_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Edit_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Login_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Login_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Package_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Package_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Back_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Back_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Cancel_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cancel_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Invoice_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Invoice_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Trash Can_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Trash Can_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sign Out_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sign Out_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Trash Can_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Trash Can_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Edit_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Edit_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="People_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\People_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Add_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Add_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Add_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Save_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Save_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Plus_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Plus_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Product_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Product_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Trash_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Trash_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Product_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Product_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Refresh_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Refresh_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Cancel_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cancel_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sign Out_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sign Out_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Trash_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Trash_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="People_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\People_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Back_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Back_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="New Product_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\New Product_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Delete_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Delete_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Edit_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Edit_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Product_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Product_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Add_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add_32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Invoice_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Invoice_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Trash Can_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Trash Can_32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Package_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Package_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Trash Can_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Trash Can_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Plus_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Plus_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Payment History_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Payment History_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Add_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Login_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="People_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\People_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Save_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Save_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cash _32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cash _32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Login1_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Login1_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Edit_32px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Edit_32px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
