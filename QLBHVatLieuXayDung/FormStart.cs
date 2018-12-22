@@ -56,7 +56,7 @@ namespace QLBHVatLieuXayDung
             else
             {
                 lbW.Text = "";
-                lbCheckLogin.Text = "Sai tên tài khoản hoặc mật khẩu!";
+                lbCheckLogin.Text = "<\\ Sai tên tài khoản hoặc mật khẩu >";
             }
         }
 

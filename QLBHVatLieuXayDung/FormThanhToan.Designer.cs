@@ -233,6 +233,7 @@
             this.MinimizeBox = false;
             this.Name = "FormThanhToan";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thanh toán";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

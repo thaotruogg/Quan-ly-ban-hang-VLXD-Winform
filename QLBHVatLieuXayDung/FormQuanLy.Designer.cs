@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.btnShowLoaiSP = new System.Windows.Forms.Button();
             this.btnFormThanhToan = new System.Windows.Forms.Button();
             this.btnShowSPQL = new System.Windows.Forms.Button();
@@ -41,6 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownSLCTHD = new System.Windows.Forms.NumericUpDown();
             this.txbMaCTHD = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.cbxMaSPOfCTHD = new System.Windows.Forms.ComboBox();
@@ -76,26 +78,28 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.tabPageCTHD = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnClearCTHD = new System.Windows.Forms.Button();
+            this.btnSaveCTHD = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnDeleteCTHD = new System.Windows.Forms.Button();
+            this.btnEditCTHD = new System.Windows.Forms.Button();
+            this.btnAddCTHD = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
             this.btnRefreshCTHD = new System.Windows.Forms.Button();
             this.dgvCTHD = new System.Windows.Forms.DataGridView();
-            this.numericUpDownSLCTHD = new System.Windows.Forms.NumericUpDown();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.lbThemTB = new System.Windows.Forms.Label();
+            this.lbThemTC = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSLCTHD)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
@@ -108,7 +112,6 @@
             this.panel6.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTHD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSLCTHD)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -129,7 +132,6 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Enabled = false;
             this.label10.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Red;
             this.label10.Location = new System.Drawing.Point(926, 17);
@@ -141,6 +143,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.btnShowLoaiSP);
             this.panel2.Controls.Add(this.btnFormThanhToan);
@@ -151,6 +154,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(356, 608);
             this.panel2.TabIndex = 25;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.LightGray;
+            this.panel7.Location = new System.Drawing.Point(0, 106);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(10, 502);
+            this.panel7.TabIndex = 32;
             // 
             // btnShowLoaiSP
             // 
@@ -283,6 +294,25 @@
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết hóa đơn";
+            // 
+            // numericUpDownSLCTHD
+            // 
+            this.numericUpDownSLCTHD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDownSLCTHD.Location = new System.Drawing.Point(124, 85);
+            this.numericUpDownSLCTHD.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownSLCTHD.Name = "numericUpDownSLCTHD";
+            this.numericUpDownSLCTHD.Size = new System.Drawing.Size(179, 24);
+            this.numericUpDownSLCTHD.TabIndex = 19;
+            this.numericUpDownSLCTHD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDownSLCTHD.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // txbMaCTHD
             // 
@@ -455,6 +485,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.lbThemTB);
+            this.groupBox3.Controls.Add(this.lbThemTC);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.btnRefreshHD);
             this.groupBox3.Controls.Add(this.dgvHoaDon);
@@ -518,6 +550,7 @@
             this.btnSaveHoaDon.Size = new System.Drawing.Size(40, 40);
             this.btnSaveHoaDon.TabIndex = 30;
             this.btnSaveHoaDon.UseVisualStyleBackColor = false;
+            this.btnSaveHoaDon.Click += new System.EventHandler(this.btnSaveHoaDon_Click);
             // 
             // btnClearHoaDon
             // 
@@ -533,6 +566,7 @@
             this.btnClearHoaDon.Size = new System.Drawing.Size(40, 40);
             this.btnClearHoaDon.TabIndex = 29;
             this.btnClearHoaDon.UseVisualStyleBackColor = false;
+            this.btnClearHoaDon.Click += new System.EventHandler(this.btnClearHoaDon_Click);
             // 
             // panel1
             // 
@@ -605,6 +639,7 @@
             this.btnEditHD.Size = new System.Drawing.Size(48, 48);
             this.btnEditHD.TabIndex = 19;
             this.btnEditHD.UseVisualStyleBackColor = true;
+            this.btnEditHD.Click += new System.EventHandler(this.btnEditHD_Click);
             // 
             // btnAddHD
             // 
@@ -617,6 +652,7 @@
             this.btnAddHD.Size = new System.Drawing.Size(48, 48);
             this.btnAddHD.TabIndex = 18;
             this.btnAddHD.UseVisualStyleBackColor = true;
+            this.btnAddHD.Click += new System.EventHandler(this.btnAddHD_Click);
             // 
             // tabControlHoaDon
             // 
@@ -670,8 +706,8 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.button2);
-            this.panel5.Controls.Add(this.button3);
+            this.panel5.Controls.Add(this.btnClearCTHD);
+            this.panel5.Controls.Add(this.btnSaveCTHD);
             this.panel5.Controls.Add(this.label18);
             this.panel5.Controls.Add(this.label19);
             this.panel5.Location = new System.Drawing.Point(404, 61);
@@ -679,35 +715,35 @@
             this.panel5.Size = new System.Drawing.Size(135, 95);
             this.panel5.TabIndex = 38;
             // 
-            // button2
+            // btnClearCTHD
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::QLBHVatLieuXayDung.Properties.Resources.Delete_32px;
-            this.button2.Location = new System.Drawing.Point(22, 17);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(40, 40);
-            this.button2.TabIndex = 29;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnClearCTHD.BackColor = System.Drawing.Color.Transparent;
+            this.btnClearCTHD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearCTHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearCTHD.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearCTHD.ForeColor = System.Drawing.Color.White;
+            this.btnClearCTHD.Image = global::QLBHVatLieuXayDung.Properties.Resources.Delete_32px;
+            this.btnClearCTHD.Location = new System.Drawing.Point(22, 17);
+            this.btnClearCTHD.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClearCTHD.Name = "btnClearCTHD";
+            this.btnClearCTHD.Size = new System.Drawing.Size(40, 40);
+            this.btnClearCTHD.TabIndex = 29;
+            this.btnClearCTHD.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnSaveCTHD
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::QLBHVatLieuXayDung.Properties.Resources.Save_32px;
-            this.button3.Location = new System.Drawing.Point(70, 17);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(40, 40);
-            this.button3.TabIndex = 30;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnSaveCTHD.BackColor = System.Drawing.Color.Transparent;
+            this.btnSaveCTHD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveCTHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveCTHD.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveCTHD.ForeColor = System.Drawing.Color.White;
+            this.btnSaveCTHD.Image = global::QLBHVatLieuXayDung.Properties.Resources.Save_32px;
+            this.btnSaveCTHD.Location = new System.Drawing.Point(70, 17);
+            this.btnSaveCTHD.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSaveCTHD.Name = "btnSaveCTHD";
+            this.btnSaveCTHD.Size = new System.Drawing.Size(40, 40);
+            this.btnSaveCTHD.TabIndex = 30;
+            this.btnSaveCTHD.UseVisualStyleBackColor = false;
             // 
             // label18
             // 
@@ -737,9 +773,9 @@
             this.panel6.Controls.Add(this.label20);
             this.panel6.Controls.Add(this.label21);
             this.panel6.Controls.Add(this.label22);
-            this.panel6.Controls.Add(this.button4);
-            this.panel6.Controls.Add(this.button5);
-            this.panel6.Controls.Add(this.button6);
+            this.panel6.Controls.Add(this.btnDeleteCTHD);
+            this.panel6.Controls.Add(this.btnEditCTHD);
+            this.panel6.Controls.Add(this.btnAddCTHD);
             this.panel6.Location = new System.Drawing.Point(545, 365);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
@@ -779,41 +815,41 @@
             this.label22.TabIndex = 26;
             this.label22.Text = "Thêm";
             // 
-            // button4
+            // btnDeleteCTHD
             // 
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = global::QLBHVatLieuXayDung.Properties.Resources.Trash_Can_32px;
-            this.button4.Location = new System.Drawing.Point(86, 111);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(48, 48);
-            this.button4.TabIndex = 20;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnDeleteCTHD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteCTHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteCTHD.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteCTHD.Image = global::QLBHVatLieuXayDung.Properties.Resources.Trash_Can_32px;
+            this.btnDeleteCTHD.Location = new System.Drawing.Point(86, 111);
+            this.btnDeleteCTHD.Name = "btnDeleteCTHD";
+            this.btnDeleteCTHD.Size = new System.Drawing.Size(48, 48);
+            this.btnDeleteCTHD.TabIndex = 20;
+            this.btnDeleteCTHD.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnEditCTHD
             // 
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = global::QLBHVatLieuXayDung.Properties.Resources.Edit_32px;
-            this.button5.Location = new System.Drawing.Point(86, 57);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(48, 48);
-            this.button5.TabIndex = 19;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnEditCTHD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditCTHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditCTHD.ForeColor = System.Drawing.Color.White;
+            this.btnEditCTHD.Image = global::QLBHVatLieuXayDung.Properties.Resources.Edit_32px;
+            this.btnEditCTHD.Location = new System.Drawing.Point(86, 57);
+            this.btnEditCTHD.Name = "btnEditCTHD";
+            this.btnEditCTHD.Size = new System.Drawing.Size(48, 48);
+            this.btnEditCTHD.TabIndex = 19;
+            this.btnEditCTHD.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnAddCTHD
             // 
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = global::QLBHVatLieuXayDung.Properties.Resources.Add_32px;
-            this.button6.Location = new System.Drawing.Point(86, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(48, 48);
-            this.button6.TabIndex = 18;
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnAddCTHD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddCTHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCTHD.ForeColor = System.Drawing.Color.White;
+            this.btnAddCTHD.Image = global::QLBHVatLieuXayDung.Properties.Resources.Add_32px;
+            this.btnAddCTHD.Location = new System.Drawing.Point(86, 3);
+            this.btnAddCTHD.Name = "btnAddCTHD";
+            this.btnAddCTHD.Size = new System.Drawing.Size(48, 48);
+            this.btnAddCTHD.TabIndex = 18;
+            this.btnAddCTHD.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
@@ -865,32 +901,44 @@
             this.dgvCTHD.TabIndex = 0;
             this.dgvCTHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTHD_CellClick);
             // 
-            // numericUpDownSLCTHD
+            // lbThemTB
             // 
-            this.numericUpDownSLCTHD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDownSLCTHD.Location = new System.Drawing.Point(124, 85);
-            this.numericUpDownSLCTHD.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpDownSLCTHD.Name = "numericUpDownSLCTHD";
-            this.numericUpDownSLCTHD.Size = new System.Drawing.Size(179, 24);
-            this.numericUpDownSLCTHD.TabIndex = 19;
-            this.numericUpDownSLCTHD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numericUpDownSLCTHD.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.lbThemTB.AutoSize = true;
+            this.lbThemTB.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThemTB.ForeColor = System.Drawing.Color.Red;
+            this.lbThemTB.Location = new System.Drawing.Point(218, 362);
+            this.lbThemTB.Name = "lbThemTB";
+            this.lbThemTB.Size = new System.Drawing.Size(226, 18);
+            this.lbThemTB.TabIndex = 43;
+            this.lbThemTB.Text = "<\\\\ Vui lòng nhập đầy đủ thông tin >";
+            this.lbThemTB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel7
+            // lbThemTC
             // 
-            this.panel7.BackColor = System.Drawing.Color.LightGray;
-            this.panel7.Location = new System.Drawing.Point(0, 106);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(10, 502);
-            this.panel7.TabIndex = 32;
+            this.lbThemTC.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThemTC.ForeColor = System.Drawing.Color.Green;
+            this.lbThemTC.Location = new System.Drawing.Point(133, 362);
+            this.lbThemTC.Name = "lbThemTC";
+            this.lbThemTC.Size = new System.Drawing.Size(393, 18);
+            this.lbThemTC.TabIndex = 42;
+            this.lbThemTC.Text = "Thêm sản phẩm thành công";
+            this.lbThemTC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::QLBHVatLieuXayDung.Properties.Resources.People_32px;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(10, 417);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(280, 75);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "Xem thanh toán";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // FormQuanLy
             // 
@@ -918,6 +966,7 @@
             this.panel3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSLCTHD)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -937,7 +986,6 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTHD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSLCTHD)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -994,20 +1042,23 @@
         private System.Windows.Forms.Button btnRefreshCTHD;
         private System.Windows.Forms.DataGridView dgvCTHD;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnClearCTHD;
+        private System.Windows.Forms.Button btnSaveCTHD;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnDeleteCTHD;
+        private System.Windows.Forms.Button btnEditCTHD;
+        private System.Windows.Forms.Button btnAddCTHD;
         private System.Windows.Forms.TextBox txbMaCTHD;
         private System.Windows.Forms.NumericUpDown numericUpDownSLCTHD;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label lbThemTB;
+        private System.Windows.Forms.Label lbThemTC;
+        private System.Windows.Forms.Button button1;
     }
 }
 

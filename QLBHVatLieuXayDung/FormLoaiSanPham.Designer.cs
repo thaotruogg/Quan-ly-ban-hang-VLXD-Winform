@@ -276,8 +276,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Controls.Add(this.lbThemTB);
-            this.panel2.Controls.Add(this.lbThemTC);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.btnBackLoaiSP);
             this.panel2.Location = new System.Drawing.Point(0, 401);
@@ -290,7 +288,7 @@
             this.lbThemTB.AutoSize = true;
             this.lbThemTB.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThemTB.ForeColor = System.Drawing.Color.Red;
-            this.lbThemTB.Location = new System.Drawing.Point(241, 11);
+            this.lbThemTB.Location = new System.Drawing.Point(134, 318);
             this.lbThemTB.Name = "lbThemTB";
             this.lbThemTB.Size = new System.Drawing.Size(226, 18);
             this.lbThemTB.TabIndex = 39;
@@ -302,7 +300,7 @@
             this.lbThemTC.AutoSize = true;
             this.lbThemTC.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThemTC.ForeColor = System.Drawing.Color.Green;
-            this.lbThemTC.Location = new System.Drawing.Point(266, 11);
+            this.lbThemTC.Location = new System.Drawing.Point(159, 318);
             this.lbThemTC.Name = "lbThemTC";
             this.lbThemTC.Size = new System.Drawing.Size(176, 18);
             this.lbThemTC.TabIndex = 38;
@@ -338,6 +336,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lbThemTB);
+            this.groupBox2.Controls.Add(this.lbThemTC);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.btnRefreshLoaiSP);
             this.groupBox2.Controls.Add(this.dgvLoaiSP);

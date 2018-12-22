@@ -33,9 +33,15 @@ namespace QLBHVatLieuXayDung.DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        public bool ThemHoaDon(string soHoaDon, string maKhachHang, DateTime ngayHoaDon)
+        public bool ThemHoaDon(string soHoaDon, string maKhachHang, string ngayHoaDon)
         {
             string query = string.Format("EXEC dbo.USP_InsertHoaDon @soHoaDon = '{0}', @maKhachHang = '{1}', @ngayHoaDon = '{2}'", soHoaDon, maKhachHang, ngayHoaDon);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+        public bool SuaHoaDon(string soHoaDon, string maKhachHang, string ngayHoaDon)
+        {
+            string query = string.Format("EXEC dbo.USP_UpdateHoaDon @soHoaDon = '{0}', @maKhachHang = '{1}', @ngayHoaDon = '{2}'", soHoaDon, maKhachHang, ngayHoaDon);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }

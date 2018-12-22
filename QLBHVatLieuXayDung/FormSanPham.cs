@@ -102,21 +102,25 @@ namespace QLBHVatLieuXayDung
         }
         private void dgvSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvSanPham.SelectedRows.Count > 0)
+            try
             {
-                txtMaSPofSP.Text = dgvSanPham.SelectedRows[0].Cells[0].Value.ToString();
-                txtTenSPofSP.Text = dgvSanPham.SelectedRows[0].Cells[1].Value.ToString();
-                txtNhaSXofSP.Text = dgvSanPham.SelectedRows[0].Cells[2].Value.ToString();
-                cbxMaLoaiSP.SelectedValue = dgvSanPham.SelectedRows[0].Cells[3].Value.ToString();
+                if (dgvSanPham.SelectedRows.Count > 0)
+                {
+                    txtMaSPofSP.Text = dgvSanPham.SelectedRows[0].Cells[0].Value.ToString();
+                    txtTenSPofSP.Text = dgvSanPham.SelectedRows[0].Cells[1].Value.ToString();
+                    txtNhaSXofSP.Text = dgvSanPham.SelectedRows[0].Cells[2].Value.ToString();
+                    cbxMaLoaiSP.SelectedValue = dgvSanPham.SelectedRows[0].Cells[3].Value.ToString();
+                }
+                else if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow row = dgvSanPham.Rows[e.RowIndex];
+                    txtMaSPofSP.Text = row.Cells[0].Value.ToString();
+                    txtTenSPofSP.Text = row.Cells[1].Value.ToString();
+                    txtNhaSXofSP.Text = row.Cells[2].Value.ToString();
+                    cbxMaLoaiSP.SelectedValue = row.Cells[3].Value.ToString();
+                }
             }
-            else if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dgvSanPham.Rows[e.RowIndex];
-                txtMaSPofSP.Text = row.Cells[0].Value.ToString();
-                txtTenSPofSP.Text = row.Cells[1].Value.ToString();
-                txtNhaSXofSP.Text = row.Cells[2].Value.ToString();
-                cbxMaLoaiSP.SelectedValue = row.Cells[3].Value.ToString();
-            }
+            catch (NullReferenceException) { }
         }
         private void btnSaveSP_Click(object sender, EventArgs e)
         {
@@ -176,7 +180,7 @@ namespace QLBHVatLieuXayDung
         private void btnDeleteSP_Click(object sender, EventArgs e)
         {
             string maSanPham = txtMaSPofSP.Text;
-            DialogResult result = MessageBox.Show("\tBạn có muốn xóa [" + txtTenSPofSP.Text + "] không?\n\n<\\ Dữ liệu [SẢN PHẨM] cũng sẽ bị ảnh hưởng >", "Chời ơi tin được hong", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Bạn có muốn xóa sản phẩm [" + txtTenSPofSP.Text + "] không?", "Chời ơi tin được hong", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
                 if (SanPhamAC.Instance.XoaSanPham(maSanPham))

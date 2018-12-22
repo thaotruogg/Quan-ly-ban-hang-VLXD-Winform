@@ -15,6 +15,7 @@ namespace QLBHVatLieuXayDung
     {
         BindingSource listHoaDon = new BindingSource();
         BindingSource listCTHD = new BindingSource();
+        private bool coThem;
         public FormQuanLy()
         {
             InitializeComponent();
@@ -22,7 +23,7 @@ namespace QLBHVatLieuXayDung
         }
 
         #region Methods
-        void SetBtnLock(bool a)
+        void SetBtnLockHoaDon(bool a)
         {
             btnSaveHoaDon.Enabled = a;
             btnClearHoaDon.Enabled = a;
@@ -30,9 +31,29 @@ namespace QLBHVatLieuXayDung
             btnEditHD.Enabled = !a;
             btnDeleteHD.Enabled = !a;
         }
-        void SetNULL(bool a)
+        void SetBtnLockCTHD(bool a)
         {
-
+            btnSaveCTHD.Enabled = a;
+            btnClearCTHD.Enabled = a;
+            btnAddCTHD.Enabled = !a;
+            btnEditCTHD.Enabled = !a;
+            btnDeleteCTHD.Enabled = !a;
+        }
+        void SetNULLHoaDon()
+        {
+            txbMaHD.Text = string.Empty;
+            dtpNgayHD.Value = DateTime.Today;
+        }
+        void SetNULLCTHD()
+        {
+            txbMaCTHD.Text = string.Empty;
+            txbDonGiaOfHD.Text = string.Empty;
+        }
+        void SetLockHoaDon(bool a)
+        {
+            txbMaHD.Enabled = a;
+            cbxMaKHOfHD.Enabled = a;
+            dtpNgayHD.Enabled = a;
         }
         void LoadMaKHIntoCombobox(ComboBox box)
         {
@@ -70,6 +91,10 @@ namespace QLBHVatLieuXayDung
             LoadListCTHD();
             LoadMaKHIntoCombobox(cbxMaKHOfHD);
             LoadMaSPIntoCombobox(cbxMaSPOfCTHD);
+            SetLockHoaDon(false);
+            SetBtnLockHoaDon(false);
+            lbThemTB.Text = string.Empty;
+            lbThemTC.Text = string.Empty;
             //HoaDonBinding();
         }
 
@@ -229,6 +254,78 @@ namespace QLBHVatLieuXayDung
             LoadListCTHD();
         }
         #endregion
-        
+
+        private void btnAddHD_Click(object sender, EventArgs e)
+        {
+            SetBtnLockHoaDon(true);
+            SetLockHoaDon(true);
+            SetNULLHoaDon();
+            txbMaHD.Text = "HD";
+            coThem = true;
+        }
+
+        private void btnClearHoaDon_Click(object sender, EventArgs e)
+        {
+            SetBtnLockHoaDon(false);
+            SetLockHoaDon(false);
+            SetNULLHoaDon();
+        }
+
+        private void btnEditHD_Click(object sender, EventArgs e)
+        {
+            txbMaHD.ReadOnly = true;
+            SetBtnLockHoaDon(true);
+            SetLockHoaDon(true);
+            coThem = false;
+        }
+
+        private void btnSaveHoaDon_Click(object sender, EventArgs e)
+        {
+            string soHoaDon = txbMaHD.Text;
+            string maKH = cbxMaKHOfHD.SelectedValue.ToString();
+            string ngayHoaDon = string.Format("{0:MM/dd/yyyy}", dtpNgayHD.Value);
+            if(coThem == true)
+            {
+                try
+                {
+                    if (txbMaHD.Text == string.Empty || txbMaHD.Text == "HD")
+                    {
+                        lbThemTC.Text = string.Empty;
+                        lbThemTB.Text = "<\\ Vui lòng nhập đầy đủ thông tin >";
+                    }
+                    else
+                    if (QuanLyAC.Instance.ThemHoaDon(soHoaDon, maKH, ngayHoaDon))
+                    {
+                        lbThemTB.Text = string.Empty;
+                        lbThemTC.Text = "<\\ Thêm hóa đơn thành công >";
+                        LoadListHoaDon();
+                        SetBtnLockHoaDon(false);
+                        SetLockHoaDon(false);
+                    }
+                }
+                catch (System.Data.SqlClient.SqlException)
+                {
+                    lbThemTC.Text = string.Empty;
+                    lbThemTB.Text = "<\\ Mã hóa đơn đã tồn tại >";
+                }
+            }
+            else if(coThem == false)
+            {
+                if (txbMaHD.Text == string.Empty || txbMaHD.Text == "HD")
+                {
+                    lbThemTC.Text = string.Empty;
+                    lbThemTB.Text = "<\\ Vui lòng nhập đầy đủ thông tin >";
+                }
+                else
+                if (QuanLyAC.Instance.SuaHoaDon(soHoaDon, maKH, ngayHoaDon))
+                {
+                    lbThemTB.Text = string.Empty;
+                    lbThemTC.Text = "<\\ Sửa hóa đơn thành công >";
+                    LoadListHoaDon();
+                    SetBtnLockHoaDon(false);
+                    SetLockHoaDon(false);
+                }
+            }
+        }
     }
 }
