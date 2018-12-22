@@ -46,6 +46,16 @@ namespace QLBHVatLieuXayDung
             btnClearHoaDon.TabStop = false;
             btnClearHoaDon.FlatAppearance.BorderSize = 0;
             btnSaveHoaDon.FlatAppearance.BorderSize = 0;
+            btnSaveCTHD.TabStop = false;
+            btnClearCTHD.TabStop = false;
+            btnAddCTHD.TabStop = false;
+            btnEditCTHD.TabStop = false;
+            btnDeleteCTHD.TabStop = false;
+            btnSaveCTHD.FlatAppearance.BorderSize = 0;
+            btnClearCTHD.FlatAppearance.BorderSize = 0;
+            btnAddCTHD.FlatAppearance.BorderSize = 0;
+            btnEditCTHD.FlatAppearance.BorderSize = 0;
+            btnDeleteCTHD.FlatAppearance.BorderSize = 0;
         }
 
         #region Methods Hóa đơn
