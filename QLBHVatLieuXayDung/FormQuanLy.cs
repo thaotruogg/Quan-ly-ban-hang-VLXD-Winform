@@ -16,13 +16,14 @@ namespace QLBHVatLieuXayDung
         BindingSource listHoaDon = new BindingSource();
         BindingSource listCTHD = new BindingSource();
         private bool coThem;
+        private bool coThemCTHD;
         public FormQuanLy()
         {
             InitializeComponent();
             LoadList();
         }
 
-        #region Methods
+        #region Methods Hóa đơn
         void SetBtnLockHoaDon(bool a)
         {
             btnSaveHoaDon.Enabled = a;
@@ -31,30 +32,57 @@ namespace QLBHVatLieuXayDung
             btnEditHD.Enabled = !a;
             btnDeleteHD.Enabled = !a;
         }
-        void SetBtnLockCTHD(bool a)
-        {
-            btnSaveCTHD.Enabled = a;
-            btnClearCTHD.Enabled = a;
-            btnAddCTHD.Enabled = !a;
-            btnEditCTHD.Enabled = !a;
-            btnDeleteCTHD.Enabled = !a;
-        }
         void SetNULLHoaDon()
         {
             txbMaHD.Text = string.Empty;
             dtpNgayHD.Value = DateTime.Today;
         }
+        void SetLockHoaDon(bool a)
+        {
+            txbMaHD.ReadOnly = !a;
+            cbxMaKHOfHD.Enabled = a;
+            dtpNgayHD.Enabled = a;
+        }
+        void LoadListHoaDon()
+        {
+            listHoaDon.DataSource = QuanLyAC.Instance.LoadListHoaDon();
+        }
+        #endregion
+
+        #region Methods Chi tiết hóa đơn
+        void SetBtnLockCTHD(bool a)
+        {
+            btnSaveCTHD.Enabled = a;
+            btnClearCTHD.Enabled = a;
+            btnAddCTHD.Enabled = !a;
+            //btnEditCTHD.Enabled = !a;
+            btnDeleteCTHD.Enabled = !a;
+        }
         void SetNULLCTHD()
         {
             txbMaCTHD.Text = string.Empty;
             txbDonGiaOfHD.Text = string.Empty;
+            numericUpDownSLCTHD.Value = 0;
         }
-        void SetLockHoaDon(bool a)
+        void SetLockCTHD(bool a)
         {
-            txbMaHD.Enabled = a;
-            cbxMaKHOfHD.Enabled = a;
-            dtpNgayHD.Enabled = a;
+            txbMaCTHD.ReadOnly = !a;
+            cbxMaSPOfCTHD.Enabled = a;
+            numericUpDownSLCTHD.Enabled = a;
+            txbDonGiaOfHD.ReadOnly = !a;
         }
+        void LoadListCTHD()
+        {
+            listCTHD.DataSource = QuanLyAC.Instance.LoadListCTHD();
+        }
+        void LableThem()
+        {
+            lbThemTBCTHD.Text = string.Empty;
+            lbThemTCCTHD.Text = string.Empty;
+        }
+        #endregion
+
+        #region Methods
         void LoadMaKHIntoCombobox(ComboBox box)
         {
             box.DataSource = KhachHangAC.Instance.LoadListKhachHang();
@@ -66,12 +94,6 @@ namespace QLBHVatLieuXayDung
             box.DataSource = SanPhamAC.Instance.LoadListSanPham();
             box.DisplayMember = "Tên sản phẩm";
             box.ValueMember = "Mã sản phẩm";
-        }
-        void LoadMaHDIntoCombobox(ComboBox box)
-        {
-            box.DataSource = QuanLyAC.Instance.LoadListHoaDon();
-            box.DisplayMember = "Số hóa đơn";
-            //box.ValueMember = "Số hóa đơn";
         }
         void HoaDonBinding()
         {
@@ -93,20 +115,13 @@ namespace QLBHVatLieuXayDung
             LoadMaSPIntoCombobox(cbxMaSPOfCTHD);
             SetLockHoaDon(false);
             SetBtnLockHoaDon(false);
+            SetLockCTHD(false);
+            SetBtnLockCTHD(false);
             lbThemTB.Text = string.Empty;
             lbThemTC.Text = string.Empty;
+            LableThem();
             //HoaDonBinding();
         }
-
-        void LoadListHoaDon()
-        {
-            listHoaDon.DataSource = QuanLyAC.Instance.LoadListHoaDon();
-        }
-        void LoadListCTHD()
-        {
-            listCTHD.DataSource = QuanLyAC.Instance.LoadListCTHD();
-        }
-
         #endregion
 
         #region events
@@ -167,6 +182,8 @@ namespace QLBHVatLieuXayDung
         private void btnRefreshHD_Click(object sender, EventArgs e)
         {
             LoadListHoaDon();
+            lbThemTB.Text = string.Empty;
+            lbThemTC.Text = string.Empty;
             //HoaDonBinding();
         }
 
@@ -252,9 +269,12 @@ namespace QLBHVatLieuXayDung
         private void btnRefreshCTHD_Click(object sender, EventArgs e)
         {
             LoadListCTHD();
+            lbThemTB.Text = string.Empty;
+            lbThemTC.Text = string.Empty;
         }
         #endregion
 
+        #region Events HoaDon
         private void btnAddHD_Click(object sender, EventArgs e)
         {
             SetBtnLockHoaDon(true);
@@ -284,7 +304,7 @@ namespace QLBHVatLieuXayDung
             string soHoaDon = txbMaHD.Text;
             string maKH = cbxMaKHOfHD.SelectedValue.ToString();
             string ngayHoaDon = string.Format("{0:MM/dd/yyyy}", dtpNgayHD.Value);
-            if(coThem == true)
+            if (coThem == true)
             {
                 try
                 {
@@ -309,7 +329,7 @@ namespace QLBHVatLieuXayDung
                     lbThemTB.Text = "<\\ Mã hóa đơn đã tồn tại >";
                 }
             }
-            else if(coThem == false)
+            else if (coThem == false)
             {
                 if (txbMaHD.Text == string.Empty || txbMaHD.Text == "HD")
                 {
@@ -324,6 +344,143 @@ namespace QLBHVatLieuXayDung
                     LoadListHoaDon();
                     SetBtnLockHoaDon(false);
                     SetLockHoaDon(false);
+                }
+            }
+        }
+
+        private void btnDeleteHD_Click(object sender, EventArgs e)
+        {
+            string soHoaDon = txbMaHD.Text;
+            DialogResult result = MessageBox.Show("Bạn có muốn xóa hoá đơn [" + txbMaHD.Text + "] không?", "Chời ơi tin được hong", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                if (QuanLyAC.Instance.XoaHoaDon(soHoaDon))
+                {
+                    lbThemTC.Text = string.Empty;
+                    lbThemTC.Text = "<\\ Xóa hóa đơn thành công >";
+                    LoadListHoaDon();
+                    LoadListCTHD();
+                    SetBtnLockHoaDon(false);
+                    SetLockHoaDon(false);
+                }
+                else
+                {
+                    lbThemTC.Text = string.Empty;
+                    lbThemTB.Text = "<\\ Xóa hóa đơn thất bại! >";
+                }
+            }
+        }
+
+        #endregion
+
+        private void btnAddCTHD_Click(object sender, EventArgs e)
+        {
+            SetBtnLockCTHD(true);
+            SetLockCTHD(true);
+            SetNULLCTHD();
+            txbMaCTHD.Text = "HD";
+            txbDonGiaOfHD.Text = "0";
+            coThemCTHD = true;
+        }
+
+        private void btnClearCTHD_Click(object sender, EventArgs e)
+        {
+            LoadListCTHD();
+            SetBtnLockCTHD(false);
+            SetLockCTHD(false);
+            SetNULLCTHD();
+            LableThem();
+        }
+
+        private void btnEditCTHD_Click(object sender, EventArgs e)
+        {
+            txbMaCTHD.ReadOnly = true;
+            SetBtnLockCTHD(true);
+            SetLockCTHD(true);
+            coThemCTHD = false;
+        }
+
+        private void btnSaveCTHD_Click(object sender, EventArgs e)
+        {
+            string maHoaDon = txbMaCTHD.Text;
+            string maSanPham = cbxMaSPOfCTHD.SelectedValue.ToString();
+            int soLuong = Convert.ToInt32(numericUpDownSLCTHD.Value);
+            double donGia = Double.Parse(txbDonGiaOfHD.Text);
+            if (coThemCTHD == true)
+            {
+                try
+                {
+                    if (txbMaCTHD.Text == string.Empty || txbDonGiaOfHD.Text == string.Empty || txbMaCTHD.Text == "HD")
+                    {
+                        lbThemTCCTHD.Text = string.Empty;
+                        lbThemTBCTHD.Text = "<\\ Vui lòng nhập đầy đủ thông tin >";
+                    }
+                    else
+                    if (QuanLyAC.Instance.ThemChiTietHoaDon(maHoaDon, maSanPham, soLuong, donGia))
+                    {
+                        lbThemTBCTHD.Text = string.Empty;
+                        lbThemTCCTHD.Text = "<\\ Thêm chi tiết hóa đơn thành công >";
+                        LoadListCTHD();
+                        SetBtnLockCTHD(false);
+                        SetLockCTHD(false);
+                    }
+                    else
+                    {
+                        lbThemTCCTHD.Text = string.Empty;
+                        lbThemTBCTHD.Text = "<\\ Thêm chi tiết hóa đơn thất bại >";
+                    }
+                }
+                catch (System.Data.SqlClient.SqlException)
+                {
+                    lbThemTCCTHD.Text = string.Empty;
+                    lbThemTBCTHD.Text = "<\\ Mã hóa đơn không tồn tại >";
+                }
+                catch (System.FormatException)
+                {
+                    lbThemTCCTHD.Text = string.Empty;
+                    lbThemTBCTHD.Text = "<\\ Vui lòng nhập đầy đủ thông tin >";
+                }
+            }
+            /**
+            else if(coThemCTHD == false)
+            {
+                if (txbMaCTHD.Text == string.Empty || txbDonGiaOfHD.Text == string.Empty || txbMaCTHD.Text == "HD")
+                {
+                    lbThemTCCTHD.Text = string.Empty;
+                    lbThemTBCTHD.Text = "<\\ Vui lòng nhập đầy đủ thông tin >";
+                }
+                else
+                    if (QuanLyAC.Instance.SuaChiTietHoaDon(maHoaDon, maSanPham, soLuong, donGia))
+                {
+                    lbThemTBCTHD.Text = string.Empty;
+                    lbThemTCCTHD.Text = "<\\ Sửa chi tiết thành công >";
+                    LoadListCTHD();
+                    SetBtnLockCTHD(false);
+                    SetLockCTHD(false);
+                }
+            }
+            **/
+        }
+
+        private void btnDeleteCTHD_Click(object sender, EventArgs e)
+        {
+            string maHoaDon = txbMaCTHD.Text;
+            DialogResult result = MessageBox.Show("Bạn có muốn xóa hoá đơn [" + txbMaCTHD.Text + "] không?", "Chời ơi tin được hong", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                if (QuanLyAC.Instance.XoaChiTietHoaDon(maHoaDon))
+                {
+                    lbThemTCCTHD.Text = string.Empty;
+                    lbThemTCCTHD.Text = "<\\ Xóa chi tiết hóa đơn thành công >";
+                    LoadListHoaDon();
+                    LoadListCTHD();
+                    SetBtnLockHoaDon(false);
+                    SetLockHoaDon(false);
+                }
+                else
+                {
+                    lbThemTCCTHD.Text = string.Empty;
+                    lbThemTBCTHD.Text = "<\\ Xóa chi tiết hóa đơn thất bại! >";
                 }
             }
         }

@@ -96,6 +96,8 @@
             this.lbThemTB = new System.Windows.Forms.Label();
             this.lbThemTC = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.lbThemTBCTHD = new System.Windows.Forms.Label();
+            this.lbThemTCCTHD = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -370,6 +372,7 @@
             this.txbDonGiaOfHD.Name = "txbDonGiaOfHD";
             this.txbDonGiaOfHD.Size = new System.Drawing.Size(171, 24);
             this.txbDonGiaOfHD.TabIndex = 6;
+            this.txbDonGiaOfHD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label6
             // 
@@ -627,6 +630,7 @@
             this.btnDeleteHD.Size = new System.Drawing.Size(48, 48);
             this.btnDeleteHD.TabIndex = 20;
             this.btnDeleteHD.UseVisualStyleBackColor = true;
+            this.btnDeleteHD.Click += new System.EventHandler(this.btnDeleteHD_Click);
             // 
             // btnEditHD
             // 
@@ -729,6 +733,7 @@
             this.btnClearCTHD.Size = new System.Drawing.Size(40, 40);
             this.btnClearCTHD.TabIndex = 29;
             this.btnClearCTHD.UseVisualStyleBackColor = false;
+            this.btnClearCTHD.Click += new System.EventHandler(this.btnClearCTHD_Click);
             // 
             // btnSaveCTHD
             // 
@@ -744,6 +749,7 @@
             this.btnSaveCTHD.Size = new System.Drawing.Size(40, 40);
             this.btnSaveCTHD.TabIndex = 30;
             this.btnSaveCTHD.UseVisualStyleBackColor = false;
+            this.btnSaveCTHD.Click += new System.EventHandler(this.btnSaveCTHD_Click);
             // 
             // label18
             // 
@@ -826,10 +832,12 @@
             this.btnDeleteCTHD.Size = new System.Drawing.Size(48, 48);
             this.btnDeleteCTHD.TabIndex = 20;
             this.btnDeleteCTHD.UseVisualStyleBackColor = true;
+            this.btnDeleteCTHD.Click += new System.EventHandler(this.btnDeleteCTHD_Click);
             // 
             // btnEditCTHD
             // 
             this.btnEditCTHD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditCTHD.Enabled = false;
             this.btnEditCTHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditCTHD.ForeColor = System.Drawing.Color.White;
             this.btnEditCTHD.Image = global::QLBHVatLieuXayDung.Properties.Resources.Edit_32px;
@@ -838,6 +846,7 @@
             this.btnEditCTHD.Size = new System.Drawing.Size(48, 48);
             this.btnEditCTHD.TabIndex = 19;
             this.btnEditCTHD.UseVisualStyleBackColor = true;
+            this.btnEditCTHD.Click += new System.EventHandler(this.btnEditCTHD_Click);
             // 
             // btnAddCTHD
             // 
@@ -850,9 +859,12 @@
             this.btnAddCTHD.Size = new System.Drawing.Size(48, 48);
             this.btnAddCTHD.TabIndex = 18;
             this.btnAddCTHD.UseVisualStyleBackColor = true;
+            this.btnAddCTHD.Click += new System.EventHandler(this.btnAddCTHD_Click);
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.lbThemTBCTHD);
+            this.groupBox4.Controls.Add(this.lbThemTCCTHD);
             this.groupBox4.Controls.Add(this.label17);
             this.groupBox4.Controls.Add(this.btnRefreshCTHD);
             this.groupBox4.Controls.Add(this.dgvCTHD);
@@ -939,6 +951,29 @@
             this.button1.Text = "Xem thanh toán";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // lbThemTBCTHD
+            // 
+            this.lbThemTBCTHD.AutoSize = true;
+            this.lbThemTBCTHD.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThemTBCTHD.ForeColor = System.Drawing.Color.Red;
+            this.lbThemTBCTHD.Location = new System.Drawing.Point(220, 335);
+            this.lbThemTBCTHD.Name = "lbThemTBCTHD";
+            this.lbThemTBCTHD.Size = new System.Drawing.Size(226, 18);
+            this.lbThemTBCTHD.TabIndex = 45;
+            this.lbThemTBCTHD.Text = "<\\\\ Vui lòng nhập đầy đủ thông tin >";
+            this.lbThemTBCTHD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbThemTCCTHD
+            // 
+            this.lbThemTCCTHD.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThemTCCTHD.ForeColor = System.Drawing.Color.Green;
+            this.lbThemTCCTHD.Location = new System.Drawing.Point(135, 335);
+            this.lbThemTCCTHD.Name = "lbThemTCCTHD";
+            this.lbThemTCCTHD.Size = new System.Drawing.Size(393, 18);
+            this.lbThemTCCTHD.TabIndex = 44;
+            this.lbThemTCCTHD.Text = "Thêm sản phẩm thành công";
+            this.lbThemTCCTHD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormQuanLy
             // 
@@ -1059,6 +1094,8 @@
         private System.Windows.Forms.Label lbThemTB;
         private System.Windows.Forms.Label lbThemTC;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbThemTBCTHD;
+        private System.Windows.Forms.Label lbThemTCCTHD;
     }
 }
 
