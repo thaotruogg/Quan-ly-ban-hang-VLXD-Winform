@@ -190,11 +190,11 @@ namespace QLBHVatLieuXayDung
             }
             else if (e.RowIndex >= 0)
             {
-                //DataGridViewRow row = dgvHoaDon.Rows[e.RowIndex];
-                //txbMaCTHD.Text = row.Cells[0].Value.ToString();
-                //cbxMaSPOfCTHD.SelectedValue = row.Cells[1].Value.ToString();
-                //numUpDMaSPOfHD.Value = Convert.ToInt32(row.Cells[2].Value);
-                //txbDonGiaOfHD.Text = row.Cells[3].Value.ToString();
+                DataGridViewRow row = dgvHoaDon.Rows[e.RowIndex];
+                txbMaCTHD.Text = row.Cells[0].Value.ToString();
+                cbxMaSPOfCTHD.SelectedValue = row.Cells[1].Value.ToString();
+                numUpDMaSPOfHD.Value = Convert.ToInt32(row.Cells[2].Selected);
+                txbDonGiaOfHD.Text = row.Cells[3].Value.ToString();
             }
         }
     }

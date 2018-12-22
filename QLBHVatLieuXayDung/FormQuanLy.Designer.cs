@@ -33,14 +33,15 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnShowLoaiSP = new System.Windows.Forms.Button();
+            this.btnFormThanhToan = new System.Windows.Forms.Button();
             this.btnShowSPQL = new System.Windows.Forms.Button();
             this.btnShowKhachHang = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnFormThanhToan = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txbMaCTHD = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.cbxMaSPOfCTHD = new System.Windows.Forms.ComboBox();
             this.btnShowSanPhamQL = new System.Windows.Forms.Button();
@@ -91,7 +92,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvCTHD = new System.Windows.Forms.DataGridView();
-            this.txbMaCTHD = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -164,6 +164,21 @@
             this.btnShowLoaiSP.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnShowLoaiSP.UseVisualStyleBackColor = true;
             this.btnShowLoaiSP.Click += new System.EventHandler(this.btnShowLoaiSP_Click);
+            // 
+            // btnFormThanhToan
+            // 
+            this.btnFormThanhToan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFormThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFormThanhToan.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFormThanhToan.ForeColor = System.Drawing.Color.Green;
+            this.btnFormThanhToan.Location = new System.Drawing.Point(201, 545);
+            this.btnFormThanhToan.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFormThanhToan.Name = "btnFormThanhToan";
+            this.btnFormThanhToan.Size = new System.Drawing.Size(150, 60);
+            this.btnFormThanhToan.TabIndex = 31;
+            this.btnFormThanhToan.Text = "Thanh toán";
+            this.btnFormThanhToan.UseVisualStyleBackColor = true;
+            this.btnFormThanhToan.Click += new System.EventHandler(this.btnFormThanhToan_Click);
             // 
             // btnShowSPQL
             // 
@@ -247,21 +262,6 @@
             this.label9.TabIndex = 32;
             this.label9.Text = "Lưu";
             // 
-            // btnFormThanhToan
-            // 
-            this.btnFormThanhToan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFormThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFormThanhToan.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFormThanhToan.ForeColor = System.Drawing.Color.Green;
-            this.btnFormThanhToan.Location = new System.Drawing.Point(201, 545);
-            this.btnFormThanhToan.Margin = new System.Windows.Forms.Padding(4);
-            this.btnFormThanhToan.Name = "btnFormThanhToan";
-            this.btnFormThanhToan.Size = new System.Drawing.Size(150, 60);
-            this.btnFormThanhToan.TabIndex = 31;
-            this.btnFormThanhToan.Text = "Thanh toán";
-            this.btnFormThanhToan.UseVisualStyleBackColor = true;
-            this.btnFormThanhToan.Click += new System.EventHandler(this.btnFormThanhToan_Click);
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txbMaCTHD);
@@ -280,6 +280,13 @@
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết hóa đơn";
+            // 
+            // txbMaCTHD
+            // 
+            this.txbMaCTHD.Location = new System.Drawing.Point(124, 24);
+            this.txbMaCTHD.Name = "txbMaCTHD";
+            this.txbMaCTHD.Size = new System.Drawing.Size(208, 24);
+            this.txbMaCTHD.TabIndex = 18;
             // 
             // label16
             // 
@@ -327,6 +334,11 @@
             // numUpDMaSPOfHD
             // 
             this.numUpDMaSPOfHD.Location = new System.Drawing.Point(123, 85);
+            this.numUpDMaSPOfHD.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.numUpDMaSPOfHD.Name = "numUpDMaSPOfHD";
             this.numUpDMaSPOfHD.Size = new System.Drawing.Size(209, 24);
             this.numUpDMaSPOfHD.TabIndex = 2;
@@ -866,13 +878,6 @@
             this.dgvCTHD.Size = new System.Drawing.Size(521, 295);
             this.dgvCTHD.TabIndex = 0;
             this.dgvCTHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTHD_CellClick);
-            // 
-            // txbMaCTHD
-            // 
-            this.txbMaCTHD.Location = new System.Drawing.Point(124, 24);
-            this.txbMaCTHD.Name = "txbMaCTHD";
-            this.txbMaCTHD.Size = new System.Drawing.Size(208, 24);
-            this.txbMaCTHD.TabIndex = 18;
             // 
             // FormQuanLy
             // 
