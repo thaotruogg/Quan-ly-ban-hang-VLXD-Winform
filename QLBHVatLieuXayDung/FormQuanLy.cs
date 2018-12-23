@@ -353,8 +353,17 @@ namespace QLBHVatLieuXayDung
                 }
                 catch (System.Data.SqlClient.SqlException)
                 {
-                    lbThemTC.Text = string.Empty;
-                    lbThemTB.Text = "<\\ Mã hóa đơn đã tồn tại >";
+                    
+                    if(dtpNgayHD.Value > DateTime.Today)
+                    {
+                        lbThemTC.Text = string.Empty;
+                        lbThemTB.Text = "<\\ Ngày không hợp lệ >";
+                    }
+                    else
+                    {
+                        lbThemTC.Text = string.Empty;
+                        lbThemTB.Text = "<\\ Mã hóa đơn đã tồn tại >";
+                    }
                 }
             }
             else if (coThem == false)

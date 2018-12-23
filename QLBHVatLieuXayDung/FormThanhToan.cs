@@ -23,6 +23,8 @@ namespace QLBHVatLieuXayDung
         void LoadThanhToan()
         {
             LoadListKH(cbxTT_maKH);
+            lbThemTB.Text = string.Empty;
+            lbThemTC.Text = string.Empty;
         }
         #endregion
 
@@ -36,19 +38,27 @@ namespace QLBHVatLieuXayDung
             string maKhachHang = cbxTT_maKH.SelectedValue.ToString();
             string ngayPhieu = string.Format("{0:MM/dd/yyyy}", dtpTT_ngayPhieu.Value);
             double soTien = double.Parse(txbTT_soTien.Text);
-            if(txbTT_soTien.Text == string.Empty)
+            try
             {
+                if (txbTT_soTien.Text == string.Empty)
+                {
 
+                }
+                else if (ThanhToan.Instance.ThemThanhToan(maKhachHang, ngayPhieu, soTien))
+                {
+                    lbThemTB.Text = string.Empty;
+                    lbThemTC.Text = "<\\ Thêm thành công >";
+                }
+                else
+                {
+                    lbThemTC.Text = string.Empty;
+                    lbThemTB.Text = "<\\ Xóa thất bại! >";
+                }
             }
-            else if(ThanhToan.Instance.ThemThanhToan(maKhachHang, ngayPhieu, soTien))
-            {
-                lbThemTB.Text = string.Empty;
-                lbThemTC.Text = "<\\ Thêm thành công >";
-            }
-            else
+            catch (System.Data.SqlClient.SqlException)
             {
                 lbThemTC.Text = string.Empty;
-                lbThemTB.Text = "<\\ Xóa thất bại! >";
+                lbThemTB.Text = "<\\ Ngày không hợp lệ >";
             }
         }
         
