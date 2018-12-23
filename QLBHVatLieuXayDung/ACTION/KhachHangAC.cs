@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 
 namespace QLBHVatLieuXayDung.DAO
 {
@@ -13,7 +8,7 @@ namespace QLBHVatLieuXayDung.DAO
 
         public static KhachHangAC Instance
         {
-            get { if (instance == null) instance = new KhachHangAC(); return KhachHangAC.instance; }
+            get { if (instance == null) instance = new KhachHangAC(); return instance; }
             private set { instance = value; }
         }
 

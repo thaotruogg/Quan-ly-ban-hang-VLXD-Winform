@@ -1,12 +1,5 @@
 ﻿using QLBHVatLieuXayDung.DAO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLBHVatLieuXayDung
@@ -14,7 +7,7 @@ namespace QLBHVatLieuXayDung
     public partial class FormKhachHang : Form
     {
         public BindingSource list = new BindingSource();
-        public Boolean coThem;
+        public bool coThem;
         public FormKhachHang()
         {
             InitializeComponent();
@@ -38,7 +31,7 @@ namespace QLBHVatLieuXayDung
             KhachHangBinding();
         }
 
-        private void SetLock(Boolean a)
+        private void SetLock(bool a)
         {
             txbMaKHOfKH.Enabled = a;
             txbTenKHOfKH.ReadOnly = !a;
@@ -49,7 +42,7 @@ namespace QLBHVatLieuXayDung
             
         }
 
-        private void SetBtn(Boolean a)
+        private void SetBtn(bool a)
         {
             btnAddKH.Enabled = a;
             btnEditKhachHang.Enabled = a;
@@ -94,7 +87,7 @@ namespace QLBHVatLieuXayDung
 
         private void btnBackKH_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnAddSP_Click(object sender, EventArgs e)
@@ -149,7 +142,7 @@ namespace QLBHVatLieuXayDung
                         lbThemTB.Text = "<\\ Mã khách hàng đã tồn tại >";
                     }
                 }
-                catch (System.FormatException)
+                catch (FormatException)
                 {
                     lbThemTB.Text = string.Empty;
                     lbThemTB.Text = "<\\ Chưa nhập tiền nợ >";
@@ -185,7 +178,7 @@ namespace QLBHVatLieuXayDung
         {
             string maKH = txbMaKHOfKH.Text;
             DialogResult delete = MessageBox.Show("\tBạn có muốn xóa " + txbTenKHOfKH.Text + " không?\n\n<\\ Dữ liệu khách hàng trong [HÓA ĐƠN] cũng sẽ bị xóa >", "Chời ơi tin được hong", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (delete == System.Windows.Forms.DialogResult.Yes)
+            if (delete == DialogResult.Yes)
             {
                 if (KhachHangAC.Instance.XoaKhachHang(maKH))
                 {

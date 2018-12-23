@@ -1,12 +1,5 @@
 ﻿using QLBHVatLieuXayDung.DAO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLBHVatLieuXayDung
@@ -162,29 +155,29 @@ namespace QLBHVatLieuXayDung
         #region events
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnShowHoaDon_Click(object sender, EventArgs e)
         {
             FormKhachHang f = new FormKhachHang();
-            this.Hide();
+            Hide();
             f.ShowDialog();
-            this.Show();
+            Show();
         }
 
         private void btnShowSPQL_Click(object sender, EventArgs e)
         {
             FormSanPham f = new FormSanPham();
-            this.Hide();
+            Hide();
             f.ShowDialog();
-            this.Show();
+            Show();
         }
 
         private void FormQuanLy_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult exit = MessageBox.Show("Bạn có chắc muốn đăng xuất hông?", "Chời ơi tin được hông", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(exit != System.Windows.Forms.DialogResult.Yes)
+            if(exit != DialogResult.Yes)
             {
                 e.Cancel = true;
             }
@@ -225,9 +218,9 @@ namespace QLBHVatLieuXayDung
         private void btnShowLoaiSP_Click(object sender, EventArgs e)
         {
             FormLoaiSanPham f = new FormLoaiSanPham();
-            this.Hide();
+            Hide();
             f.ShowDialog();
-            this.Show();
+            Show();
         }
         private void dgvHoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -441,7 +434,7 @@ namespace QLBHVatLieuXayDung
             string maHoaDon = txbMaCTHD.Text;
             string maSanPham = cbxMaSPOfCTHD.SelectedValue.ToString();
             int soLuong = Convert.ToInt32(numericUpDownSLCTHD.Value);
-            double donGia = Double.Parse(txbDonGiaOfHD.Text);
+            double donGia = double.Parse(txbDonGiaOfHD.Text);
             if (coThemCTHD == true)
             {
                 try
@@ -471,7 +464,7 @@ namespace QLBHVatLieuXayDung
                     lbThemTCCTHD.Text = string.Empty;
                     lbThemTBCTHD.Text = "<\\ Mã hóa đơn không tồn tại >";
                 }
-                catch (System.FormatException)
+                catch (FormatException)
                 {
                     lbThemTCCTHD.Text = string.Empty;
                     lbThemTBCTHD.Text = "<\\ Vui lòng nhập đầy đủ thông tin >";

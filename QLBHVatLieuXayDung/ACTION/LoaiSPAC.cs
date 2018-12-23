@@ -1,10 +1,5 @@
 ﻿using QLBHVatLieuXayDung.INFO;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QLBHVatLieuXayDung.DAO
 {
@@ -14,7 +9,7 @@ namespace QLBHVatLieuXayDung.DAO
 
         public static LoaiSPAC Instance
         {
-            get { if (instance == null) instance = new LoaiSPAC(); return LoaiSPAC.instance; }
+            get { if (instance == null) instance = new LoaiSPAC(); return instance; }
             private set { instance = value; }
         }
 

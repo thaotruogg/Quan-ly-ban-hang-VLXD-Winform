@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLBHVatLieuXayDung
@@ -48,10 +41,10 @@ namespace QLBHVatLieuXayDung
             if (Login(userName, passWord))
             {
                 FormQuanLy f = new FormQuanLy();
-                this.Hide();
+                Hide();
                 EnableLogin();
                 f.ShowDialog();
-                this.Show();
+                Show();
             }
             else
             {
