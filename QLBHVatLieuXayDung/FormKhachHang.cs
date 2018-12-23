@@ -104,66 +104,74 @@ namespace QLBHVatLieuXayDung
 
         private void btnSaveKH_Click(object sender, EventArgs e)
         {
-            string name = txbTenKHOfKH.Text;
-            string maKH = txbMaKHOfKH.Text;
-            string diaChi = txbDiaChiOfKH.Text;
-            string soDienThoai = txbSdtOfKH.Text;
-            float noDauKi = float.Parse(txbNoDauKiOfKH.Text);
-            float noCuoiKi = float.Parse(txbNoCuoiKiOfKH.Text);
-            if(coThem == true)
+            try
             {
-                try
+                string name = txbTenKHOfKH.Text;
+                string maKH = txbMaKHOfKH.Text;
+                string diaChi = txbDiaChiOfKH.Text;
+                string soDienThoai = txbSdtOfKH.Text;
+                float noDauKi = float.Parse(txbNoDauKiOfKH.Text);
+                float noCuoiKi = float.Parse(txbNoCuoiKiOfKH.Text);
+                if (coThem == true)
                 {
-                    if (KhachHangAC.Instance.ThemKhachHang(maKH, name, diaChi, soDienThoai, noDauKi, noCuoiKi))
+                    try
+                    {
+                        if (KhachHangAC.Instance.ThemKhachHang(maKH, name, diaChi, soDienThoai, noDauKi, noCuoiKi))
+                        {
+                            lbThemTB.Text = string.Empty;
+                            lbThemTC.Text = "<\\ Thêm khách hàng thành công >";
+                            LoadListKH();
+                            SetLock(false);
+                            SetBtn(true);
+                            //dgvKhachHang.Enabled = true;
+                        }
+                        else
+                        {
+                            lbThemTB.Text = "Thêm khách hàng thất bại!";
+                        }
+                    }
+                    catch (System.Data.SqlClient.SqlException)
+                    {
+
+                        if (txbTenKHOfKH.Text == string.Empty || txbSdtOfKH.Text == string.Empty || txbTenKHOfKH.Text == "KH")
+                        {
+                            lbThemTB.Text = string.Empty;
+                            lbThemTB.Text = "<\\ Vui lòng nhập đầy đủ thông tin >";
+                        }
+                        else
+                        {
+                            lbThemTB.Text = string.Empty;
+                            lbThemTB.Text = "<\\ Mã khách hàng đã tồn tại >";
+                        }
+                    }
+                    catch (FormatException)
                     {
                         lbThemTB.Text = string.Empty;
-                        lbThemTC.Text = "<\\ Thêm khách hàng thành công >";
-                        LoadListKH();
-                        SetLock(false);
-                        SetBtn(true);
-                        //dgvKhachHang.Enabled = true;
+                        lbThemTB.Text = "<\\ Chưa nhập tiền nợ >";
                     }
-                    else
-                    {
-                        lbThemTB.Text = "Thêm khách hàng thất bại!";
-                    }
-                }
-                catch (System.Data.SqlClient.SqlException)
-                {
-                    
-                    if(txbTenKHOfKH.Text == string.Empty || txbSdtOfKH.Text == string.Empty || txbTenKHOfKH.Text == "KH")
-                    {
-                        lbThemTB.Text = string.Empty;
-                        lbThemTB.Text = "<\\ Vui lòng nhập đầy đủ thông tin >";
-                    }
-                    else
-                    {
-                        lbThemTB.Text = string.Empty;
-                        lbThemTB.Text = "<\\ Mã khách hàng đã tồn tại >";
-                    }
-                }
-                catch (FormatException)
-                {
-                    lbThemTB.Text = string.Empty;
-                    lbThemTB.Text = "<\\ Chưa nhập tiền nợ >";
-                }
-            }
-            else
-            {
-                if(KhachHangAC.Instance.SuaKhachHang(maKH, name, diaChi, soDienThoai, noDauKi, noCuoiKi))
-                {
-                    lbThemTB.Text = string.Empty;
-                    lbThemTC.Text = "<\\ Sửa khách hàng thành công >";
-                    LoadListKH();
-                    SetLock(false);
-                    SetBtn(true);
                 }
                 else
                 {
-                    lbThemTB.Text = "<\\ Sửa khách hàng thất bại! >";
+                    if (KhachHangAC.Instance.SuaKhachHang(maKH, name, diaChi, soDienThoai, noDauKi, noCuoiKi))
+                    {
+                        lbThemTB.Text = string.Empty;
+                        lbThemTC.Text = "<\\ Sửa khách hàng thành công >";
+                        LoadListKH();
+                        txbMaKHOfKH.ReadOnly = false;
+                        SetLock(false);
+                        SetBtn(true);
+                    }
+                    else
+                    {
+                        lbThemTB.Text = string.Empty;
+                        lbThemTB.Text = "<\\ Sửa khách hàng thất bại! >";
+                    }
                 }
             }
-            
+            catch (FormatException)
+            {
+
+            }
         }
         
         private void btnEditKhachHang_Click(object sender, EventArgs e)

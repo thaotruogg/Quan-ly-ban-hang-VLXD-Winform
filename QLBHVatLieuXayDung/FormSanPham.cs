@@ -166,6 +166,7 @@ namespace QLBHVatLieuXayDung
                     lbThemTB.Text = string.Empty;
                     lbThemTC.Text = "<\\ Sửa sản phẩm thành công >";
                     LoadListSanPham();
+                    txtMaSPofSP.ReadOnly = false;
                     SetLock(false);
                     SetBtnLock(false);
                 }

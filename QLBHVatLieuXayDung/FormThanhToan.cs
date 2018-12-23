@@ -11,9 +11,15 @@ namespace QLBHVatLieuXayDung
         {
             InitializeComponent();
             LoadThanhToan();
+            ChangeBtn();
         }
 
         #region Methods
+        void ChangeBtn()
+        {
+            btnTT_save.TabStop = false;
+            btnTT_save.FlatAppearance.BorderSize = 0;
+        }
         void LoadListKH(ComboBox box)
         {
             box.DataSource = KhachHangAC.Instance.LoadListKhachHang();
@@ -30,16 +36,16 @@ namespace QLBHVatLieuXayDung
 
         private void btnBackThanhToan_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnTT_save_Click(object sender, EventArgs e)
         {
-            string maKhachHang = cbxTT_maKH.SelectedValue.ToString();
-            string ngayPhieu = string.Format("{0:MM/dd/yyyy}", dtpTT_ngayPhieu.Value);
-            double soTien = double.Parse(txbTT_soTien.Text);
             try
             {
+                string maKhachHang = cbxTT_maKH.SelectedValue.ToString();
+                string ngayPhieu = string.Format("{0:MM/dd/yyyy}", dtpTT_ngayPhieu.Value);
+                double soTien = double.Parse(txbTT_soTien.Text);
                 if (txbTT_soTien.Text == string.Empty)
                 {
 

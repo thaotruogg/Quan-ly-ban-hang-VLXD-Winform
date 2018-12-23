@@ -156,6 +156,7 @@ namespace QLBHVatLieuXayDung
         private void btnExit_Click(object sender, EventArgs e)
         {
             Close();
+            Dispose();
         }
 
         private void btnShowHoaDon_Click(object sender, EventArgs e)
@@ -210,6 +211,8 @@ namespace QLBHVatLieuXayDung
         private void btnRefreshHD_Click(object sender, EventArgs e)
         {
             LoadListHoaDon();
+            LoadMaKHIntoCombobox(cbxMaKHOfHD);
+            LoadMaSPIntoCombobox(cbxMaSPOfCTHD);
             lbThemTB.Text = string.Empty;
             lbThemTC.Text = string.Empty;
             //HoaDonBinding();

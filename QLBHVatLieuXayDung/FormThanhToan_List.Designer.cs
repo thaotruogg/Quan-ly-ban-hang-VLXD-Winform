@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormThanhToan_List));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbThemTB = new System.Windows.Forms.Label();
             this.lbThemTC = new System.Windows.Forms.Label();
@@ -341,10 +342,12 @@
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormThanhToan_List";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh sách thanh toán";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

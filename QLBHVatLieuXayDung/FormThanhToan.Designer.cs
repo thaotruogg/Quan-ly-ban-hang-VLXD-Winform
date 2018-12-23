@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormThanhToan));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbThemTB = new System.Windows.Forms.Label();
+            this.lbThemTC = new System.Windows.Forms.Label();
             this.dtpTT_ngayPhieu = new System.Windows.Forms.DateTimePicker();
             this.cbxTT_maKH = new System.Windows.Forms.ComboBox();
-            this.btnTT_save = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txbTT_soTien = new System.Windows.Forms.TextBox();
@@ -41,8 +43,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.btnBackThanhToan = new System.Windows.Forms.Button();
-            this.lbThemTB = new System.Windows.Forms.Label();
-            this.lbThemTC = new System.Windows.Forms.Label();
+            this.btnTT_save = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +78,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thanh toán";
             // 
+            // lbThemTB
+            // 
+            this.lbThemTB.AutoSize = true;
+            this.lbThemTB.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThemTB.ForeColor = System.Drawing.Color.Red;
+            this.lbThemTB.Location = new System.Drawing.Point(43, 212);
+            this.lbThemTB.Name = "lbThemTB";
+            this.lbThemTB.Size = new System.Drawing.Size(226, 18);
+            this.lbThemTB.TabIndex = 47;
+            this.lbThemTB.Text = "<\\\\ Vui lòng nhập đầy đủ thông tin >";
+            this.lbThemTB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbThemTC
+            // 
+            this.lbThemTC.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThemTC.ForeColor = System.Drawing.Color.Green;
+            this.lbThemTC.Location = new System.Drawing.Point(7, 212);
+            this.lbThemTC.Name = "lbThemTC";
+            this.lbThemTC.Size = new System.Drawing.Size(293, 18);
+            this.lbThemTC.TabIndex = 46;
+            this.lbThemTC.Text = "Thêm sản phẩm thành công";
+            this.lbThemTC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // dtpTT_ngayPhieu
             // 
             this.dtpTT_ngayPhieu.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -96,18 +120,6 @@
             this.cbxTT_maKH.Name = "cbxTT_maKH";
             this.cbxTT_maKH.Size = new System.Drawing.Size(173, 25);
             this.cbxTT_maKH.TabIndex = 10;
-            // 
-            // btnTT_save
-            // 
-            this.btnTT_save.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTT_save.ForeColor = System.Drawing.Color.Red;
-            this.btnTT_save.Location = new System.Drawing.Point(214, 149);
-            this.btnTT_save.Name = "btnTT_save";
-            this.btnTT_save.Size = new System.Drawing.Size(88, 34);
-            this.btnTT_save.TabIndex = 9;
-            this.btnTT_save.Text = "Thanh toán";
-            this.btnTT_save.UseVisualStyleBackColor = true;
-            this.btnTT_save.Click += new System.EventHandler(this.btnTT_save_Click);
             // 
             // label5
             // 
@@ -196,31 +208,23 @@
             this.btnBackThanhToan.UseVisualStyleBackColor = false;
             this.btnBackThanhToan.Click += new System.EventHandler(this.btnBackThanhToan_Click);
             // 
-            // lbThemTB
+            // btnTT_save
             // 
-            this.lbThemTB.AutoSize = true;
-            this.lbThemTB.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbThemTB.ForeColor = System.Drawing.Color.Red;
-            this.lbThemTB.Location = new System.Drawing.Point(43, 212);
-            this.lbThemTB.Name = "lbThemTB";
-            this.lbThemTB.Size = new System.Drawing.Size(226, 18);
-            this.lbThemTB.TabIndex = 47;
-            this.lbThemTB.Text = "<\\\\ Vui lòng nhập đầy đủ thông tin >";
-            this.lbThemTB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbThemTC
-            // 
-            this.lbThemTC.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbThemTC.ForeColor = System.Drawing.Color.Green;
-            this.lbThemTC.Location = new System.Drawing.Point(7, 212);
-            this.lbThemTC.Name = "lbThemTC";
-            this.lbThemTC.Size = new System.Drawing.Size(293, 18);
-            this.lbThemTC.TabIndex = 46;
-            this.lbThemTC.Text = "Thêm sản phẩm thành công";
-            this.lbThemTC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTT_save.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTT_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTT_save.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTT_save.ForeColor = System.Drawing.Color.Green;
+            this.btnTT_save.Image = global::QLBHVatLieuXayDung.Properties.Resources.Paper_Money_32px;
+            this.btnTT_save.Location = new System.Drawing.Point(212, 146);
+            this.btnTT_save.Name = "btnTT_save";
+            this.btnTT_save.Size = new System.Drawing.Size(90, 42);
+            this.btnTT_save.TabIndex = 9;
+            this.btnTT_save.UseVisualStyleBackColor = true;
+            this.btnTT_save.Click += new System.EventHandler(this.btnTT_save_Click);
             // 
             // FormThanhToan
             // 
+            this.AcceptButton = this.btnTT_save;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
@@ -230,11 +234,11 @@
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormThanhToan";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thanh toán";
             this.groupBox1.ResumeLayout(false);
