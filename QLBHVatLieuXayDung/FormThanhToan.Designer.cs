@@ -35,6 +35,7 @@
             this.lbThemTC = new System.Windows.Forms.Label();
             this.dtpTT_ngayPhieu = new System.Windows.Forms.DateTimePicker();
             this.cbxTT_maKH = new System.Windows.Forms.ComboBox();
+            this.btnTT_save = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txbTT_soTien = new System.Windows.Forms.TextBox();
@@ -43,7 +44,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.btnBackThanhToan = new System.Windows.Forms.Button();
-            this.btnTT_save = new System.Windows.Forms.Button();
+            this.btnThanhToan_chonKH = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +52,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 36);
+            this.label1.Location = new System.Drawing.Point(6, 34);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 17);
@@ -60,6 +61,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnThanhToan_chonKH);
             this.groupBox1.Controls.Add(this.lbThemTB);
             this.groupBox1.Controls.Add(this.lbThemTC);
             this.groupBox1.Controls.Add(this.dtpTT_ngayPhieu);
@@ -105,10 +107,10 @@
             // 
             this.dtpTT_ngayPhieu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpTT_ngayPhieu.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTT_ngayPhieu.Location = new System.Drawing.Point(124, 66);
+            this.dtpTT_ngayPhieu.Location = new System.Drawing.Point(96, 64);
             this.dtpTT_ngayPhieu.Name = "dtpTT_ngayPhieu";
             this.dtpTT_ngayPhieu.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dtpTT_ngayPhieu.Size = new System.Drawing.Size(173, 24);
+            this.dtpTT_ngayPhieu.Size = new System.Drawing.Size(206, 24);
             this.dtpTT_ngayPhieu.TabIndex = 11;
             // 
             // cbxTT_maKH
@@ -116,16 +118,30 @@
             this.cbxTT_maKH.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbxTT_maKH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTT_maKH.FormattingEnabled = true;
-            this.cbxTT_maKH.Location = new System.Drawing.Point(124, 30);
+            this.cbxTT_maKH.Location = new System.Drawing.Point(96, 28);
             this.cbxTT_maKH.Name = "cbxTT_maKH";
-            this.cbxTT_maKH.Size = new System.Drawing.Size(173, 25);
+            this.cbxTT_maKH.Size = new System.Drawing.Size(175, 25);
             this.cbxTT_maKH.TabIndex = 10;
+            // 
+            // btnTT_save
+            // 
+            this.btnTT_save.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTT_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTT_save.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTT_save.ForeColor = System.Drawing.Color.Green;
+            this.btnTT_save.Image = global::QLBHVatLieuXayDung.Properties.Resources.Paper_Money_32px;
+            this.btnTT_save.Location = new System.Drawing.Point(212, 146);
+            this.btnTT_save.Name = "btnTT_save";
+            this.btnTT_save.Size = new System.Drawing.Size(90, 42);
+            this.btnTT_save.TabIndex = 9;
+            this.btnTT_save.UseVisualStyleBackColor = true;
+            this.btnTT_save.Click += new System.EventHandler(this.btnTT_save_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(260, 105);
+            this.label5.Location = new System.Drawing.Point(262, 102);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 18);
@@ -144,10 +160,11 @@
             // 
             // txbTT_soTien
             // 
-            this.txbTT_soTien.Location = new System.Drawing.Point(124, 101);
+            this.txbTT_soTien.Location = new System.Drawing.Point(96, 99);
             this.txbTT_soTien.Name = "txbTT_soTien";
-            this.txbTT_soTien.Size = new System.Drawing.Size(129, 24);
+            this.txbTT_soTien.Size = new System.Drawing.Size(162, 24);
             this.txbTT_soTien.TabIndex = 7;
+            this.txbTT_soTien.Text = "0";
             this.txbTT_soTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label3
@@ -208,19 +225,18 @@
             this.btnBackThanhToan.UseVisualStyleBackColor = false;
             this.btnBackThanhToan.Click += new System.EventHandler(this.btnBackThanhToan_Click);
             // 
-            // btnTT_save
+            // btnThanhToan_chonKH
             // 
-            this.btnTT_save.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTT_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTT_save.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTT_save.ForeColor = System.Drawing.Color.Green;
-            this.btnTT_save.Image = global::QLBHVatLieuXayDung.Properties.Resources.Paper_Money_32px;
-            this.btnTT_save.Location = new System.Drawing.Point(212, 146);
-            this.btnTT_save.Name = "btnTT_save";
-            this.btnTT_save.Size = new System.Drawing.Size(90, 42);
-            this.btnTT_save.TabIndex = 9;
-            this.btnTT_save.UseVisualStyleBackColor = true;
-            this.btnTT_save.Click += new System.EventHandler(this.btnTT_save_Click);
+            this.btnThanhToan_chonKH.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThanhToan_chonKH.Font = new System.Drawing.Font("Segoe MDL2 Assets", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan_chonKH.Location = new System.Drawing.Point(278, 29);
+            this.btnThanhToan_chonKH.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThanhToan_chonKH.Name = "btnThanhToan_chonKH";
+            this.btnThanhToan_chonKH.Size = new System.Drawing.Size(24, 24);
+            this.btnThanhToan_chonKH.TabIndex = 48;
+            this.btnThanhToan_chonKH.Text = "";
+            this.btnThanhToan_chonKH.UseVisualStyleBackColor = true;
+            this.btnThanhToan_chonKH.Click += new System.EventHandler(this.btnThanhToan_chonKH_Click);
             // 
             // FormThanhToan
             // 
@@ -267,5 +283,6 @@
         private System.Windows.Forms.ComboBox cbxTT_maKH;
         private System.Windows.Forms.Label lbThemTB;
         private System.Windows.Forms.Label lbThemTC;
+        private System.Windows.Forms.Button btnThanhToan_chonKH;
     }
 }

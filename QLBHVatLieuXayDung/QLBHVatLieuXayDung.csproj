@@ -248,5 +248,8 @@
   <ItemGroup>
     <None Include="Resources\Paper Money_32px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Cash__48.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

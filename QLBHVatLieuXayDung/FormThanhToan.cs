@@ -66,7 +66,17 @@ namespace QLBHVatLieuXayDung
                 lbThemTC.Text = string.Empty;
                 lbThemTB.Text = "<\\ Ngày không hợp lệ >";
             }
+            catch (FormatException)
+            {
+                lbThemTC.Text = string.Empty;
+                lbThemTB.Text = "<\\ Thanh toán không hợp lệ >";
+            }
         }
-        
+
+        private void btnThanhToan_chonKH_Click(object sender, EventArgs e)
+        {
+            FormChonKhachHang f = new FormChonKhachHang();
+            f.Show();
+        }
     }
 }

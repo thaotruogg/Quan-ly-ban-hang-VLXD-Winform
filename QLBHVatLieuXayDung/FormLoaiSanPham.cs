@@ -12,12 +12,27 @@ namespace QLBHVatLieuXayDung
         {
             InitializeComponent();
             LoadLoaiSP();
+            LoadButtonDesign();
         }
+        void LoadButtonDesign()
+        {
+            btnLoaiSP_add.TabStop = false;
+            btnLoaiSP_edit.TabStop = false;
+            btnLoaiSP_delete.TabStop = false;
+            btnLoaiSP_save.TabStop = false;
+            btnLoaiSP_clear.TabStop = false;
+            btnLoaiSP_add.FlatAppearance.BorderSize = 0;
+            btnLoaiSP_edit.FlatAppearance.BorderSize = 0;
+            btnLoaiSP_delete.FlatAppearance.BorderSize = 0;
+            btnLoaiSP_save.FlatAppearance.BorderSize = 0;
+            btnLoaiSP_clear.FlatAppearance.BorderSize = 0;
+        }
+
         #region Method
         void LoaiSanPhamDataBinding()
         {
-            txtMaLoaiSP.DataBindings.Add(new Binding("Text", dgvLoaiSP.DataSource, "Mã loại sản phẩm", true, DataSourceUpdateMode.Never));
-            txtTenLoaiSP.DataBindings.Add(new Binding("Text", dgvLoaiSP.DataSource, "Tên loại sản phẩm", true, DataSourceUpdateMode.Never));
+            txbLoaiSP_maLoai.DataBindings.Add(new Binding("Text", dgvLoaiSP.DataSource, "Mã loại sản phẩm", true, DataSourceUpdateMode.Never));
+            txbLoaiSP_tenLoai.DataBindings.Add(new Binding("Text", dgvLoaiSP.DataSource, "Tên loại sản phẩm", true, DataSourceUpdateMode.Never));
         }
         void LoadListLoaiSP()
         {
@@ -35,21 +50,21 @@ namespace QLBHVatLieuXayDung
         }
         void SetLock(bool a)
         {
-            txtMaLoaiSP.Enabled = a;
-            txtTenLoaiSP.ReadOnly = !a;
+            txbLoaiSP_maLoai.Enabled = a;
+            txbLoaiSP_tenLoai.ReadOnly = !a;
         }
         void SetBtnLock(bool a)
         {
-            btnAddLoaiSP.Enabled = a;
-            btnEditLoaiSP.Enabled = a;
-            btnDeleteLoaiSP.Enabled = a;
-            btnSaveLoaiSP.Enabled = !a;
-            btnClearLoaiSP.Enabled = !a;
+            btnLoaiSP_add.Enabled = a;
+            btnLoaiSP_edit.Enabled = a;
+            btnLoaiSP_delete.Enabled = a;
+            btnLoaiSP_save.Enabled = !a;
+            btnLoaiSP_clear.Enabled = !a;
         }
         void SetNULL()
         {
-            txtMaLoaiSP.Text = string.Empty;
-            txtTenLoaiSP.Text = string.Empty;
+            txbLoaiSP_maLoai.Text = string.Empty;
+            txbLoaiSP_tenLoai.Text = string.Empty;
             lbThemTB.Text = string.Empty;
             lbThemTC.Text = string.Empty;
         }
@@ -76,7 +91,7 @@ namespace QLBHVatLieuXayDung
         private void btnAddLoaiSP_Click(object sender, EventArgs e)
         {
             SetNULL();
-            txtMaLoaiSP.Text = "VL";
+            txbLoaiSP_maLoai.Text = "VL";
             SetLock(true);
             SetBtnLock(false);
             coThem = true;
@@ -84,13 +99,13 @@ namespace QLBHVatLieuXayDung
 
         private void btnSaveLoaiSP_Click(object sender, EventArgs e)
         {
-            string maLoaiSP = txtMaLoaiSP.Text;
-            string tenLoaiSP = txtTenLoaiSP.Text;
+            string maLoaiSP = txbLoaiSP_maLoai.Text;
+            string tenLoaiSP = txbLoaiSP_tenLoai.Text;
             if(coThem == true)
             {
                 try
                 {
-                    if (txtTenLoaiSP.Text == string.Empty || txtMaLoaiSP.Text == string.Empty || txtMaLoaiSP.Text == "VL")
+                    if (txbLoaiSP_tenLoai.Text == string.Empty || txbLoaiSP_maLoai.Text == string.Empty || txbLoaiSP_maLoai.Text == "VL")
                     {
                         lbThemTC.Text = string.Empty;
                         lbThemTB.Text = "<\\ Vui lòng nhập đầy đủ thông tin >";
@@ -118,7 +133,7 @@ namespace QLBHVatLieuXayDung
             }
             else
             {
-                if (txtTenLoaiSP.Text == string.Empty)
+                if (txbLoaiSP_tenLoai.Text == string.Empty)
                 {
                     lbThemTC.Text = string.Empty;
                     lbThemTB.Text = "<\\ Vui lòng nhập đầy đủ thông tin >";
@@ -129,7 +144,7 @@ namespace QLBHVatLieuXayDung
                     lbThemTB.Text = string.Empty;
                     lbThemTC.Text = "<\\ Sửa sản phẩm thành công >";
                     LoadListLoaiSP();
-                    txtMaLoaiSP.ReadOnly = false;
+                    txbLoaiSP_maLoai.ReadOnly = false;
                     SetLock(false);
                     SetBtnLock(true);
                 }
@@ -147,14 +162,14 @@ namespace QLBHVatLieuXayDung
         {
             SetLock(true);
             SetBtnLock(false);
-            txtMaLoaiSP.ReadOnly = true;
+            txbLoaiSP_maLoai.ReadOnly = true;
             coThem = false;
         }
 
         private void btnDeleteLoaiSP_Click(object sender, EventArgs e)
         {
-            string maLoai = txtMaLoaiSP.Text;
-            DialogResult delete = MessageBox.Show("\tBạn có muốn xóa [" + txtTenLoaiSP.Text + "] không?\n\n<\\ Dữ liệu [SẢN PHẨM] cũng sẽ bị ảnh hưởng >", "Chời ơi tin được hong", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            string maLoai = txbLoaiSP_maLoai.Text;
+            DialogResult delete = MessageBox.Show("\tBạn có muốn xóa [" + txbLoaiSP_tenLoai.Text + "] không?\n\n<\\ Dữ liệu [SẢN PHẨM] cũng sẽ bị ảnh hưởng >", "Chời ơi tin được hong", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (delete == DialogResult.Yes)
             {
                 try

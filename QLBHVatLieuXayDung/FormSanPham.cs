@@ -12,28 +12,42 @@ namespace QLBHVatLieuXayDung
         {
             InitializeComponent();
             LoadSanPham();
+            LoadButtonDesign();
+        }
+        void LoadButtonDesign()
+        {
+            btnSanPham_add.TabStop = false;
+            btnSanPham_edit.TabStop = false;
+            btnSanPham_delete.TabStop = false;
+            btnSanPham_save.TabStop = false;
+            btnSanPham_clear.TabStop = false;
+            btnSanPham_add.FlatAppearance.BorderSize = 0;
+            btnSanPham_edit.FlatAppearance.BorderSize = 0;
+            btnSanPham_delete.FlatAppearance.BorderSize = 0;
+            btnSanPham_save.FlatAppearance.BorderSize = 0;
+            btnSanPham_clear.FlatAppearance.BorderSize = 0;
         }
         #region Methods
         void SetNULL()
         {
-            txtMaSPofSP.Text = string.Empty;
-            txtNhaSXofSP.Text = string.Empty;
-            txtTenSPofSP.Text = string.Empty;
+            txbSanPham_maSP.Text = string.Empty;
+            txbSanPham_nSX.Text = string.Empty;
+            txtSanPham_tenSP.Text = string.Empty;
         }
         void SetBtnLock(bool a)
         {
-            btnSaveSP.Enabled = a;
-            btnClearSP.Enabled = a;
-            btnAddSP.Enabled = !a;
-            btnEditSP.Enabled = !a;
-            btnDeleteSP.Enabled = !a;
+            btnSanPham_save.Enabled = a;
+            btnSanPham_clear.Enabled = a;
+            btnSanPham_add.Enabled = !a;
+            btnSanPham_edit.Enabled = !a;
+            btnSanPham_delete.Enabled = !a;
         }
         void SetLock(bool a)
         {
-            txtMaSPofSP.Enabled = a;
-            txtTenSPofSP.ReadOnly = !a;
-            txtNhaSXofSP.ReadOnly = !a;
-            cbxMaLoaiSP.Enabled = a;
+            txbSanPham_maSP.Enabled = a;
+            txtSanPham_tenSP.ReadOnly = !a;
+            txbSanPham_nSX.ReadOnly = !a;
+            cbxSanPham_loaiSP.Enabled = a;
         }
         void LoadLoaiSPIntoCombobox(ComboBox bx)
         {
@@ -45,7 +59,7 @@ namespace QLBHVatLieuXayDung
         {
             dgvSanPham.DataSource = list;
             LoadListSanPham();
-            LoadLoaiSPIntoCombobox(cbxMaLoaiSP);
+            LoadLoaiSPIntoCombobox(cbxSanPham_loaiSP);
             SetNULL();
             lbThemTB.Text = string.Empty;
             lbThemTC.Text = string.Empty;
@@ -80,7 +94,7 @@ namespace QLBHVatLieuXayDung
         private void btnAddSP_Click(object sender, EventArgs e)
         {
             SetNULL();
-            txtMaSPofSP.Text = "SP";
+            txbSanPham_maSP.Text = "SP";
             SetBtnLock(true);
             SetLock(true);
             coThem = true;
@@ -90,7 +104,7 @@ namespace QLBHVatLieuXayDung
         {
             SetBtnLock(true);
             SetLock(true);
-            txtMaSPofSP.ReadOnly = true;
+            txbSanPham_maSP.ReadOnly = true;
             coThem = false;
         }
         private void dgvSanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -106,33 +120,33 @@ namespace QLBHVatLieuXayDung
             {
                 if (dgvSanPham.SelectedRows.Count > 0)
                 {
-                    txtMaSPofSP.Text = dgvSanPham.SelectedRows[0].Cells[0].Value.ToString();
-                    txtTenSPofSP.Text = dgvSanPham.SelectedRows[0].Cells[1].Value.ToString();
-                    txtNhaSXofSP.Text = dgvSanPham.SelectedRows[0].Cells[2].Value.ToString();
-                    cbxMaLoaiSP.SelectedValue = dgvSanPham.SelectedRows[0].Cells[3].Value.ToString();
+                    txbSanPham_maSP.Text = dgvSanPham.SelectedRows[0].Cells[0].Value.ToString();
+                    txtSanPham_tenSP.Text = dgvSanPham.SelectedRows[0].Cells[1].Value.ToString();
+                    txbSanPham_nSX.Text = dgvSanPham.SelectedRows[0].Cells[2].Value.ToString();
+                    cbxSanPham_loaiSP.SelectedValue = dgvSanPham.SelectedRows[0].Cells[3].Value.ToString();
                 }
                 else if (e.RowIndex >= 0)
                 {
                     DataGridViewRow row = dgvSanPham.Rows[e.RowIndex];
-                    txtMaSPofSP.Text = row.Cells[0].Value.ToString();
-                    txtTenSPofSP.Text = row.Cells[1].Value.ToString();
-                    txtNhaSXofSP.Text = row.Cells[2].Value.ToString();
-                    cbxMaLoaiSP.SelectedValue = row.Cells[3].Value.ToString();
+                    txbSanPham_maSP.Text = row.Cells[0].Value.ToString();
+                    txtSanPham_tenSP.Text = row.Cells[1].Value.ToString();
+                    txbSanPham_nSX.Text = row.Cells[2].Value.ToString();
+                    cbxSanPham_loaiSP.SelectedValue = row.Cells[3].Value.ToString();
                 }
             }
             catch (NullReferenceException) { }
         }
         private void btnSaveSP_Click(object sender, EventArgs e)
         {
-            string maSanPham = txtMaSPofSP.Text;
-            string tenSanPham = txtTenSPofSP.Text;
-            string nhaSanXuat = txtNhaSXofSP.Text;
-            string maLoaiSP = cbxMaLoaiSP.SelectedValue.ToString();
+            string maSanPham = txbSanPham_maSP.Text;
+            string tenSanPham = txtSanPham_tenSP.Text;
+            string nhaSanXuat = txbSanPham_nSX.Text;
+            string maLoaiSP = cbxSanPham_loaiSP.SelectedValue.ToString();
             if (coThem == true)
             {
                 try
                 {
-                    if (txtMaSPofSP.Text == string.Empty || txtTenSPofSP.Text == string.Empty || txtNhaSXofSP.Text == string.Empty || txtMaSPofSP.Text == "SP")
+                    if (txbSanPham_maSP.Text == string.Empty || txtSanPham_tenSP.Text == string.Empty || txbSanPham_nSX.Text == string.Empty || txbSanPham_maSP.Text == "SP")
                     {
                         lbThemTC.Text = string.Empty;
                         lbThemTB.Text = "<\\ Vui lòng nhập đầy đủ thông tin >";
@@ -155,7 +169,7 @@ namespace QLBHVatLieuXayDung
             }
             else if (coThem == false)
             {
-                if (txtMaSPofSP.Text == string.Empty || txtTenSPofSP.Text == string.Empty || txtNhaSXofSP.Text == string.Empty || txtMaSPofSP.Text == "SP")
+                if (txbSanPham_maSP.Text == string.Empty || txtSanPham_tenSP.Text == string.Empty || txbSanPham_nSX.Text == string.Empty || txbSanPham_maSP.Text == "SP")
                 {
                     lbThemTC.Text = string.Empty;
                     lbThemTB.Text = "<\\ Vui lòng nhập đầy đủ thông tin >";
@@ -166,7 +180,7 @@ namespace QLBHVatLieuXayDung
                     lbThemTB.Text = string.Empty;
                     lbThemTC.Text = "<\\ Sửa sản phẩm thành công >";
                     LoadListSanPham();
-                    txtMaSPofSP.ReadOnly = false;
+                    txbSanPham_maSP.ReadOnly = false;
                     SetLock(false);
                     SetBtnLock(false);
                 }
@@ -180,8 +194,8 @@ namespace QLBHVatLieuXayDung
         }
         private void btnDeleteSP_Click(object sender, EventArgs e)
         {
-            string maSanPham = txtMaSPofSP.Text;
-            DialogResult result = MessageBox.Show("Bạn có muốn xóa sản phẩm [" + txtTenSPofSP.Text + "] không?", "Chời ơi tin được hong", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            string maSanPham = txbSanPham_maSP.Text;
+            DialogResult result = MessageBox.Show("Bạn có muốn xóa sản phẩm [" + txtSanPham_tenSP.Text + "] không?", "Chời ơi tin được hong", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
                 if (SanPhamAC.Instance.XoaSanPham(maSanPham))
