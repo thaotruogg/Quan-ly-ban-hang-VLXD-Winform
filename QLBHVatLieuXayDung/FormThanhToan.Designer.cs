@@ -30,19 +30,19 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dtpTT_ngayPhieu = new System.Windows.Forms.DateTimePicker();
+            this.cbxTT_maKH = new System.Windows.Forms.ComboBox();
+            this.btnTT_save = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txbTT_soTien = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.btnBackThanhToan = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lbThemTB = new System.Windows.Forms.Label();
+            this.lbThemTC = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -53,21 +53,21 @@
             this.label1.Location = new System.Drawing.Point(6, 36);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 17);
+            this.label1.Size = new System.Drawing.Size(73, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Mã khách hàng";
+            this.label1.Text = "Khách hàng";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.lbThemTB);
+            this.groupBox1.Controls.Add(this.lbThemTC);
+            this.groupBox1.Controls.Add(this.dtpTT_ngayPhieu);
+            this.groupBox1.Controls.Add(this.cbxTT_maKH);
+            this.groupBox1.Controls.Add(this.btnTT_save);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.txbTT_soTien);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox1.Location = new System.Drawing.Point(22, 53);
@@ -77,23 +77,43 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thanh toán";
             // 
-            // button1
+            // dtpTT_ngayPhieu
             // 
-            this.button1.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(214, 203);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 34);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Thanh toán";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.dtpTT_ngayPhieu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dtpTT_ngayPhieu.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTT_ngayPhieu.Location = new System.Drawing.Point(124, 66);
+            this.dtpTT_ngayPhieu.Name = "dtpTT_ngayPhieu";
+            this.dtpTT_ngayPhieu.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dtpTT_ngayPhieu.Size = new System.Drawing.Size(173, 24);
+            this.dtpTT_ngayPhieu.TabIndex = 11;
+            // 
+            // cbxTT_maKH
+            // 
+            this.cbxTT_maKH.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxTT_maKH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxTT_maKH.FormattingEnabled = true;
+            this.cbxTT_maKH.Location = new System.Drawing.Point(124, 30);
+            this.cbxTT_maKH.Name = "cbxTT_maKH";
+            this.cbxTT_maKH.Size = new System.Drawing.Size(173, 25);
+            this.cbxTT_maKH.TabIndex = 10;
+            // 
+            // btnTT_save
+            // 
+            this.btnTT_save.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTT_save.ForeColor = System.Drawing.Color.Red;
+            this.btnTT_save.Location = new System.Drawing.Point(214, 149);
+            this.btnTT_save.Name = "btnTT_save";
+            this.btnTT_save.Size = new System.Drawing.Size(88, 34);
+            this.btnTT_save.TabIndex = 9;
+            this.btnTT_save.Text = "Thanh toán";
+            this.btnTT_save.UseVisualStyleBackColor = true;
+            this.btnTT_save.Click += new System.EventHandler(this.btnTT_save_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(260, 122);
+            this.label5.Location = new System.Drawing.Point(260, 105);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 18);
@@ -103,47 +123,30 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 120);
+            this.label4.Location = new System.Drawing.Point(6, 102);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 17);
             this.label4.TabIndex = 6;
             this.label4.Text = "Số tiền";
             // 
-            // textBox4
+            // txbTT_soTien
             // 
-            this.textBox4.Location = new System.Drawing.Point(124, 119);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(129, 24);
-            this.textBox4.TabIndex = 7;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txbTT_soTien.Location = new System.Drawing.Point(124, 101);
+            this.txbTT_soTien.Name = "txbTT_soTien";
+            this.txbTT_soTien.Size = new System.Drawing.Size(129, 24);
+            this.txbTT_soTien.TabIndex = 7;
+            this.txbTT_soTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 92);
+            this.label3.Location = new System.Drawing.Point(6, 69);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Ngày phiếu";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 64);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Số phiếu";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(124, 61);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(173, 24);
-            this.textBox2.TabIndex = 3;
             // 
             // label7
             // 
@@ -193,25 +196,28 @@
             this.btnBackThanhToan.UseVisualStyleBackColor = false;
             this.btnBackThanhToan.Click += new System.EventHandler(this.btnBackThanhToan_Click);
             // 
-            // comboBox1
+            // lbThemTB
             // 
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(124, 30);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(173, 25);
-            this.comboBox1.TabIndex = 10;
+            this.lbThemTB.AutoSize = true;
+            this.lbThemTB.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThemTB.ForeColor = System.Drawing.Color.Red;
+            this.lbThemTB.Location = new System.Drawing.Point(43, 212);
+            this.lbThemTB.Name = "lbThemTB";
+            this.lbThemTB.Size = new System.Drawing.Size(226, 18);
+            this.lbThemTB.TabIndex = 47;
+            this.lbThemTB.Text = "<\\\\ Vui lòng nhập đầy đủ thông tin >";
+            this.lbThemTB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dateTimePicker1
+            // lbThemTC
             // 
-            this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(124, 91);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker1.Size = new System.Drawing.Size(173, 24);
-            this.dateTimePicker1.TabIndex = 11;
+            this.lbThemTC.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThemTC.ForeColor = System.Drawing.Color.Green;
+            this.lbThemTC.Location = new System.Drawing.Point(7, 212);
+            this.lbThemTC.Name = "lbThemTC";
+            this.lbThemTC.Size = new System.Drawing.Size(293, 18);
+            this.lbThemTC.TabIndex = 46;
+            this.lbThemTC.Text = "Thêm sản phẩm thành công";
+            this.lbThemTC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormThanhToan
             // 
@@ -245,17 +251,17 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txbTT_soTien;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTT_save;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnBackThanhToan;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DateTimePicker dtpTT_ngayPhieu;
+        private System.Windows.Forms.ComboBox cbxTT_maKH;
+        private System.Windows.Forms.Label lbThemTB;
+        private System.Windows.Forms.Label lbThemTC;
     }
 }

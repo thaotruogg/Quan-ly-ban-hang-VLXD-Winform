@@ -8,7 +8,7 @@ namespace QLBHVatLieuXayDung
     public partial class FormThanhToan_List : Form
     {
         private BindingSource list = new BindingSource();
-        private bool coThem;
+        //private bool coThem;
         public FormThanhToan_List()
         {
             InitializeComponent();
@@ -92,7 +92,6 @@ namespace QLBHVatLieuXayDung
             SetLock(true);
             SetNULL();
             txbThanhToan_soTien.Text = "0";
-            coThem = true;
         }
 
         private void btnThanhToan_clear_Click(object sender, EventArgs e)
@@ -109,7 +108,6 @@ namespace QLBHVatLieuXayDung
             SetBtnLock(true);
             SetLock(true);
             txbThanhToan_soPhieu.ReadOnly = true;
-            coThem = false;
         }
 
         private void btnThanhToan_delete_Click(object sender, EventArgs e)

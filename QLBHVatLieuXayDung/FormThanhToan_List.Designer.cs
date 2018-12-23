@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbThemTB = new System.Windows.Forms.Label();
+            this.lbThemTC = new System.Windows.Forms.Label();
             this.dgvThanhToan = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
@@ -48,8 +50,6 @@
             this.btnThanhToan_clear = new System.Windows.Forms.Button();
             this.btnThanhToan_save = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.lbThemTB = new System.Windows.Forms.Label();
-            this.lbThemTC = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThanhToan)).BeginInit();
             this.panel2.SuspendLayout();
@@ -69,6 +69,29 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách chi tiết";
+            // 
+            // lbThemTB
+            // 
+            this.lbThemTB.AutoSize = true;
+            this.lbThemTB.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThemTB.ForeColor = System.Drawing.Color.Red;
+            this.lbThemTB.Location = new System.Drawing.Point(302, 325);
+            this.lbThemTB.Name = "lbThemTB";
+            this.lbThemTB.Size = new System.Drawing.Size(226, 18);
+            this.lbThemTB.TabIndex = 45;
+            this.lbThemTB.Text = "<\\\\ Vui lòng nhập đầy đủ thông tin >";
+            this.lbThemTB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbThemTC
+            // 
+            this.lbThemTC.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThemTC.ForeColor = System.Drawing.Color.Green;
+            this.lbThemTC.Location = new System.Drawing.Point(217, 325);
+            this.lbThemTC.Name = "lbThemTC";
+            this.lbThemTC.Size = new System.Drawing.Size(393, 18);
+            this.lbThemTC.TabIndex = 44;
+            this.lbThemTC.Text = "Thêm sản phẩm thành công";
+            this.lbThemTC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgvThanhToan
             // 
@@ -300,29 +323,6 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(10, 458);
             this.panel8.TabIndex = 36;
-            // 
-            // lbThemTB
-            // 
-            this.lbThemTB.AutoSize = true;
-            this.lbThemTB.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbThemTB.ForeColor = System.Drawing.Color.Red;
-            this.lbThemTB.Location = new System.Drawing.Point(302, 325);
-            this.lbThemTB.Name = "lbThemTB";
-            this.lbThemTB.Size = new System.Drawing.Size(226, 18);
-            this.lbThemTB.TabIndex = 45;
-            this.lbThemTB.Text = "<\\\\ Vui lòng nhập đầy đủ thông tin >";
-            this.lbThemTB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbThemTC
-            // 
-            this.lbThemTC.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbThemTC.ForeColor = System.Drawing.Color.Green;
-            this.lbThemTC.Location = new System.Drawing.Point(217, 325);
-            this.lbThemTC.Name = "lbThemTC";
-            this.lbThemTC.Size = new System.Drawing.Size(393, 18);
-            this.lbThemTC.TabIndex = 44;
-            this.lbThemTC.Text = "Thêm sản phẩm thành công";
-            this.lbThemTC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormThanhToan_List
             // 
