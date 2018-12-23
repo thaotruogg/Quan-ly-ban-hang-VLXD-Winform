@@ -513,8 +513,15 @@ namespace QLBHVatLieuXayDung
                 }
             }
         }
+
         #endregion
 
-
+        private void btnShowThanhToan_Click(object sender, EventArgs e)
+        {
+            FormThanhToan_List f = new FormThanhToan_List();
+            Hide();
+            f.ShowDialog();
+            Show();
+        }
     }
 }

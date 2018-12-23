@@ -52,6 +52,7 @@
     <Compile Include="ACTION\LoaiSPAC.cs" />
     <Compile Include="ACTION\QuanLyAC.cs" />
     <Compile Include="ACTION\SanPhamAC.cs" />
+    <Compile Include="ACTION\ThanhToan.cs" />
     <Compile Include="FormChonKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +95,12 @@
     <Compile Include="FormThanhToan.Designer.cs">
       <DependentUpon>FormThanhToan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThanhToan_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThanhToan_List.Designer.cs">
+      <DependentUpon>FormThanhToan_List.cs</DependentUpon>
+    </Compile>
     <Compile Include="INFO\ChiTietHoaDOn.cs" />
     <Compile Include="INFO\Datarow.cs" />
     <Compile Include="INFO\HoaDon.cs" />
@@ -122,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormThanhToan.resx">
       <DependentUpon>FormThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThanhToan_List.resx">
+      <DependentUpon>FormThanhToan_List.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
