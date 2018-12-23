@@ -48,6 +48,8 @@
             this.btnThanhToan_clear = new System.Windows.Forms.Button();
             this.btnThanhToan_save = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.lbThemTB = new System.Windows.Forms.Label();
+            this.lbThemTC = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThanhToan)).BeginInit();
             this.panel2.SuspendLayout();
@@ -56,6 +58,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lbThemTB);
+            this.groupBox1.Controls.Add(this.lbThemTC);
             this.groupBox1.Controls.Add(this.dgvThanhToan);
             this.groupBox1.Location = new System.Drawing.Point(14, 187);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -74,7 +78,7 @@
             this.dgvThanhToan.Location = new System.Drawing.Point(7, 25);
             this.dgvThanhToan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvThanhToan.Name = "dgvThanhToan";
-            this.dgvThanhToan.Size = new System.Drawing.Size(634, 326);
+            this.dgvThanhToan.Size = new System.Drawing.Size(634, 282);
             this.dgvThanhToan.TabIndex = 0;
             this.dgvThanhToan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThanhToan_CellClick);
             // 
@@ -222,11 +226,13 @@
             this.btnThanhToan_delete.TabIndex = 33;
             this.btnThanhToan_delete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThanhToan_delete.UseVisualStyleBackColor = false;
+            this.btnThanhToan_delete.Click += new System.EventHandler(this.btnThanhToan_delete_Click);
             // 
             // btnThanhToan_edit
             // 
             this.btnThanhToan_edit.BackColor = System.Drawing.Color.AliceBlue;
             this.btnThanhToan_edit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThanhToan_edit.Enabled = false;
             this.btnThanhToan_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThanhToan_edit.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThanhToan_edit.ForeColor = System.Drawing.Color.Transparent;
@@ -237,11 +243,13 @@
             this.btnThanhToan_edit.TabIndex = 32;
             this.btnThanhToan_edit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThanhToan_edit.UseVisualStyleBackColor = false;
+            this.btnThanhToan_edit.Click += new System.EventHandler(this.btnThanhToan_edit_Click);
             // 
             // btnThanhToan_add
             // 
             this.btnThanhToan_add.BackColor = System.Drawing.Color.AliceBlue;
             this.btnThanhToan_add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThanhToan_add.Enabled = false;
             this.btnThanhToan_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThanhToan_add.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThanhToan_add.ForeColor = System.Drawing.Color.Transparent;
@@ -252,6 +260,7 @@
             this.btnThanhToan_add.TabIndex = 31;
             this.btnThanhToan_add.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThanhToan_add.UseVisualStyleBackColor = false;
+            this.btnThanhToan_add.Click += new System.EventHandler(this.btnThanhToan_add_Click);
             // 
             // btnThanhToan_clear
             // 
@@ -267,6 +276,7 @@
             this.btnThanhToan_clear.Size = new System.Drawing.Size(100, 42);
             this.btnThanhToan_clear.TabIndex = 34;
             this.btnThanhToan_clear.UseVisualStyleBackColor = false;
+            this.btnThanhToan_clear.Click += new System.EventHandler(this.btnThanhToan_clear_Click);
             // 
             // btnThanhToan_save
             // 
@@ -291,6 +301,29 @@
             this.panel8.Size = new System.Drawing.Size(10, 458);
             this.panel8.TabIndex = 36;
             // 
+            // lbThemTB
+            // 
+            this.lbThemTB.AutoSize = true;
+            this.lbThemTB.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThemTB.ForeColor = System.Drawing.Color.Red;
+            this.lbThemTB.Location = new System.Drawing.Point(302, 325);
+            this.lbThemTB.Name = "lbThemTB";
+            this.lbThemTB.Size = new System.Drawing.Size(226, 18);
+            this.lbThemTB.TabIndex = 45;
+            this.lbThemTB.Text = "<\\\\ Vui lòng nhập đầy đủ thông tin >";
+            this.lbThemTB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbThemTC
+            // 
+            this.lbThemTC.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThemTC.ForeColor = System.Drawing.Color.Green;
+            this.lbThemTC.Location = new System.Drawing.Point(217, 325);
+            this.lbThemTC.Name = "lbThemTC";
+            this.lbThemTC.Size = new System.Drawing.Size(393, 18);
+            this.lbThemTC.TabIndex = 44;
+            this.lbThemTC.Text = "Thêm sản phẩm thành công";
+            this.lbThemTC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormThanhToan_List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -314,6 +347,7 @@
             this.Name = "FormThanhToan_List";
             this.Text = "Danh sách thanh toán";
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThanhToan)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -345,5 +379,7 @@
         private System.Windows.Forms.Button btnThanhToan_clear;
         private System.Windows.Forms.Button btnThanhToan_save;
         private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label lbThemTB;
+        private System.Windows.Forms.Label lbThemTC;
     }
 }
