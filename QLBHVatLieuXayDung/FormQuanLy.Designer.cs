@@ -379,8 +379,10 @@
             // 
             this.cbxMaKHOfHD.BackColor = System.Drawing.Color.Silver;
             this.cbxMaKHOfHD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxMaKHOfHD.DropDownHeight = 160;
             this.cbxMaKHOfHD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxMaKHOfHD.FormattingEnabled = true;
+            this.cbxMaKHOfHD.IntegralHeight = false;
             this.cbxMaKHOfHD.Location = new System.Drawing.Point(125, 53);
             this.cbxMaKHOfHD.Name = "cbxMaKHOfHD";
             this.cbxMaKHOfHD.Size = new System.Drawing.Size(179, 25);
