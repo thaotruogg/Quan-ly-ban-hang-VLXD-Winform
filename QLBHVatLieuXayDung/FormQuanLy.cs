@@ -39,16 +39,16 @@ namespace QLBHVatLieuXayDung
             btnClearHoaDon.TabStop = false;
             btnClearHoaDon.FlatAppearance.BorderSize = 0;
             btnSaveHoaDon.FlatAppearance.BorderSize = 0;
-            btnSaveCTHD.TabStop = false;
-            btnClearCTHD.TabStop = false;
-            btnAddCTHD.TabStop = false;
-            btnEditCTHD.TabStop = false;
-            btnDeleteCTHD.TabStop = false;
-            btnSaveCTHD.FlatAppearance.BorderSize = 0;
-            btnClearCTHD.FlatAppearance.BorderSize = 0;
-            btnAddCTHD.FlatAppearance.BorderSize = 0;
-            btnEditCTHD.FlatAppearance.BorderSize = 0;
-            btnDeleteCTHD.FlatAppearance.BorderSize = 0;
+            btnCTHD_save.TabStop = false;
+            btnCTHD_clear.TabStop = false;
+            btnCTHD_add.TabStop = false;
+            btnCTHD_edit.TabStop = false;
+            btnCTHD_delete.TabStop = false;
+            btnCTHD_save.FlatAppearance.BorderSize = 0;
+            btnCTHD_clear.FlatAppearance.BorderSize = 0;
+            btnCTHD_add.FlatAppearance.BorderSize = 0;
+            btnCTHD_edit.FlatAppearance.BorderSize = 0;
+            btnCTHD_delete.FlatAppearance.BorderSize = 0;
         }
 
         #region Methods Hóa đơn
@@ -78,26 +78,33 @@ namespace QLBHVatLieuXayDung
         #endregion
 
         #region Methods Chi tiết hóa đơn
+        void LoadSoHoaDon(ComboBox box)
+        {
+            box.DataSource = QuanLyAC.Instance.LoadListHoaDon();
+            box.DisplayMember = "Số hóa đơn";
+            box.ValueMember = "Số hóa đơn";
+        }
         void SetBtnLockCTHD(bool a)
         {
-            btnSaveCTHD.Enabled = a;
-            btnClearCTHD.Enabled = a;
-            btnAddCTHD.Enabled = !a;
+            btnCTHD_save.Enabled = a;
+            btnCTHD_clear.Enabled = a;
+            btnCTHD_add.Enabled = !a;
             //btnEditCTHD.Enabled = !a;
-            btnDeleteCTHD.Enabled = !a;
+            btnCTHD_delete.Enabled = !a;
         }
         void SetNULLCTHD()
         {
-            txbMaCTHD.Text = string.Empty;
-            txbDonGiaOfHD.Text = string.Empty;
-            numericUpDownSLCTHD.Value = 0;
+            //txbMaCTHD.Text = string.Empty;
+            txbCTDH_donGia.Text = string.Empty;
+            numupdCTHD_soLuong.Value = 0;
         }
         void SetLockCTHD(bool a)
         {
-            txbMaCTHD.ReadOnly = !a;
-            cbxMaSPOfCTHD.Enabled = a;
-            numericUpDownSLCTHD.Enabled = a;
-            txbDonGiaOfHD.ReadOnly = !a;
+            //txbMaCTHD.ReadOnly = !a;
+            cbxCTHD_maHoaDon.Enabled = a;
+            cbxCTHD_maSP.Enabled = a;
+            numupdCTHD_soLuong.Enabled = a;
+            txbCTDH_donGia.ReadOnly = !a;
         }
         void LoadListCTHD()
         {
@@ -128,9 +135,9 @@ namespace QLBHVatLieuXayDung
             txbMaHD.DataBindings.Add(new Binding("Text", dgvHoaDon.DataSource, "Số hóa đơn", true, DataSourceUpdateMode.Never));
             dtpNgayHD.DataBindings.Add(new Binding("Value", dgvHoaDon.DataSource, "Ngày hóa đơn", true, DataSourceUpdateMode.Never));
             //numUpDMaSPOfHD.DataBindings.Add(new Binding("Value", dgvCTHD.DataSource, "Số lượng", true, DataSourceUpdateMode.Never));
-            txbDonGiaOfHD.DataBindings.Add(new Binding("Text", dgvCTHD.DataSource, "Đơn giá", true, DataSourceUpdateMode.Never));
+            txbCTDH_donGia.DataBindings.Add(new Binding("Text", dgvCTHD.DataSource, "Đơn giá", true, DataSourceUpdateMode.Never));
             //txbSoLuongCTHD.DataBindings.Add(new Binding("Text", dgvCTHD.DataSource, "Số lượng", true, DataSourceUpdateMode.Never));
-            txbMaCTHD.DataBindings.Add(new Binding("Text", dgvCTHD.DataSource, "Mã hóa đơn", true, DataSourceUpdateMode.Never));
+            //txbMaCTHD.DataBindings.Add(new Binding("Text", dgvCTHD.DataSource, "Mã hóa đơn", true, DataSourceUpdateMode.Never));
         }
 
         void LoadList()
@@ -139,8 +146,9 @@ namespace QLBHVatLieuXayDung
             dgvHoaDon.DataSource = listHoaDon;
             LoadListHoaDon();
             LoadListCTHD();
+            LoadSoHoaDon(cbxCTHD_maHoaDon);
             LoadMaKHIntoCombobox(cbxMaKHOfHD);
-            LoadMaSPIntoCombobox(cbxMaSPOfCTHD);
+            LoadMaSPIntoCombobox(cbxCTHD_maSP);
             SetLockHoaDon(false);
             SetBtnLockHoaDon(false);
             SetLockCTHD(false);
@@ -212,7 +220,7 @@ namespace QLBHVatLieuXayDung
         {
             LoadListHoaDon();
             LoadMaKHIntoCombobox(cbxMaKHOfHD);
-            LoadMaSPIntoCombobox(cbxMaSPOfCTHD);
+            LoadMaSPIntoCombobox(cbxCTHD_maSP);
             lbThemTB.Text = string.Empty;
             lbThemTC.Text = string.Empty;
             //HoaDonBinding();
@@ -269,18 +277,20 @@ namespace QLBHVatLieuXayDung
             {
                 if (dgvCTHD.SelectedRows.Count > 0)
                 {
-                    txbMaCTHD.Text = dgvCTHD.SelectedRows[0].Cells[0].Value.ToString();
-                    cbxMaSPOfCTHD.SelectedValue = dgvCTHD.SelectedRows[0].Cells[1].Value.ToString();
-                    numericUpDownSLCTHD.Value = Convert.ToInt32(dgvCTHD.SelectedRows[0].Cells[2].Value);
-                    txbDonGiaOfHD.Text = dgvCTHD.SelectedRows[0].Cells[3].Value.ToString();
+                    //txbMaCTHD.Text = dgvCTHD.SelectedRows[0].Cells[0].Value.ToString();
+                    cbxCTHD_maSP.SelectedValue = dgvCTHD.SelectedRows[0].Cells[1].Value.ToString();
+                    numupdCTHD_soLuong.Value = Convert.ToInt32(dgvCTHD.SelectedRows[0].Cells[2].Value);
+                    txbCTDH_donGia.Text = dgvCTHD.SelectedRows[0].Cells[3].Value.ToString();
+                    cbxCTHD_maHoaDon.SelectedValue = dgvCTHD.SelectedRows[0].Cells[0].Value.ToString();
                 }
                 else if (e.RowIndex >= 0)
                 {
                     DataGridViewRow row = dgvCTHD.Rows[e.RowIndex];
-                    txbMaCTHD.Text = row.Cells[0].Value.ToString();
-                    cbxMaSPOfCTHD.SelectedValue = row.Cells[1].Value.ToString();
-                    numericUpDownSLCTHD.Value = Convert.ToInt32(row.Cells[2].Value);
-                    txbDonGiaOfHD.Text = row.Cells[3].Value.ToString();
+                    //txbMaCTHD.Text = row.Cells[0].Value.ToString();
+                    cbxCTHD_maSP.SelectedValue = row.Cells[1].Value.ToString();
+                    numupdCTHD_soLuong.Value = Convert.ToInt32(row.Cells[2].Value);
+                    txbCTDH_donGia.Text = row.Cells[3].Value.ToString();
+                    cbxCTHD_maHoaDon.SelectedValue = row.Cells[0].Value.ToString();
                 }
             }
             catch (NullReferenceException)
@@ -419,8 +429,8 @@ namespace QLBHVatLieuXayDung
             SetBtnLockCTHD(true);
             SetLockCTHD(true);
             SetNULLCTHD();
-            txbMaCTHD.Text = "HD";
-            txbDonGiaOfHD.Text = "0";
+            //txbMaCTHD.Text = "HD";
+            txbCTDH_donGia.Text = "0";
             coThemCTHD = true;
         }
 
@@ -435,7 +445,7 @@ namespace QLBHVatLieuXayDung
 
         private void btnEditCTHD_Click(object sender, EventArgs e)
         {
-            txbMaCTHD.ReadOnly = true;
+            //txbMaCTHD.ReadOnly = true;
             SetBtnLockCTHD(true);
             SetLockCTHD(true);
             coThemCTHD = false;
@@ -443,15 +453,16 @@ namespace QLBHVatLieuXayDung
 
         private void btnSaveCTHD_Click(object sender, EventArgs e)
         {
-            string maHoaDon = txbMaCTHD.Text;
-            string maSanPham = cbxMaSPOfCTHD.SelectedValue.ToString();
-            int soLuong = Convert.ToInt32(numericUpDownSLCTHD.Value);
-            double donGia = double.Parse(txbDonGiaOfHD.Text);
+            string maHoaDon = cbxCTHD_maHoaDon.SelectedValue.ToString();
+            //string maHoaDon = txbMaCTHD.Text;
+            string maSanPham = cbxCTHD_maSP.SelectedValue.ToString();
+            int soLuong = Convert.ToInt32(numupdCTHD_soLuong.Value);
+            double donGia = double.Parse(txbCTDH_donGia.Text);
             if (coThemCTHD == true)
             {
                 try
                 {
-                    if (txbMaCTHD.Text == string.Empty || txbDonGiaOfHD.Text == string.Empty || txbMaCTHD.Text == "HD")
+                    if (txbCTDH_donGia.Text == string.Empty)
                     {
                         lbThemTCCTHD.Text = string.Empty;
                         lbThemTBCTHD.Text = "<\\ Vui lòng nhập đầy đủ thông tin >";
@@ -505,8 +516,8 @@ namespace QLBHVatLieuXayDung
 
         private void btnDeleteCTHD_Click(object sender, EventArgs e)
         {
-            string maHoaDon = txbMaCTHD.Text;
-            DialogResult result = MessageBox.Show("Bạn có muốn xóa hoá đơn [" + txbMaCTHD.Text + "] không?", "Chời ơi tin được hong", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            string maHoaDon = cbxCTHD_maHoaDon.SelectedValue.ToString();
+            DialogResult result = MessageBox.Show("Bạn có muốn xóa hoá đơn [" + cbxCTHD_maHoaDon.SelectedValue.ToString() + "] không?", "Chời ơi tin được hong", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
                 if (QuanLyAC.Instance.XoaChiTietHoaDon(maHoaDon))
