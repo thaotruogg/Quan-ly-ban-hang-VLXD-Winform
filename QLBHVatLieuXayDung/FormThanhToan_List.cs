@@ -61,7 +61,7 @@ namespace QLBHVatLieuXayDung
         #region Events
         private void btnBackThanhToan_list_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         private void dgvThanhToan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
