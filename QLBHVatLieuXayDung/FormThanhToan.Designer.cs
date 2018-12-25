@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormThanhToan));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnThanhToan_chonKH = new System.Windows.Forms.Button();
             this.lbThemTB = new System.Windows.Forms.Label();
             this.lbThemTC = new System.Windows.Forms.Label();
             this.dtpTT_ngayPhieu = new System.Windows.Forms.DateTimePicker();
@@ -44,7 +45,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.btnBackThanhToan = new System.Windows.Forms.Button();
-            this.btnThanhToan_chonKH = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +79,19 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thanh toán";
+            // 
+            // btnThanhToan_chonKH
+            // 
+            this.btnThanhToan_chonKH.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThanhToan_chonKH.Font = new System.Drawing.Font("Segoe MDL2 Assets", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan_chonKH.Location = new System.Drawing.Point(278, 29);
+            this.btnThanhToan_chonKH.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThanhToan_chonKH.Name = "btnThanhToan_chonKH";
+            this.btnThanhToan_chonKH.Size = new System.Drawing.Size(24, 24);
+            this.btnThanhToan_chonKH.TabIndex = 48;
+            this.btnThanhToan_chonKH.Text = "";
+            this.btnThanhToan_chonKH.UseVisualStyleBackColor = true;
+            this.btnThanhToan_chonKH.Click += new System.EventHandler(this.btnThanhToan_chonKH_Click);
             // 
             // lbThemTB
             // 
@@ -116,8 +129,10 @@
             // cbxTT_maKH
             // 
             this.cbxTT_maKH.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxTT_maKH.DropDownHeight = 120;
             this.cbxTT_maKH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTT_maKH.FormattingEnabled = true;
+            this.cbxTT_maKH.IntegralHeight = false;
             this.cbxTT_maKH.Location = new System.Drawing.Point(96, 28);
             this.cbxTT_maKH.Name = "cbxTT_maKH";
             this.cbxTT_maKH.Size = new System.Drawing.Size(175, 25);
@@ -224,19 +239,6 @@
             this.btnBackThanhToan.TabIndex = 5;
             this.btnBackThanhToan.UseVisualStyleBackColor = false;
             this.btnBackThanhToan.Click += new System.EventHandler(this.btnBackThanhToan_Click);
-            // 
-            // btnThanhToan_chonKH
-            // 
-            this.btnThanhToan_chonKH.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThanhToan_chonKH.Font = new System.Drawing.Font("Segoe MDL2 Assets", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhToan_chonKH.Location = new System.Drawing.Point(278, 29);
-            this.btnThanhToan_chonKH.Margin = new System.Windows.Forms.Padding(4);
-            this.btnThanhToan_chonKH.Name = "btnThanhToan_chonKH";
-            this.btnThanhToan_chonKH.Size = new System.Drawing.Size(24, 24);
-            this.btnThanhToan_chonKH.TabIndex = 48;
-            this.btnThanhToan_chonKH.Text = "";
-            this.btnThanhToan_chonKH.UseVisualStyleBackColor = true;
-            this.btnThanhToan_chonKH.Click += new System.EventHandler(this.btnThanhToan_chonKH_Click);
             // 
             // FormThanhToan
             // 

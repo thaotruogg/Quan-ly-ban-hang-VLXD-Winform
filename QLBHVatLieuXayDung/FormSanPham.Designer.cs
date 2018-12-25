@@ -83,8 +83,11 @@
             // cbxSanPham_loaiSP
             // 
             this.cbxSanPham_loaiSP.DisplayMember = "maSanPham";
+            this.cbxSanPham_loaiSP.DropDownHeight = 100;
             this.cbxSanPham_loaiSP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSanPham_loaiSP.FormattingEnabled = true;
+            this.cbxSanPham_loaiSP.IntegralHeight = false;
+            this.cbxSanPham_loaiSP.ItemHeight = 17;
             this.cbxSanPham_loaiSP.Location = new System.Drawing.Point(125, 112);
             this.cbxSanPham_loaiSP.Name = "cbxSanPham_loaiSP";
             this.cbxSanPham_loaiSP.Size = new System.Drawing.Size(189, 25);

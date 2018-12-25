@@ -14,10 +14,10 @@ namespace QLBHVatLieuXayDung
         {
             InitializeComponent();
             LoadList();
-            LoadButton();
+            LoadButtonDesign();
         }
 
-        void LoadButton()
+        void LoadButtonDesign()
         {
             btnShowKhachHang.TabStop = false;
             btnShowKhachHang.FlatAppearance.BorderSize = 0;
@@ -50,6 +50,49 @@ namespace QLBHVatLieuXayDung
             btnCTHD_edit.FlatAppearance.BorderSize = 0;
             btnCTHD_delete.FlatAppearance.BorderSize = 0;
         }
+
+        #region Methods
+        void LoadMaKHIntoCombobox(ComboBox box)
+        {
+            box.DataSource = KhachHangAC.Instance.LoadListKhachHang();
+            box.DisplayMember = "Tên khách hàng";
+            box.ValueMember = "Mã khách hàng";
+        }
+        void LoadMaSPIntoCombobox(ComboBox box)
+        {
+            box.DataSource = SanPhamAC.Instance.LoadListSanPham();
+            box.DisplayMember = "Tên sản phẩm";
+            box.ValueMember = "Mã sản phẩm";
+        }
+        void HoaDonBinding()
+        {
+            txbMaHD.DataBindings.Add(new Binding("Text", dgvHoaDon.DataSource, "Số hóa đơn", true, DataSourceUpdateMode.Never));
+            dtpNgayHD.DataBindings.Add(new Binding("Value", dgvHoaDon.DataSource, "Ngày hóa đơn", true, DataSourceUpdateMode.Never));
+            //numUpDMaSPOfHD.DataBindings.Add(new Binding("Value", dgvCTHD.DataSource, "Số lượng", true, DataSourceUpdateMode.Never));
+            txbCTDH_donGia.DataBindings.Add(new Binding("Text", dgvCTHD.DataSource, "Đơn giá", true, DataSourceUpdateMode.Never));
+            //txbSoLuongCTHD.DataBindings.Add(new Binding("Text", dgvCTHD.DataSource, "Số lượng", true, DataSourceUpdateMode.Never));
+            //txbMaCTHD.DataBindings.Add(new Binding("Text", dgvCTHD.DataSource, "Mã hóa đơn", true, DataSourceUpdateMode.Never));
+        }
+
+        void LoadList()
+        {
+            dgvCTHD.DataSource = listCTHD;
+            dgvHoaDon.DataSource = listHoaDon;
+            LoadListHoaDon();
+            LoadListCTHD();
+            LoadSoHoaDon(cbxCTHD_maHoaDon);
+            LoadMaKHIntoCombobox(cbxMaKHOfHD);
+            LoadMaSPIntoCombobox(cbxCTHD_maSP);
+            SetLockHoaDon(false);
+            SetBtnLockHoaDon(false);
+            SetLockCTHD(false);
+            SetBtnLockCTHD(false);
+            lbThemTB.Text = string.Empty;
+            lbThemTC.Text = string.Empty;
+            LableThem();
+            //HoaDonBinding();
+        }
+        #endregion
 
         #region Methods Hóa đơn
         void SetBtnLockHoaDon(bool a)
@@ -117,49 +160,6 @@ namespace QLBHVatLieuXayDung
         }
         #endregion
 
-        #region Methods
-        void LoadMaKHIntoCombobox(ComboBox box)
-        {
-            box.DataSource = KhachHangAC.Instance.LoadListKhachHang();
-            box.DisplayMember = "Tên khách hàng";
-            box.ValueMember = "Mã khách hàng";
-        }
-        void LoadMaSPIntoCombobox(ComboBox box)
-        {
-            box.DataSource = SanPhamAC.Instance.LoadListSanPham();
-            box.DisplayMember = "Tên sản phẩm";
-            box.ValueMember = "Mã sản phẩm";
-        }
-        void HoaDonBinding()
-        {
-            txbMaHD.DataBindings.Add(new Binding("Text", dgvHoaDon.DataSource, "Số hóa đơn", true, DataSourceUpdateMode.Never));
-            dtpNgayHD.DataBindings.Add(new Binding("Value", dgvHoaDon.DataSource, "Ngày hóa đơn", true, DataSourceUpdateMode.Never));
-            //numUpDMaSPOfHD.DataBindings.Add(new Binding("Value", dgvCTHD.DataSource, "Số lượng", true, DataSourceUpdateMode.Never));
-            txbCTDH_donGia.DataBindings.Add(new Binding("Text", dgvCTHD.DataSource, "Đơn giá", true, DataSourceUpdateMode.Never));
-            //txbSoLuongCTHD.DataBindings.Add(new Binding("Text", dgvCTHD.DataSource, "Số lượng", true, DataSourceUpdateMode.Never));
-            //txbMaCTHD.DataBindings.Add(new Binding("Text", dgvCTHD.DataSource, "Mã hóa đơn", true, DataSourceUpdateMode.Never));
-        }
-
-        void LoadList()
-        {
-            dgvCTHD.DataSource = listCTHD;
-            dgvHoaDon.DataSource = listHoaDon;
-            LoadListHoaDon();
-            LoadListCTHD();
-            LoadSoHoaDon(cbxCTHD_maHoaDon);
-            LoadMaKHIntoCombobox(cbxMaKHOfHD);
-            LoadMaSPIntoCombobox(cbxCTHD_maSP);
-            SetLockHoaDon(false);
-            SetBtnLockHoaDon(false);
-            SetLockCTHD(false);
-            SetBtnLockCTHD(false);
-            lbThemTB.Text = string.Empty;
-            lbThemTC.Text = string.Empty;
-            LableThem();
-            //HoaDonBinding();
-        }
-        #endregion
-
         #region events
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -191,7 +191,19 @@ namespace QLBHVatLieuXayDung
                 e.Cancel = true;
             }
         }
+        private void btnShowThanhToan_Click(object sender, EventArgs e)
+        {
+            FormThanhToan_List f = new FormThanhToan_List();
+            Hide();
+            f.ShowDialog();
+            Show();
+        }
 
+        private void btnCTHD_thanhToan_Click(object sender, EventArgs e)
+        {
+            FormThanhToan f = new FormThanhToan();
+            f.ShowDialog();
+        }
         private void FormQuanLy_Load(object sender, EventArgs e)
         {
             //LoadList();
@@ -220,7 +232,7 @@ namespace QLBHVatLieuXayDung
         {
             LoadListHoaDon();
             LoadMaKHIntoCombobox(cbxMaKHOfHD);
-            LoadMaSPIntoCombobox(cbxCTHD_maSP);
+            
             lbThemTB.Text = string.Empty;
             lbThemTC.Text = string.Empty;
             //HoaDonBinding();
@@ -310,6 +322,8 @@ namespace QLBHVatLieuXayDung
         private void btnRefreshCTHD_Click(object sender, EventArgs e)
         {
             LoadListCTHD();
+            LoadMaSPIntoCombobox(cbxCTHD_maSP);
+            LoadSoHoaDon(cbxCTHD_maHoaDon);
             lbThemTB.Text = string.Empty;
             lbThemTC.Text = string.Empty;
         }
@@ -539,12 +553,5 @@ namespace QLBHVatLieuXayDung
 
         #endregion
 
-        private void btnShowThanhToan_Click(object sender, EventArgs e)
-        {
-            FormThanhToan_List f = new FormThanhToan_List();
-            Hide();
-            f.ShowDialog();
-            Show();
-        }
     }
 }

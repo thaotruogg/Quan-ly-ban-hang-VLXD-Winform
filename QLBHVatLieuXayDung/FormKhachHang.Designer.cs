@@ -35,7 +35,6 @@
             this.btnSaveKH = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnShowChonKHKH = new System.Windows.Forms.Button();
             this.txbNoCuoiKiOfKH = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txbNoDauKiOfKH = new System.Windows.Forms.TextBox();
@@ -74,7 +73,6 @@
             this.groupBox1.Controls.Add(this.btnSaveKH);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.btnShowChonKHKH);
             this.groupBox1.Controls.Add(this.txbNoCuoiKiOfKH);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txbNoDauKiOfKH);
@@ -99,6 +97,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(14, 28);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
@@ -160,18 +159,6 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "VNĐ";
             // 
-            // btnShowChonKHKH
-            // 
-            this.btnShowChonKHKH.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnShowChonKHKH.Font = new System.Drawing.Font("Segoe MDL2 Assets", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShowChonKHKH.Location = new System.Drawing.Point(330, 25);
-            this.btnShowChonKHKH.Margin = new System.Windows.Forms.Padding(4);
-            this.btnShowChonKHKH.Name = "btnShowChonKHKH";
-            this.btnShowChonKHKH.Size = new System.Drawing.Size(24, 24);
-            this.btnShowChonKHKH.TabIndex = 12;
-            this.btnShowChonKHKH.Text = "";
-            this.btnShowChonKHKH.UseVisualStyleBackColor = true;
-            // 
             // txbNoCuoiKiOfKH
             // 
             this.txbNoCuoiKiOfKH.Location = new System.Drawing.Point(136, 189);
@@ -183,6 +170,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(13, 193);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
@@ -201,6 +189,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(13, 160);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
@@ -220,7 +209,8 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 126);
+            this.label5.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(13, 127);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 18);
@@ -238,7 +228,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 95);
+            this.label4.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(13, 94);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 18);
@@ -256,7 +247,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 62);
+            this.label3.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(13, 61);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 18);
@@ -268,7 +260,7 @@
             this.txbMaKHOfKH.Location = new System.Drawing.Point(136, 25);
             this.txbMaKHOfKH.Margin = new System.Windows.Forms.Padding(4);
             this.txbMaKHOfKH.Name = "txbMaKHOfKH";
-            this.txbMaKHOfKH.Size = new System.Drawing.Size(187, 25);
+            this.txbMaKHOfKH.Size = new System.Drawing.Size(216, 25);
             this.txbMaKHOfKH.TabIndex = 0;
             // 
             // lbThemTB
@@ -493,7 +485,6 @@
         private System.Windows.Forms.Button btnSaveKH;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnShowChonKHKH;
         private System.Windows.Forms.TextBox txbNoCuoiKiOfKH;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txbNoDauKiOfKH;

@@ -40,6 +40,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbxCTHD_maHoaDon = new System.Windows.Forms.ComboBox();
             this.numupdCTHD_soLuong = new System.Windows.Forms.NumericUpDown();
             this.label16 = new System.Windows.Forms.Label();
             this.cbxCTHD_maSP = new System.Windows.Forms.ComboBox();
@@ -87,7 +88,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.btnRefreshCTHD = new System.Windows.Forms.Button();
             this.dgvCTHD = new System.Windows.Forms.DataGridView();
-            this.cbxCTHD_maHoaDon = new System.Windows.Forms.ComboBox();
+            this.btnCTHD_thanhToan = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -260,6 +261,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết hóa đơn";
             // 
+            // cbxCTHD_maHoaDon
+            // 
+            this.cbxCTHD_maHoaDon.DropDownHeight = 100;
+            this.cbxCTHD_maHoaDon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCTHD_maHoaDon.FormattingEnabled = true;
+            this.cbxCTHD_maHoaDon.IntegralHeight = false;
+            this.cbxCTHD_maHoaDon.Location = new System.Drawing.Point(124, 23);
+            this.cbxCTHD_maHoaDon.Name = "cbxCTHD_maHoaDon";
+            this.cbxCTHD_maHoaDon.Size = new System.Drawing.Size(208, 25);
+            this.cbxCTHD_maHoaDon.TabIndex = 23;
+            // 
             // numupdCTHD_soLuong
             // 
             this.numupdCTHD_soLuong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -292,8 +304,10 @@
             // 
             this.cbxCTHD_maSP.BackColor = System.Drawing.Color.Silver;
             this.cbxCTHD_maSP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxCTHD_maSP.DropDownHeight = 100;
             this.cbxCTHD_maSP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCTHD_maSP.FormattingEnabled = true;
+            this.cbxCTHD_maSP.IntegralHeight = false;
             this.cbxCTHD_maSP.Location = new System.Drawing.Point(124, 54);
             this.cbxCTHD_maSP.Name = "cbxCTHD_maSP";
             this.cbxCTHD_maSP.Size = new System.Drawing.Size(179, 25);
@@ -717,6 +731,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.Controls.Add(this.btnCTHD_thanhToan);
             this.panel6.Controls.Add(this.panel4);
             this.panel6.Controls.Add(this.btnCTHD_delete);
             this.panel6.Controls.Add(this.btnCTHD_edit);
@@ -853,14 +868,24 @@
             this.dgvCTHD.TabIndex = 0;
             this.dgvCTHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTHD_CellClick);
             // 
-            // cbxCTHD_maHoaDon
+            // btnCTHD_thanhToan
             // 
-            this.cbxCTHD_maHoaDon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxCTHD_maHoaDon.FormattingEnabled = true;
-            this.cbxCTHD_maHoaDon.Location = new System.Drawing.Point(124, 23);
-            this.cbxCTHD_maHoaDon.Name = "cbxCTHD_maHoaDon";
-            this.cbxCTHD_maHoaDon.Size = new System.Drawing.Size(208, 25);
-            this.cbxCTHD_maHoaDon.TabIndex = 23;
+            this.btnCTHD_thanhToan.BackColor = System.Drawing.Color.Honeydew;
+            this.btnCTHD_thanhToan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCTHD_thanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCTHD_thanhToan.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCTHD_thanhToan.ForeColor = System.Drawing.Color.Green;
+            this.btnCTHD_thanhToan.Image = global::QLBHVatLieuXayDung.Properties.Resources.icons8_Cash__48;
+            this.btnCTHD_thanhToan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCTHD_thanhToan.Location = new System.Drawing.Point(10, 407);
+            this.btnCTHD_thanhToan.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCTHD_thanhToan.Name = "btnCTHD_thanhToan";
+            this.btnCTHD_thanhToan.Size = new System.Drawing.Size(143, 90);
+            this.btnCTHD_thanhToan.TabIndex = 32;
+            this.btnCTHD_thanhToan.Text = "< Thanh toán />";
+            this.btnCTHD_thanhToan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCTHD_thanhToan.UseVisualStyleBackColor = false;
+            this.btnCTHD_thanhToan.Click += new System.EventHandler(this.btnCTHD_thanhToan_Click);
             // 
             // FormQuanLy
             // 
@@ -967,6 +992,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ComboBox cbxCTHD_maHoaDon;
+        private System.Windows.Forms.Button btnCTHD_thanhToan;
     }
 }
 

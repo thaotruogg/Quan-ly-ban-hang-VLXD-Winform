@@ -21,7 +21,7 @@ namespace QLBHVatLieuXayDung.ACTION
         }
         public bool ThemThanhToan(string maKH, string ngayPhieu, double soTien)
         {
-            string query = string.Format("EXEC dbo.Insert_ThanhToan @maKhachHang = '{0}', @ngayPhieu = '{1}', @soTien = {2}", maKH, ngayPhieu, soTien);
+            string query = string.Format("EXEC dbo.USP_InsertThanhToan @maKhachHang = '{0}', @ngayPhieu = '{1}', @soTien = {2}", maKH, ngayPhieu, soTien);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
@@ -33,7 +33,7 @@ namespace QLBHVatLieuXayDung.ACTION
         }
         public bool XoaThanhToan(int soPhieu)
         {
-            string query = string.Format("EXEC dbo.Delete_ThanhToan @soPhieu = '{0}'", soPhieu);
+            string query = string.Format("EXEC dbo.USP_DeleteThanhToan @soPhieu = '{0}'", soPhieu);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }

@@ -13,6 +13,7 @@ namespace QLBHVatLieuXayDung
             InitializeComponent();
             LoadKH();
         }
+
         #region Methors
 
         private void LoadListKH()
@@ -141,13 +142,13 @@ namespace QLBHVatLieuXayDung
                         else
                         {
                             lbThemTB.Text = string.Empty;
-                            lbThemTB.Text = "<\\ Mã khách hàng đã tồn tại >";
+                            lbThemTB.Text = "<\\ Lỗi nhập thông tin khách hàng >";
                         }
                     }
                     catch (FormatException)
                     {
                         lbThemTB.Text = string.Empty;
-                        lbThemTB.Text = "<\\ Chưa nhập tiền nợ >";
+                        lbThemTB.Text = "<\\ Lỗi nhập thông tin tiền nợ >";
                     }
                 }
                 else
@@ -170,7 +171,8 @@ namespace QLBHVatLieuXayDung
             }
             catch (FormatException)
             {
-
+                lbThemTB.Text = string.Empty;
+                lbThemTB.Text = "<\\ Lỗi nhập thông tin tiền nợ >";
             }
         }
         

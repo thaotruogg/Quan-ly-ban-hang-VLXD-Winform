@@ -22,7 +22,7 @@ namespace QLBHVatLieuXayDung.DAO
         #region Hóa đơn
         public DataTable LoadListHoaDon()
         {
-            string query = "EXEC dbo.Show_SoHoaDon";
+            string query = "EXEC dbo.SHOW_HoaDon";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public bool ThemHoaDon(string soHoaDon, string maKhachHang, string ngayHoaDon)
@@ -48,7 +48,7 @@ namespace QLBHVatLieuXayDung.DAO
         #region Chi tiết hóa đơn
         public DataTable LoadListCTHD()
         {
-            string query = "EXEC dbo.Show_CTHD";
+            string query = "EXEC dbo.SHOW_CTHD";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public bool ThemChiTietHoaDon(string maHoaDon, string maSanPham, int soLuong, double donGia)
