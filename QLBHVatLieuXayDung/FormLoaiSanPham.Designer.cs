@@ -130,6 +130,8 @@
             // 
             this.btnLoaiSP_clear.BackColor = System.Drawing.Color.AliceBlue;
             this.btnLoaiSP_clear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoaiSP_clear.FlatAppearance.BorderSize = 0;
+            this.btnLoaiSP_clear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
             this.btnLoaiSP_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoaiSP_clear.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoaiSP_clear.ForeColor = System.Drawing.Color.AliceBlue;
@@ -146,6 +148,7 @@
             // 
             this.btnLoaiSP_save.BackColor = System.Drawing.Color.AliceBlue;
             this.btnLoaiSP_save.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoaiSP_save.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnLoaiSP_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoaiSP_save.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoaiSP_save.ForeColor = System.Drawing.Color.AliceBlue;
@@ -162,6 +165,8 @@
             // 
             this.btnLoaiSP_delete.BackColor = System.Drawing.Color.AliceBlue;
             this.btnLoaiSP_delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoaiSP_delete.FlatAppearance.BorderSize = 0;
+            this.btnLoaiSP_delete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
             this.btnLoaiSP_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoaiSP_delete.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnLoaiSP_delete.Image = global::QLBHVatLieuXayDung.Properties.Resources.Trash_Can_32px1;
@@ -176,6 +181,8 @@
             // 
             this.btnLoaiSP_edit.BackColor = System.Drawing.Color.AliceBlue;
             this.btnLoaiSP_edit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoaiSP_edit.FlatAppearance.BorderSize = 0;
+            this.btnLoaiSP_edit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
             this.btnLoaiSP_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoaiSP_edit.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnLoaiSP_edit.Image = global::QLBHVatLieuXayDung.Properties.Resources.Edit_32px1;
@@ -190,6 +197,8 @@
             // 
             this.btnLoaiSP_add.BackColor = System.Drawing.Color.AliceBlue;
             this.btnLoaiSP_add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoaiSP_add.FlatAppearance.BorderSize = 0;
+            this.btnLoaiSP_add.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
             this.btnLoaiSP_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoaiSP_add.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnLoaiSP_add.Image = global::QLBHVatLieuXayDung.Properties.Resources.Add_32px1;
@@ -205,6 +214,7 @@
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.btnLoaiSP_back);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 401);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(684, 40);
@@ -270,7 +280,7 @@
             this.groupBox2.Controls.Add(this.dgvLoaiSP);
             this.groupBox2.Location = new System.Drawing.Point(301, 38);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(371, 351);
+            this.groupBox2.Size = new System.Drawing.Size(371, 355);
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh mục";

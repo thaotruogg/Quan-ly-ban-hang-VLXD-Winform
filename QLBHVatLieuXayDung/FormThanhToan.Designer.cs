@@ -141,14 +141,18 @@
             // btnTT_save
             // 
             this.btnTT_save.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTT_save.FlatAppearance.BorderSize = 0;
+            this.btnTT_save.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LimeGreen;
+            this.btnTT_save.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
             this.btnTT_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTT_save.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTT_save.ForeColor = System.Drawing.Color.Green;
             this.btnTT_save.Image = global::QLBHVatLieuXayDung.Properties.Resources.Paper_Money_32px;
-            this.btnTT_save.Location = new System.Drawing.Point(212, 146);
+            this.btnTT_save.Location = new System.Drawing.Point(212, 129);
             this.btnTT_save.Name = "btnTT_save";
-            this.btnTT_save.Size = new System.Drawing.Size(90, 42);
+            this.btnTT_save.Size = new System.Drawing.Size(90, 63);
             this.btnTT_save.TabIndex = 9;
+            this.btnTT_save.TabStop = false;
             this.btnTT_save.UseVisualStyleBackColor = true;
             this.btnTT_save.Click += new System.EventHandler(this.btnTT_save_Click);
             // 
@@ -208,6 +212,7 @@
             this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.btnBackThanhToan);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 313);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(350, 40);

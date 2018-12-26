@@ -46,8 +46,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnThanhToan_delete = new System.Windows.Forms.Button();
-            this.btnThanhToan_edit = new System.Windows.Forms.Button();
-            this.btnThanhToan_add = new System.Windows.Forms.Button();
             this.btnThanhToan_clear = new System.Windows.Forms.Button();
             this.btnThanhToan_save = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -111,10 +109,11 @@
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.btnBackThanhToan_list);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 551);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(814, 40);
+            this.panel2.Size = new System.Drawing.Size(676, 40);
             this.panel2.TabIndex = 5;
             // 
             // label11
@@ -148,19 +147,24 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnThanhToan_delete);
+            this.groupBox2.Controls.Add(this.panel8);
             this.groupBox2.Controls.Add(this.cbxThanhToan_maKH);
             this.groupBox2.Controls.Add(this.dtpThanhToan_ngayPhieu);
             this.groupBox2.Controls.Add(this.txbThanhToan_soTien);
             this.groupBox2.Controls.Add(this.txbThanhToan_soPhieu);
+            this.groupBox2.Controls.Add(this.btnThanhToan_clear);
             this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.btnThanhToan_save);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(186, 16);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(343, 163);
+            this.groupBox2.Size = new System.Drawing.Size(676, 163);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết";
@@ -169,7 +173,7 @@
             // 
             this.cbxThanhToan_maKH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxThanhToan_maKH.FormattingEnabled = true;
-            this.cbxThanhToan_maKH.Location = new System.Drawing.Point(133, 48);
+            this.cbxThanhToan_maKH.Location = new System.Drawing.Point(159, 56);
             this.cbxThanhToan_maKH.Name = "cbxThanhToan_maKH";
             this.cbxThanhToan_maKH.Size = new System.Drawing.Size(194, 25);
             this.cbxThanhToan_maKH.TabIndex = 7;
@@ -177,14 +181,14 @@
             // dtpThanhToan_ngayPhieu
             // 
             this.dtpThanhToan_ngayPhieu.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpThanhToan_ngayPhieu.Location = new System.Drawing.Point(133, 80);
+            this.dtpThanhToan_ngayPhieu.Location = new System.Drawing.Point(159, 88);
             this.dtpThanhToan_ngayPhieu.Name = "dtpThanhToan_ngayPhieu";
             this.dtpThanhToan_ngayPhieu.Size = new System.Drawing.Size(194, 24);
             this.dtpThanhToan_ngayPhieu.TabIndex = 6;
             // 
             // txbThanhToan_soTien
             // 
-            this.txbThanhToan_soTien.Location = new System.Drawing.Point(133, 111);
+            this.txbThanhToan_soTien.Location = new System.Drawing.Point(159, 119);
             this.txbThanhToan_soTien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbThanhToan_soTien.Name = "txbThanhToan_soTien";
             this.txbThanhToan_soTien.Size = new System.Drawing.Size(151, 24);
@@ -193,7 +197,7 @@
             // 
             // txbThanhToan_soPhieu
             // 
-            this.txbThanhToan_soPhieu.Location = new System.Drawing.Point(133, 17);
+            this.txbThanhToan_soPhieu.Location = new System.Drawing.Point(159, 25);
             this.txbThanhToan_soPhieu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbThanhToan_soPhieu.Name = "txbThanhToan_soPhieu";
             this.txbThanhToan_soPhieu.ReadOnly = true;
@@ -203,7 +207,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 114);
+            this.label4.Location = new System.Drawing.Point(56, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 17);
             this.label4.TabIndex = 3;
@@ -212,7 +216,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 83);
+            this.label3.Location = new System.Drawing.Point(56, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 17);
             this.label3.TabIndex = 2;
@@ -221,7 +225,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 52);
+            this.label2.Location = new System.Drawing.Point(56, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 17);
             this.label2.TabIndex = 1;
@@ -230,7 +234,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 21);
+            this.label1.Location = new System.Drawing.Point(56, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 17);
             this.label1.TabIndex = 0;
@@ -240,51 +244,19 @@
             // 
             this.btnThanhToan_delete.BackColor = System.Drawing.Color.AliceBlue;
             this.btnThanhToan_delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThanhToan_delete.FlatAppearance.BorderSize = 0;
+            this.btnThanhToan_delete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnThanhToan_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThanhToan_delete.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThanhToan_delete.ForeColor = System.Drawing.Color.Transparent;
             this.btnThanhToan_delete.Image = global::QLBHVatLieuXayDung.Properties.Resources.Trash_Can_32px1;
-            this.btnThanhToan_delete.Location = new System.Drawing.Point(671, 362);
+            this.btnThanhToan_delete.Location = new System.Drawing.Point(523, 19);
             this.btnThanhToan_delete.Name = "btnThanhToan_delete";
-            this.btnThanhToan_delete.Size = new System.Drawing.Size(142, 58);
+            this.btnThanhToan_delete.Size = new System.Drawing.Size(142, 132);
             this.btnThanhToan_delete.TabIndex = 33;
             this.btnThanhToan_delete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThanhToan_delete.UseVisualStyleBackColor = false;
             this.btnThanhToan_delete.Click += new System.EventHandler(this.btnThanhToan_delete_Click);
-            // 
-            // btnThanhToan_edit
-            // 
-            this.btnThanhToan_edit.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnThanhToan_edit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThanhToan_edit.Enabled = false;
-            this.btnThanhToan_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThanhToan_edit.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhToan_edit.ForeColor = System.Drawing.Color.Transparent;
-            this.btnThanhToan_edit.Image = global::QLBHVatLieuXayDung.Properties.Resources.Edit_32px1;
-            this.btnThanhToan_edit.Location = new System.Drawing.Point(671, 299);
-            this.btnThanhToan_edit.Name = "btnThanhToan_edit";
-            this.btnThanhToan_edit.Size = new System.Drawing.Size(142, 58);
-            this.btnThanhToan_edit.TabIndex = 32;
-            this.btnThanhToan_edit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThanhToan_edit.UseVisualStyleBackColor = false;
-            this.btnThanhToan_edit.Click += new System.EventHandler(this.btnThanhToan_edit_Click);
-            // 
-            // btnThanhToan_add
-            // 
-            this.btnThanhToan_add.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnThanhToan_add.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThanhToan_add.Enabled = false;
-            this.btnThanhToan_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThanhToan_add.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhToan_add.ForeColor = System.Drawing.Color.Transparent;
-            this.btnThanhToan_add.Image = global::QLBHVatLieuXayDung.Properties.Resources.Add_32px1;
-            this.btnThanhToan_add.Location = new System.Drawing.Point(671, 236);
-            this.btnThanhToan_add.Name = "btnThanhToan_add";
-            this.btnThanhToan_add.Size = new System.Drawing.Size(142, 58);
-            this.btnThanhToan_add.TabIndex = 31;
-            this.btnThanhToan_add.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThanhToan_add.UseVisualStyleBackColor = false;
-            this.btnThanhToan_add.Click += new System.EventHandler(this.btnThanhToan_add_Click);
             // 
             // btnThanhToan_clear
             // 
@@ -294,7 +266,7 @@
             this.btnThanhToan_clear.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThanhToan_clear.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnThanhToan_clear.Image = global::QLBHVatLieuXayDung.Properties.Resources.Delete_32px;
-            this.btnThanhToan_clear.Location = new System.Drawing.Point(560, 139);
+            this.btnThanhToan_clear.Location = new System.Drawing.Point(402, 67);
             this.btnThanhToan_clear.Margin = new System.Windows.Forms.Padding(4);
             this.btnThanhToan_clear.Name = "btnThanhToan_clear";
             this.btnThanhToan_clear.Size = new System.Drawing.Size(100, 42);
@@ -310,7 +282,7 @@
             this.btnThanhToan_save.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThanhToan_save.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnThanhToan_save.Image = global::QLBHVatLieuXayDung.Properties.Resources.Save_32px;
-            this.btnThanhToan_save.Location = new System.Drawing.Point(560, 89);
+            this.btnThanhToan_save.Location = new System.Drawing.Point(402, 17);
             this.btnThanhToan_save.Margin = new System.Windows.Forms.Padding(4);
             this.btnThanhToan_save.Name = "btnThanhToan_save";
             this.btnThanhToan_save.Size = new System.Drawing.Size(100, 42);
@@ -320,9 +292,9 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel8.Location = new System.Drawing.Point(661, 88);
+            this.panel8.Location = new System.Drawing.Point(503, 9);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(10, 458);
+            this.panel8.Size = new System.Drawing.Size(10, 154);
             this.panel8.TabIndex = 36;
             // 
             // FormThanhToan_List
@@ -330,13 +302,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(814, 591);
-            this.Controls.Add(this.panel8);
-            this.Controls.Add(this.btnThanhToan_delete);
-            this.Controls.Add(this.btnThanhToan_edit);
-            this.Controls.Add(this.btnThanhToan_add);
-            this.Controls.Add(this.btnThanhToan_clear);
-            this.Controls.Add(this.btnThanhToan_save);
+            this.ClientSize = new System.Drawing.Size(676, 591);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
@@ -377,8 +343,6 @@
         private System.Windows.Forms.TextBox txbThanhToan_soTien;
         private System.Windows.Forms.ComboBox cbxThanhToan_maKH;
         private System.Windows.Forms.Button btnThanhToan_delete;
-        private System.Windows.Forms.Button btnThanhToan_edit;
-        private System.Windows.Forms.Button btnThanhToan_add;
         private System.Windows.Forms.Button btnThanhToan_clear;
         private System.Windows.Forms.Button btnThanhToan_save;
         private System.Windows.Forms.Panel panel8;

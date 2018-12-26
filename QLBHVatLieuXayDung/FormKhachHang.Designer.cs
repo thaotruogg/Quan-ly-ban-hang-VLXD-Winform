@@ -398,6 +398,7 @@
             this.panel3.BackColor = System.Drawing.Color.Gainsboro;
             this.panel3.Controls.Add(this.btnBackKH);
             this.panel3.Controls.Add(this.label10);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 511);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1184, 50);

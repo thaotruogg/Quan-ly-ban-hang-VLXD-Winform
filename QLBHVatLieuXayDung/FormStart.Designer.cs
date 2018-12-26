@@ -179,11 +179,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Noto Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(178, 19);
+            this.label5.Location = new System.Drawing.Point(219, 18);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(207, 26);
+            this.label5.Size = new System.Drawing.Size(128, 26);
             this.label5.TabIndex = 24;
-            this.label5.Text = "Quéo căm Quéo căm";
+            this.label5.Text = "ĐĂNG NHẬP";
             // 
             // lbCheckLogin
             // 
@@ -238,7 +238,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(550, 258);
+            this.ClientSize = new System.Drawing.Size(546, 254);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label5);

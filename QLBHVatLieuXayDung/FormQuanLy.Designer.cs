@@ -78,6 +78,7 @@
             this.btnCTHD_clear = new System.Windows.Forms.Button();
             this.btnCTHD_save = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnCTHD_thanhToan = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnCTHD_delete = new System.Windows.Forms.Button();
             this.btnCTHD_edit = new System.Windows.Forms.Button();
@@ -88,7 +89,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.btnRefreshCTHD = new System.Windows.Forms.Button();
             this.dgvCTHD = new System.Windows.Forms.DataGridView();
-            this.btnCTHD_thanhToan = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -107,10 +107,8 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.BackColor = System.Drawing.Color.LightGray;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
             this.label1.Location = new System.Drawing.Point(0, 0);
@@ -164,9 +162,10 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.LightGray;
-            this.panel7.Location = new System.Drawing.Point(0, 106);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel7.Location = new System.Drawing.Point(0, 111);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(10, 502);
+            this.panel7.Size = new System.Drawing.Size(10, 497);
             this.panel7.TabIndex = 32;
             // 
             // btnShowLoaiSP
@@ -220,6 +219,7 @@
             this.panel3.BackColor = System.Drawing.Color.Gainsboro;
             this.panel3.Controls.Add(this.btnExit);
             this.panel3.Controls.Add(this.label10);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 612);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1058, 50);
@@ -467,7 +467,7 @@
             this.groupBox3.Controls.Add(this.dgvHoaDon);
             this.groupBox3.Location = new System.Drawing.Point(7, 135);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(532, 397);
+            this.groupBox3.Size = new System.Drawing.Size(523, 397);
             this.groupBox3.TabIndex = 34;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách hóa đơn";
@@ -490,7 +490,7 @@
             this.lbThemTC.ForeColor = System.Drawing.Color.Green;
             this.lbThemTC.Location = new System.Drawing.Point(133, 362);
             this.lbThemTC.Name = "lbThemTC";
-            this.lbThemTC.Size = new System.Drawing.Size(393, 18);
+            this.lbThemTC.Size = new System.Drawing.Size(384, 18);
             this.lbThemTC.TabIndex = 42;
             this.lbThemTC.Text = "Thêm sản phẩm thành công";
             this.lbThemTC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -529,7 +529,7 @@
             this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHoaDon.Location = new System.Drawing.Point(6, 23);
             this.dgvHoaDon.Name = "dgvHoaDon";
-            this.dgvHoaDon.Size = new System.Drawing.Size(520, 322);
+            this.dgvHoaDon.Size = new System.Drawing.Size(511, 322);
             this.dgvHoaDon.TabIndex = 0;
             this.dgvHoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHoaDon_CellClick);
             this.dgvHoaDon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHoaDon_CellContentClick);
@@ -542,24 +542,28 @@
             this.panel1.Controls.Add(this.btnEditHD);
             this.panel1.Controls.Add(this.btnFormThanhToan);
             this.panel1.Controls.Add(this.btnAddHD);
-            this.panel1.Location = new System.Drawing.Point(539, 34);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(536, 3);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(153, 498);
+            this.panel1.Size = new System.Drawing.Size(153, 576);
             this.panel1.TabIndex = 35;
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(10, 498);
+            this.panel8.Size = new System.Drawing.Size(10, 576);
             this.panel8.TabIndex = 21;
             // 
             // btnDeleteHD
             // 
             this.btnDeleteHD.BackColor = System.Drawing.Color.AliceBlue;
             this.btnDeleteHD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteHD.FlatAppearance.BorderSize = 0;
+            this.btnDeleteHD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
             this.btnDeleteHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteHD.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteHD.ForeColor = System.Drawing.Color.Transparent;
@@ -576,6 +580,8 @@
             // 
             this.btnEditHD.BackColor = System.Drawing.Color.AliceBlue;
             this.btnEditHD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditHD.FlatAppearance.BorderSize = 0;
+            this.btnEditHD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
             this.btnEditHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditHD.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditHD.ForeColor = System.Drawing.Color.Transparent;
@@ -597,7 +603,7 @@
             this.btnFormThanhToan.ForeColor = System.Drawing.Color.Green;
             this.btnFormThanhToan.Image = global::QLBHVatLieuXayDung.Properties.Resources.icons8_Cash__48;
             this.btnFormThanhToan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnFormThanhToan.Location = new System.Drawing.Point(10, 407);
+            this.btnFormThanhToan.Location = new System.Drawing.Point(10, 439);
             this.btnFormThanhToan.Margin = new System.Windows.Forms.Padding(4);
             this.btnFormThanhToan.Name = "btnFormThanhToan";
             this.btnFormThanhToan.Size = new System.Drawing.Size(143, 90);
@@ -611,6 +617,8 @@
             // 
             this.btnAddHD.BackColor = System.Drawing.Color.AliceBlue;
             this.btnAddHD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddHD.FlatAppearance.BorderSize = 0;
+            this.btnAddHD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
             this.btnAddHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddHD.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddHD.ForeColor = System.Drawing.Color.Transparent;
@@ -627,10 +635,11 @@
             // 
             this.tabControlHoaDon.Controls.Add(this.tabPageHoaDon);
             this.tabControlHoaDon.Controls.Add(this.tabPageCTHD);
-            this.tabControlHoaDon.Location = new System.Drawing.Point(358, 40);
+            this.tabControlHoaDon.Dock = System.Windows.Forms.DockStyle.Right;
+            this.tabControlHoaDon.Location = new System.Drawing.Point(358, 0);
             this.tabControlHoaDon.Name = "tabControlHoaDon";
             this.tabControlHoaDon.SelectedIndex = 0;
-            this.tabControlHoaDon.Size = new System.Drawing.Size(700, 568);
+            this.tabControlHoaDon.Size = new System.Drawing.Size(700, 612);
             this.tabControlHoaDon.TabIndex = 36;
             // 
             // tabPageHoaDon
@@ -644,7 +653,7 @@
             this.tabPageHoaDon.Location = new System.Drawing.Point(4, 26);
             this.tabPageHoaDon.Name = "tabPageHoaDon";
             this.tabPageHoaDon.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageHoaDon.Size = new System.Drawing.Size(692, 538);
+            this.tabPageHoaDon.Size = new System.Drawing.Size(692, 582);
             this.tabPageHoaDon.TabIndex = 0;
             this.tabPageHoaDon.Text = "Hóa đơn";
             this.tabPageHoaDon.Click += new System.EventHandler(this.tabPageHoaDon_Click);
@@ -653,11 +662,13 @@
             // 
             this.btnClearHoaDon.BackColor = System.Drawing.Color.AliceBlue;
             this.btnClearHoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearHoaDon.FlatAppearance.BorderSize = 0;
+            this.btnClearHoaDon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
             this.btnClearHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearHoaDon.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearHoaDon.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnClearHoaDon.Image = global::QLBHVatLieuXayDung.Properties.Resources.Delete_32px;
-            this.btnClearHoaDon.Location = new System.Drawing.Point(439, 86);
+            this.btnClearHoaDon.Location = new System.Drawing.Point(434, 86);
             this.btnClearHoaDon.Margin = new System.Windows.Forms.Padding(4);
             this.btnClearHoaDon.Name = "btnClearHoaDon";
             this.btnClearHoaDon.Size = new System.Drawing.Size(100, 42);
@@ -669,11 +680,13 @@
             // 
             this.btnSaveHoaDon.BackColor = System.Drawing.Color.AliceBlue;
             this.btnSaveHoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveHoaDon.FlatAppearance.BorderSize = 0;
+            this.btnSaveHoaDon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
             this.btnSaveHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveHoaDon.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveHoaDon.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSaveHoaDon.Image = global::QLBHVatLieuXayDung.Properties.Resources.Save_32px;
-            this.btnSaveHoaDon.Location = new System.Drawing.Point(439, 36);
+            this.btnSaveHoaDon.Location = new System.Drawing.Point(434, 36);
             this.btnSaveHoaDon.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveHoaDon.Name = "btnSaveHoaDon";
             this.btnSaveHoaDon.Size = new System.Drawing.Size(100, 42);
@@ -691,7 +704,7 @@
             this.tabPageCTHD.Location = new System.Drawing.Point(4, 26);
             this.tabPageCTHD.Name = "tabPageCTHD";
             this.tabPageCTHD.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCTHD.Size = new System.Drawing.Size(692, 538);
+            this.tabPageCTHD.Size = new System.Drawing.Size(692, 582);
             this.tabPageCTHD.TabIndex = 1;
             this.tabPageCTHD.Text = "Chi tiết hóa đơn";
             this.tabPageCTHD.UseVisualStyleBackColor = true;
@@ -704,7 +717,7 @@
             this.btnCTHD_clear.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCTHD_clear.ForeColor = System.Drawing.Color.White;
             this.btnCTHD_clear.Image = global::QLBHVatLieuXayDung.Properties.Resources.Delete_32px;
-            this.btnCTHD_clear.Location = new System.Drawing.Point(439, 86);
+            this.btnCTHD_clear.Location = new System.Drawing.Point(435, 86);
             this.btnCTHD_clear.Margin = new System.Windows.Forms.Padding(4);
             this.btnCTHD_clear.Name = "btnCTHD_clear";
             this.btnCTHD_clear.Size = new System.Drawing.Size(100, 40);
@@ -720,7 +733,7 @@
             this.btnCTHD_save.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCTHD_save.ForeColor = System.Drawing.Color.White;
             this.btnCTHD_save.Image = global::QLBHVatLieuXayDung.Properties.Resources.Save_32px;
-            this.btnCTHD_save.Location = new System.Drawing.Point(439, 36);
+            this.btnCTHD_save.Location = new System.Drawing.Point(435, 36);
             this.btnCTHD_save.Margin = new System.Windows.Forms.Padding(4);
             this.btnCTHD_save.Name = "btnCTHD_save";
             this.btnCTHD_save.Size = new System.Drawing.Size(100, 40);
@@ -736,24 +749,47 @@
             this.panel6.Controls.Add(this.btnCTHD_delete);
             this.panel6.Controls.Add(this.btnCTHD_edit);
             this.panel6.Controls.Add(this.btnCTHD_add);
-            this.panel6.Location = new System.Drawing.Point(539, 34);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel6.Location = new System.Drawing.Point(536, 3);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(153, 498);
+            this.panel6.Size = new System.Drawing.Size(153, 576);
             this.panel6.TabIndex = 37;
+            // 
+            // btnCTHD_thanhToan
+            // 
+            this.btnCTHD_thanhToan.BackColor = System.Drawing.Color.Honeydew;
+            this.btnCTHD_thanhToan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCTHD_thanhToan.FlatAppearance.BorderSize = 0;
+            this.btnCTHD_thanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCTHD_thanhToan.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCTHD_thanhToan.ForeColor = System.Drawing.Color.Green;
+            this.btnCTHD_thanhToan.Image = global::QLBHVatLieuXayDung.Properties.Resources.icons8_Cash__48;
+            this.btnCTHD_thanhToan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCTHD_thanhToan.Location = new System.Drawing.Point(10, 439);
+            this.btnCTHD_thanhToan.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCTHD_thanhToan.Name = "btnCTHD_thanhToan";
+            this.btnCTHD_thanhToan.Size = new System.Drawing.Size(143, 90);
+            this.btnCTHD_thanhToan.TabIndex = 32;
+            this.btnCTHD_thanhToan.Text = "< Thanh toán />";
+            this.btnCTHD_thanhToan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCTHD_thanhToan.UseVisualStyleBackColor = false;
+            this.btnCTHD_thanhToan.Click += new System.EventHandler(this.btnCTHD_thanhToan_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 498);
+            this.panel4.Size = new System.Drawing.Size(10, 576);
             this.panel4.TabIndex = 22;
             // 
             // btnCTHD_delete
             // 
             this.btnCTHD_delete.BackColor = System.Drawing.Color.AliceBlue;
             this.btnCTHD_delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCTHD_delete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
             this.btnCTHD_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCTHD_delete.ForeColor = System.Drawing.Color.White;
             this.btnCTHD_delete.Image = global::QLBHVatLieuXayDung.Properties.Resources.Trash_Can_32px1;
@@ -769,6 +805,7 @@
             this.btnCTHD_edit.BackColor = System.Drawing.Color.AliceBlue;
             this.btnCTHD_edit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCTHD_edit.Enabled = false;
+            this.btnCTHD_edit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
             this.btnCTHD_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCTHD_edit.ForeColor = System.Drawing.Color.White;
             this.btnCTHD_edit.Image = global::QLBHVatLieuXayDung.Properties.Resources.Edit_32px1;
@@ -783,6 +820,7 @@
             // 
             this.btnCTHD_add.BackColor = System.Drawing.Color.AliceBlue;
             this.btnCTHD_add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCTHD_add.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
             this.btnCTHD_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCTHD_add.ForeColor = System.Drawing.Color.Transparent;
             this.btnCTHD_add.Image = global::QLBHVatLieuXayDung.Properties.Resources.Add_32px1;
@@ -867,25 +905,6 @@
             this.dgvCTHD.Size = new System.Drawing.Size(521, 295);
             this.dgvCTHD.TabIndex = 0;
             this.dgvCTHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTHD_CellClick);
-            // 
-            // btnCTHD_thanhToan
-            // 
-            this.btnCTHD_thanhToan.BackColor = System.Drawing.Color.Honeydew;
-            this.btnCTHD_thanhToan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCTHD_thanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCTHD_thanhToan.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCTHD_thanhToan.ForeColor = System.Drawing.Color.Green;
-            this.btnCTHD_thanhToan.Image = global::QLBHVatLieuXayDung.Properties.Resources.icons8_Cash__48;
-            this.btnCTHD_thanhToan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCTHD_thanhToan.Location = new System.Drawing.Point(10, 407);
-            this.btnCTHD_thanhToan.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCTHD_thanhToan.Name = "btnCTHD_thanhToan";
-            this.btnCTHD_thanhToan.Size = new System.Drawing.Size(143, 90);
-            this.btnCTHD_thanhToan.TabIndex = 32;
-            this.btnCTHD_thanhToan.Text = "< Thanh toán />";
-            this.btnCTHD_thanhToan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCTHD_thanhToan.UseVisualStyleBackColor = false;
-            this.btnCTHD_thanhToan.Click += new System.EventHandler(this.btnCTHD_thanhToan_Click);
             // 
             // FormQuanLy
             // 

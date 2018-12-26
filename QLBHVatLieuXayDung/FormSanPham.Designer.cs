@@ -61,21 +61,26 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.panel1);
+            this.groupBox1.Controls.Add(this.btnSanPham_delete);
             this.groupBox1.Controls.Add(this.cbxSanPham_loaiSP);
             this.groupBox1.Controls.Add(this.btnSanPham_clear);
             this.groupBox1.Controls.Add(this.btnSanPham_save);
+            this.groupBox1.Controls.Add(this.btnSanPham_add);
             this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.btnSanPham_edit);
             this.groupBox1.Controls.Add(this.txbSanPham_nSX);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtSanPham_tenSP);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txbSanPham_maSP);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(104, 13);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(322, 213);
+            this.groupBox1.Size = new System.Drawing.Size(578, 213);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi tiết";
@@ -88,7 +93,7 @@
             this.cbxSanPham_loaiSP.FormattingEnabled = true;
             this.cbxSanPham_loaiSP.IntegralHeight = false;
             this.cbxSanPham_loaiSP.ItemHeight = 17;
-            this.cbxSanPham_loaiSP.Location = new System.Drawing.Point(125, 112);
+            this.cbxSanPham_loaiSP.Location = new System.Drawing.Point(179, 112);
             this.cbxSanPham_loaiSP.Name = "cbxSanPham_loaiSP";
             this.cbxSanPham_loaiSP.Size = new System.Drawing.Size(189, 25);
             this.cbxSanPham_loaiSP.TabIndex = 27;
@@ -102,7 +107,7 @@
             this.btnSanPham_clear.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSanPham_clear.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSanPham_clear.Image = global::QLBHVatLieuXayDung.Properties.Resources.Delete_32px;
-            this.btnSanPham_clear.Location = new System.Drawing.Point(125, 152);
+            this.btnSanPham_clear.Location = new System.Drawing.Point(179, 152);
             this.btnSanPham_clear.Margin = new System.Windows.Forms.Padding(4);
             this.btnSanPham_clear.Name = "btnSanPham_clear";
             this.btnSanPham_clear.Size = new System.Drawing.Size(80, 42);
@@ -118,7 +123,7 @@
             this.btnSanPham_save.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSanPham_save.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSanPham_save.Image = global::QLBHVatLieuXayDung.Properties.Resources.Save_32px;
-            this.btnSanPham_save.Location = new System.Drawing.Point(234, 152);
+            this.btnSanPham_save.Location = new System.Drawing.Point(288, 152);
             this.btnSanPham_save.Margin = new System.Windows.Forms.Padding(4);
             this.btnSanPham_save.Name = "btnSanPham_save";
             this.btnSanPham_save.Size = new System.Drawing.Size(80, 42);
@@ -129,7 +134,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 115);
+            this.label4.Location = new System.Drawing.Point(61, 115);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 17);
             this.label4.TabIndex = 7;
@@ -137,7 +142,7 @@
             // 
             // txbSanPham_nSX
             // 
-            this.txbSanPham_nSX.Location = new System.Drawing.Point(125, 83);
+            this.txbSanPham_nSX.Location = new System.Drawing.Point(179, 83);
             this.txbSanPham_nSX.Name = "txbSanPham_nSX";
             this.txbSanPham_nSX.Size = new System.Drawing.Size(190, 24);
             this.txbSanPham_nSX.TabIndex = 4;
@@ -145,7 +150,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 86);
+            this.label3.Location = new System.Drawing.Point(61, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 17);
             this.label3.TabIndex = 5;
@@ -153,7 +158,7 @@
             // 
             // txtSanPham_tenSP
             // 
-            this.txtSanPham_tenSP.Location = new System.Drawing.Point(125, 54);
+            this.txtSanPham_tenSP.Location = new System.Drawing.Point(179, 54);
             this.txtSanPham_tenSP.Name = "txtSanPham_tenSP";
             this.txtSanPham_tenSP.Size = new System.Drawing.Size(190, 24);
             this.txtSanPham_tenSP.TabIndex = 2;
@@ -161,7 +166,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 56);
+            this.label2.Location = new System.Drawing.Point(61, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 17);
             this.label2.TabIndex = 3;
@@ -169,7 +174,7 @@
             // 
             // txbSanPham_maSP
             // 
-            this.txbSanPham_maSP.Location = new System.Drawing.Point(125, 24);
+            this.txbSanPham_maSP.Location = new System.Drawing.Point(179, 24);
             this.txbSanPham_maSP.Name = "txbSanPham_maSP";
             this.txbSanPham_maSP.Size = new System.Drawing.Size(190, 24);
             this.txbSanPham_maSP.TabIndex = 1;
@@ -177,7 +182,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 27);
+            this.label1.Location = new System.Drawing.Point(61, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 17);
             this.label1.TabIndex = 1;
@@ -264,9 +269,10 @@
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.btnBackHoaDon);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 568);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(579, 40);
+            this.panel2.Size = new System.Drawing.Size(578, 40);
             this.panel2.TabIndex = 4;
             // 
             // label11
@@ -305,7 +311,7 @@
             this.btnSanPham_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSanPham_add.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSanPham_add.Image = global::QLBHVatLieuXayDung.Properties.Resources.Add_32px1;
-            this.btnSanPham_add.Location = new System.Drawing.Point(436, 21);
+            this.btnSanPham_add.Location = new System.Drawing.Point(433, 15);
             this.btnSanPham_add.Name = "btnSanPham_add";
             this.btnSanPham_add.Size = new System.Drawing.Size(142, 58);
             this.btnSanPham_add.TabIndex = 9;
@@ -319,7 +325,7 @@
             this.btnSanPham_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSanPham_edit.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSanPham_edit.Image = global::QLBHVatLieuXayDung.Properties.Resources.Edit_32px1;
-            this.btnSanPham_edit.Location = new System.Drawing.Point(436, 87);
+            this.btnSanPham_edit.Location = new System.Drawing.Point(433, 81);
             this.btnSanPham_edit.Name = "btnSanPham_edit";
             this.btnSanPham_edit.Size = new System.Drawing.Size(142, 58);
             this.btnSanPham_edit.TabIndex = 10;
@@ -333,7 +339,7 @@
             this.btnSanPham_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSanPham_delete.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnSanPham_delete.Image = global::QLBHVatLieuXayDung.Properties.Resources.Trash_Can_48px;
-            this.btnSanPham_delete.Location = new System.Drawing.Point(436, 153);
+            this.btnSanPham_delete.Location = new System.Drawing.Point(433, 147);
             this.btnSanPham_delete.Name = "btnSanPham_delete";
             this.btnSanPham_delete.Size = new System.Drawing.Size(142, 58);
             this.btnSanPham_delete.TabIndex = 11;
@@ -343,9 +349,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel1.Location = new System.Drawing.Point(426, 21);
+            this.panel1.Location = new System.Drawing.Point(423, 9);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 204);
+            this.panel1.Size = new System.Drawing.Size(10, 202);
             this.panel1.TabIndex = 12;
             // 
             // FormSanPham
@@ -354,13 +360,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(578, 608);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnSanPham_delete);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.btnSanPham_edit);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnSanPham_add);
             this.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
