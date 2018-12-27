@@ -165,7 +165,7 @@
             this.btnExitLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExitLogin.Font = new System.Drawing.Font("Segoe MDL2 Assets", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExitLogin.ForeColor = System.Drawing.Color.Red;
-            this.btnExitLogin.Location = new System.Drawing.Point(507, 215);
+            this.btnExitLogin.Location = new System.Drawing.Point(13, 199);
             this.btnExitLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnExitLogin.Name = "btnExitLogin";
             this.btnExitLogin.Size = new System.Drawing.Size(38, 38);
@@ -219,12 +219,14 @@
             // 
             this.btnLogin.BackColor = System.Drawing.Color.White;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.Green;
             this.btnLogin.Image = global::QLBHVatLieuXayDung.Properties.Resources.Login1_32px;
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnLogin.Location = new System.Drawing.Point(384, 183);
+            this.btnLogin.Location = new System.Drawing.Point(384, 185);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(84, 40);
             this.btnLogin.TabIndex = 2;
@@ -238,7 +240,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(546, 254);
+            this.ClientSize = new System.Drawing.Size(542, 250);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label5);
@@ -283,5 +285,6 @@
         private System.Windows.Forms.Label lbCheckLogin;
         private System.Windows.Forms.Label lbW;
         private System.Windows.Forms.Panel panel2;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton_login;
     }
 }

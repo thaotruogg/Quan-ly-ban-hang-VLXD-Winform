@@ -30,10 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSanPham));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSanPham_delete = new System.Windows.Forms.Button();
             this.cbxSanPham_loaiSP = new System.Windows.Forms.ComboBox();
             this.btnSanPham_clear = new System.Windows.Forms.Button();
             this.btnSanPham_save = new System.Windows.Forms.Button();
+            this.btnSanPham_add = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnSanPham_edit = new System.Windows.Forms.Button();
             this.txbSanPham_nSX = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtSanPham_tenSP = new System.Windows.Forms.TextBox();
@@ -49,10 +53,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.btnBackHoaDon = new System.Windows.Forms.Button();
-            this.btnSanPham_add = new System.Windows.Forms.Button();
-            this.btnSanPham_edit = new System.Windows.Forms.Button();
-            this.btnSanPham_delete = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
@@ -85,6 +85,30 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi tiết";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.Location = new System.Drawing.Point(423, 9);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(10, 202);
+            this.panel1.TabIndex = 12;
+            // 
+            // btnSanPham_delete
+            // 
+            this.btnSanPham_delete.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnSanPham_delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSanPham_delete.FlatAppearance.BorderSize = 0;
+            this.btnSanPham_delete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
+            this.btnSanPham_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSanPham_delete.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btnSanPham_delete.Image = global::QLBHVatLieuXayDung.Properties.Resources.Trash_Can_48px;
+            this.btnSanPham_delete.Location = new System.Drawing.Point(433, 147);
+            this.btnSanPham_delete.Name = "btnSanPham_delete";
+            this.btnSanPham_delete.Size = new System.Drawing.Size(142, 58);
+            this.btnSanPham_delete.TabIndex = 11;
+            this.btnSanPham_delete.UseVisualStyleBackColor = false;
+            this.btnSanPham_delete.Click += new System.EventHandler(this.btnDeleteSP_Click);
+            // 
             // cbxSanPham_loaiSP
             // 
             this.cbxSanPham_loaiSP.DisplayMember = "maSanPham";
@@ -103,6 +127,8 @@
             // 
             this.btnSanPham_clear.BackColor = System.Drawing.Color.AliceBlue;
             this.btnSanPham_clear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSanPham_clear.FlatAppearance.BorderSize = 0;
+            this.btnSanPham_clear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
             this.btnSanPham_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSanPham_clear.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSanPham_clear.ForeColor = System.Drawing.Color.AliceBlue;
@@ -119,6 +145,8 @@
             // 
             this.btnSanPham_save.BackColor = System.Drawing.Color.AliceBlue;
             this.btnSanPham_save.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSanPham_save.FlatAppearance.BorderSize = 0;
+            this.btnSanPham_save.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnSanPham_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSanPham_save.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSanPham_save.ForeColor = System.Drawing.Color.AliceBlue;
@@ -131,6 +159,22 @@
             this.btnSanPham_save.UseVisualStyleBackColor = false;
             this.btnSanPham_save.Click += new System.EventHandler(this.btnSaveSP_Click);
             // 
+            // btnSanPham_add
+            // 
+            this.btnSanPham_add.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnSanPham_add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSanPham_add.FlatAppearance.BorderSize = 0;
+            this.btnSanPham_add.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.btnSanPham_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSanPham_add.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btnSanPham_add.Image = global::QLBHVatLieuXayDung.Properties.Resources.Add_32px1;
+            this.btnSanPham_add.Location = new System.Drawing.Point(433, 15);
+            this.btnSanPham_add.Name = "btnSanPham_add";
+            this.btnSanPham_add.Size = new System.Drawing.Size(142, 58);
+            this.btnSanPham_add.TabIndex = 9;
+            this.btnSanPham_add.UseVisualStyleBackColor = false;
+            this.btnSanPham_add.Click += new System.EventHandler(this.btnAddSP_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -139,6 +183,22 @@
             this.label4.Size = new System.Drawing.Size(89, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "Loại sản phẩm";
+            // 
+            // btnSanPham_edit
+            // 
+            this.btnSanPham_edit.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnSanPham_edit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSanPham_edit.FlatAppearance.BorderSize = 0;
+            this.btnSanPham_edit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnSanPham_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSanPham_edit.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btnSanPham_edit.Image = global::QLBHVatLieuXayDung.Properties.Resources.Edit_32px1;
+            this.btnSanPham_edit.Location = new System.Drawing.Point(433, 81);
+            this.btnSanPham_edit.Name = "btnSanPham_edit";
+            this.btnSanPham_edit.Size = new System.Drawing.Size(142, 58);
+            this.btnSanPham_edit.TabIndex = 10;
+            this.btnSanPham_edit.UseVisualStyleBackColor = false;
+            this.btnSanPham_edit.Click += new System.EventHandler(this.btnEditSP_Click);
             // 
             // txbSanPham_nSX
             // 
@@ -303,56 +363,6 @@
             this.btnBackHoaDon.TabIndex = 28;
             this.btnBackHoaDon.UseVisualStyleBackColor = false;
             this.btnBackHoaDon.Click += new System.EventHandler(this.btnBackHoaDon_Click);
-            // 
-            // btnSanPham_add
-            // 
-            this.btnSanPham_add.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnSanPham_add.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSanPham_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSanPham_add.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnSanPham_add.Image = global::QLBHVatLieuXayDung.Properties.Resources.Add_32px1;
-            this.btnSanPham_add.Location = new System.Drawing.Point(433, 15);
-            this.btnSanPham_add.Name = "btnSanPham_add";
-            this.btnSanPham_add.Size = new System.Drawing.Size(142, 58);
-            this.btnSanPham_add.TabIndex = 9;
-            this.btnSanPham_add.UseVisualStyleBackColor = false;
-            this.btnSanPham_add.Click += new System.EventHandler(this.btnAddSP_Click);
-            // 
-            // btnSanPham_edit
-            // 
-            this.btnSanPham_edit.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnSanPham_edit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSanPham_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSanPham_edit.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnSanPham_edit.Image = global::QLBHVatLieuXayDung.Properties.Resources.Edit_32px1;
-            this.btnSanPham_edit.Location = new System.Drawing.Point(433, 81);
-            this.btnSanPham_edit.Name = "btnSanPham_edit";
-            this.btnSanPham_edit.Size = new System.Drawing.Size(142, 58);
-            this.btnSanPham_edit.TabIndex = 10;
-            this.btnSanPham_edit.UseVisualStyleBackColor = false;
-            this.btnSanPham_edit.Click += new System.EventHandler(this.btnEditSP_Click);
-            // 
-            // btnSanPham_delete
-            // 
-            this.btnSanPham_delete.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnSanPham_delete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSanPham_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSanPham_delete.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnSanPham_delete.Image = global::QLBHVatLieuXayDung.Properties.Resources.Trash_Can_48px;
-            this.btnSanPham_delete.Location = new System.Drawing.Point(433, 147);
-            this.btnSanPham_delete.Name = "btnSanPham_delete";
-            this.btnSanPham_delete.Size = new System.Drawing.Size(142, 58);
-            this.btnSanPham_delete.TabIndex = 11;
-            this.btnSanPham_delete.UseVisualStyleBackColor = false;
-            this.btnSanPham_delete.Click += new System.EventHandler(this.btnDeleteSP_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel1.Location = new System.Drawing.Point(423, 9);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 202);
-            this.panel1.TabIndex = 12;
             // 
             // FormSanPham
             // 

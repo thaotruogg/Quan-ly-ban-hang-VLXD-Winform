@@ -109,6 +109,8 @@
             // 
             this.btnClearKH.BackColor = System.Drawing.Color.AliceBlue;
             this.btnClearKH.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearKH.FlatAppearance.BorderSize = 0;
+            this.btnClearKH.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
             this.btnClearKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearKH.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearKH.ForeColor = System.Drawing.Color.AliceBlue;
@@ -125,6 +127,8 @@
             // 
             this.btnSaveKH.BackColor = System.Drawing.Color.AliceBlue;
             this.btnSaveKH.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveKH.FlatAppearance.BorderSize = 0;
+            this.btnSaveKH.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnSaveKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveKH.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveKH.ForeColor = System.Drawing.Color.AliceBlue;
@@ -355,6 +359,8 @@
             // 
             this.btnDeleteKhachHang.BackColor = System.Drawing.Color.AliceBlue;
             this.btnDeleteKhachHang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteKhachHang.FlatAppearance.BorderSize = 0;
+            this.btnDeleteKhachHang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
             this.btnDeleteKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteKhachHang.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnDeleteKhachHang.Image = global::QLBHVatLieuXayDung.Properties.Resources.Trash_Can_32px1;
@@ -369,6 +375,8 @@
             // 
             this.btnEditKhachHang.BackColor = System.Drawing.Color.AliceBlue;
             this.btnEditKhachHang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditKhachHang.FlatAppearance.BorderSize = 0;
+            this.btnEditKhachHang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
             this.btnEditKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditKhachHang.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnEditKhachHang.Image = global::QLBHVatLieuXayDung.Properties.Resources.Edit_32px1;
@@ -383,6 +391,8 @@
             // 
             this.btnAddKH.BackColor = System.Drawing.Color.AliceBlue;
             this.btnAddKH.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddKH.FlatAppearance.BorderSize = 0;
+            this.btnAddKH.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
             this.btnAddKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddKH.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnAddKH.Image = global::QLBHVatLieuXayDung.Properties.Resources.Add_32px1;
