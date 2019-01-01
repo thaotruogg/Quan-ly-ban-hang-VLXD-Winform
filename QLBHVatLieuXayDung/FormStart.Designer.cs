@@ -124,7 +124,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txbPassword);
-            this.panel1.Location = new System.Drawing.Point(68, 61);
+            this.panel1.Location = new System.Drawing.Point(56, 37);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(423, 116);
             this.panel1.TabIndex = 6;
@@ -166,6 +166,7 @@
             // btnExitLogin
             // 
             this.btnExitLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExitLogin.FlatAppearance.BorderSize = 0;
             this.btnExitLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExitLogin.Font = new System.Drawing.Font("Segoe MDL2 Assets", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExitLogin.ForeColor = System.Drawing.Color.Red;
@@ -183,7 +184,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Noto Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(219, 18);
+            this.label5.Location = new System.Drawing.Point(210, 5);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(128, 26);
             this.label5.TabIndex = 24;
@@ -214,7 +215,7 @@
             // 
             this.panel2.Controls.Add(this.lbCheckLogin);
             this.panel2.Controls.Add(this.lbW);
-            this.panel2.Location = new System.Drawing.Point(68, 178);
+            this.panel2.Location = new System.Drawing.Point(56, 154);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(279, 29);
             this.panel2.TabIndex = 27;
@@ -224,13 +225,13 @@
             this.btnLogin.BackColor = System.Drawing.Color.White;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.Green;
             this.btnLogin.Image = global::QLBHVatLieuXayDung.Properties.Resources.Login1_32px;
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnLogin.Location = new System.Drawing.Point(384, 185);
+            this.btnLogin.Location = new System.Drawing.Point(372, 161);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(84, 40);
             this.btnLogin.TabIndex = 2;
@@ -241,16 +242,19 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(70, 220);
+            this.label7.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(96, 213);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 17);
+            this.label7.Size = new System.Drawing.Size(40, 17);
             this.label7.TabIndex = 28;
-            this.label7.Text = "Time login:";
+            this.label7.Text = "Time:";
             // 
             // lbTimer
             // 
             this.lbTimer.AutoSize = true;
-            this.lbTimer.Location = new System.Drawing.Point(146, 220);
+            this.lbTimer.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lbTimer.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTimer.Location = new System.Drawing.Point(142, 213);
             this.lbTimer.Name = "lbTimer";
             this.lbTimer.Size = new System.Drawing.Size(146, 17);
             this.lbTimer.TabIndex = 29;
@@ -267,7 +271,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(538, 246);
+            this.ClientSize = new System.Drawing.Size(534, 242);
             this.ControlBox = false;
             this.Controls.Add(this.lbTimer);
             this.Controls.Add(this.label7);

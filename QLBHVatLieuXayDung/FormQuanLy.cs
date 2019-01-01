@@ -476,46 +476,55 @@ namespace QLBHVatLieuXayDung
 
         private void btnSaveCTHD_Click(object sender, EventArgs e)
         {
-            string maHoaDon = cbxCTHD_maHoaDon.SelectedValue.ToString();
-            //string maHoaDon = txbMaCTHD.Text;
-            string maSanPham = cbxCTHD_maSP.SelectedValue.ToString();
-            int soLuong = Convert.ToInt32(numupdCTHD_soLuong.Value);
-            double donGia = double.Parse(txbCTDH_donGia.Text);
-            if (coThemCTHD == true)
+            try
             {
-                try
+                string maHoaDon = cbxCTHD_maHoaDon.SelectedValue.ToString();
+                //string maHoaDon = txbMaCTHD.Text;
+                string maSanPham = cbxCTHD_maSP.SelectedValue.ToString();
+                int soLuong = Convert.ToInt32(numupdCTHD_soLuong.Value);
+                double donGia = double.Parse(txbCTDH_donGia.Text);
+                if (coThemCTHD == true)
                 {
-                    if (txbCTDH_donGia.Text == string.Empty)
+                    try
+                    {
+                        if (txbCTDH_donGia.Text == string.Empty)
+                        {
+                            lbThemTCCTHD.Text = string.Empty;
+                            lbThemTBCTHD.Text = "<\\ Vui lòng nhập đầy đủ thông tin >";
+                        }
+                        else
+                        if (QuanLyAC.Instance.ThemChiTietHoaDon(maHoaDon, maSanPham, soLuong, donGia))
+                        {
+                            lbThemTBCTHD.Text = string.Empty;
+                            lbThemTCCTHD.Text = "<\\ Thêm chi tiết hóa đơn thành công >";
+                            LoadListCTHD();
+                            SetBtnLockCTHD(false);
+                            SetLockCTHD(false);
+                        }
+                        else
+                        {
+                            lbThemTCCTHD.Text = string.Empty;
+                            lbThemTBCTHD.Text = "<\\ Thêm chi tiết hóa đơn thất bại >";
+                        }
+                    }
+                    catch (System.Data.SqlClient.SqlException)
+                    {
+                        lbThemTCCTHD.Text = string.Empty;
+                        lbThemTBCTHD.Text = "<\\ Mã hóa đơn không tồn tại >";
+                    }
+                    catch (FormatException)
                     {
                         lbThemTCCTHD.Text = string.Empty;
                         lbThemTBCTHD.Text = "<\\ Vui lòng nhập đầy đủ thông tin >";
                     }
-                    else
-                    if (QuanLyAC.Instance.ThemChiTietHoaDon(maHoaDon, maSanPham, soLuong, donGia))
-                    {
-                        lbThemTBCTHD.Text = string.Empty;
-                        lbThemTCCTHD.Text = "<\\ Thêm chi tiết hóa đơn thành công >";
-                        LoadListCTHD();
-                        SetBtnLockCTHD(false);
-                        SetLockCTHD(false);
-                    }
-                    else
-                    {
-                        lbThemTCCTHD.Text = string.Empty;
-                        lbThemTBCTHD.Text = "<\\ Thêm chi tiết hóa đơn thất bại >";
-                    }
-                }
-                catch (System.Data.SqlClient.SqlException)
-                {
-                    lbThemTCCTHD.Text = string.Empty;
-                    lbThemTBCTHD.Text = "<\\ Mã hóa đơn không tồn tại >";
-                }
-                catch (FormatException)
-                {
-                    lbThemTCCTHD.Text = string.Empty;
-                    lbThemTBCTHD.Text = "<\\ Vui lòng nhập đầy đủ thông tin >";
                 }
             }
+            catch (System.FormatException)
+            {
+                lbThemTCCTHD.Text = string.Empty;
+                lbThemTBCTHD.Text = "<\\ Vui lòng nhập đầy đủ thông tin >";
+            }
+            
             /**
             else if(coThemCTHD == false)
             {

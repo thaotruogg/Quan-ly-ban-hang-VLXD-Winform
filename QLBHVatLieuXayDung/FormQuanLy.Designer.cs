@@ -39,6 +39,8 @@
             this.btnShowSPQL = new System.Windows.Forms.Button();
             this.btnShowKhachHang = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbTimeLogin = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.tabPageCTHD = new System.Windows.Forms.TabPage();
             this.btnCTHD_clear = new System.Windows.Forms.Button();
@@ -56,6 +58,7 @@
             this.btnRefreshCTHD = new System.Windows.Forms.Button();
             this.dgvCTHD = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnCTHD_reload = new System.Windows.Forms.Button();
             this.cbxCTHD_maHoaDon = new System.Windows.Forms.ComboBox();
             this.numupdCTHD_soLuong = new System.Windows.Forms.NumericUpDown();
             this.label16 = new System.Windows.Forms.Label();
@@ -82,6 +85,7 @@
             this.btnAddHD = new System.Windows.Forms.Button();
             this.btnSaveHoaDon = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnHoaDon_reload = new System.Windows.Forms.Button();
             this.cbxMaKHOfHD = new System.Windows.Forms.ComboBox();
             this.btnShowKHQL = new System.Windows.Forms.Button();
             this.dtpNgayHD = new System.Windows.Forms.DateTimePicker();
@@ -90,11 +94,7 @@
             this.txbMaHD = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.tabControlHoaDon = new System.Windows.Forms.TabControl();
-            this.btnHoaDon_reload = new System.Windows.Forms.Button();
-            this.btnCTHD_reload = new System.Windows.Forms.Button();
-            this.lbTimeLogin = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabPageCTHD.SuspendLayout();
@@ -115,8 +115,8 @@
             // 
             this.label1.BackColor = System.Drawing.Color.LightGray;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Navy;
+            this.label1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MediumBlue;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(356, 111);
@@ -232,6 +232,25 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1058, 50);
             this.panel3.TabIndex = 26;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(128, 17);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Thời gian đăng nhập: ";
+            // 
+            // lbTimeLogin
+            // 
+            this.lbTimeLogin.AutoSize = true;
+            this.lbTimeLogin.ForeColor = System.Drawing.Color.MediumBlue;
+            this.lbTimeLogin.Location = new System.Drawing.Point(146, 17);
+            this.lbTimeLogin.Name = "lbTimeLogin";
+            this.lbTimeLogin.Size = new System.Drawing.Size(42, 17);
+            this.lbTimeLogin.TabIndex = 24;
+            this.lbTimeLogin.Text = "label2";
             // 
             // btnExit
             // 
@@ -486,6 +505,21 @@
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết hóa đơn";
+            // 
+            // btnCTHD_reload
+            // 
+            this.btnCTHD_reload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCTHD_reload.FlatAppearance.BorderSize = 0;
+            this.btnCTHD_reload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCTHD_reload.Font = new System.Drawing.Font("Segoe MDL2 Assets", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCTHD_reload.Location = new System.Drawing.Point(96, 55);
+            this.btnCTHD_reload.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCTHD_reload.Name = "btnCTHD_reload";
+            this.btnCTHD_reload.Size = new System.Drawing.Size(24, 24);
+            this.btnCTHD_reload.TabIndex = 24;
+            this.btnCTHD_reload.Text = "";
+            this.btnCTHD_reload.UseVisualStyleBackColor = true;
+            this.btnCTHD_reload.Click += new System.EventHandler(this.btnCTHD_reload_Click);
             // 
             // cbxCTHD_maHoaDon
             // 
@@ -843,6 +877,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin hóa đơn";
             // 
+            // btnHoaDon_reload
+            // 
+            this.btnHoaDon_reload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHoaDon_reload.FlatAppearance.BorderSize = 0;
+            this.btnHoaDon_reload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHoaDon_reload.Font = new System.Drawing.Font("Segoe MDL2 Assets", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHoaDon_reload.Location = new System.Drawing.Point(98, 54);
+            this.btnHoaDon_reload.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHoaDon_reload.Name = "btnHoaDon_reload";
+            this.btnHoaDon_reload.Size = new System.Drawing.Size(24, 24);
+            this.btnHoaDon_reload.TabIndex = 16;
+            this.btnHoaDon_reload.Text = "";
+            this.btnHoaDon_reload.UseVisualStyleBackColor = true;
+            this.btnHoaDon_reload.Click += new System.EventHandler(this.btnHoaDon_reload_Click);
+            // 
             // cbxMaKHOfHD
             // 
             this.cbxMaKHOfHD.BackColor = System.Drawing.Color.Silver;
@@ -925,58 +974,10 @@
             this.tabControlHoaDon.Size = new System.Drawing.Size(700, 612);
             this.tabControlHoaDon.TabIndex = 36;
             // 
-            // btnHoaDon_reload
-            // 
-            this.btnHoaDon_reload.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHoaDon_reload.FlatAppearance.BorderSize = 0;
-            this.btnHoaDon_reload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHoaDon_reload.Font = new System.Drawing.Font("Segoe MDL2 Assets", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHoaDon_reload.Location = new System.Drawing.Point(98, 54);
-            this.btnHoaDon_reload.Margin = new System.Windows.Forms.Padding(4);
-            this.btnHoaDon_reload.Name = "btnHoaDon_reload";
-            this.btnHoaDon_reload.Size = new System.Drawing.Size(24, 24);
-            this.btnHoaDon_reload.TabIndex = 16;
-            this.btnHoaDon_reload.Text = "";
-            this.btnHoaDon_reload.UseVisualStyleBackColor = true;
-            this.btnHoaDon_reload.Click += new System.EventHandler(this.btnHoaDon_reload_Click);
-            // 
-            // btnCTHD_reload
-            // 
-            this.btnCTHD_reload.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCTHD_reload.FlatAppearance.BorderSize = 0;
-            this.btnCTHD_reload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCTHD_reload.Font = new System.Drawing.Font("Segoe MDL2 Assets", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCTHD_reload.Location = new System.Drawing.Point(96, 55);
-            this.btnCTHD_reload.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCTHD_reload.Name = "btnCTHD_reload";
-            this.btnCTHD_reload.Size = new System.Drawing.Size(24, 24);
-            this.btnCTHD_reload.TabIndex = 24;
-            this.btnCTHD_reload.Text = "";
-            this.btnCTHD_reload.UseVisualStyleBackColor = true;
-            this.btnCTHD_reload.Click += new System.EventHandler(this.btnCTHD_reload_Click);
-            // 
-            // lbTimeLogin
-            // 
-            this.lbTimeLogin.AutoSize = true;
-            this.lbTimeLogin.Location = new System.Drawing.Point(146, 17);
-            this.lbTimeLogin.Name = "lbTimeLogin";
-            this.lbTimeLogin.Size = new System.Drawing.Size(42, 17);
-            this.lbTimeLogin.TabIndex = 24;
-            this.lbTimeLogin.Text = "label2";
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 17);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "Thời gian đăng nhập: ";
             // 
             // FormQuanLy
             // 
