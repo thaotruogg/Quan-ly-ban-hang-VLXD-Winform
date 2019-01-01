@@ -56,6 +56,12 @@
     <Compile Include="ACTION\QuanLyAC.cs" />
     <Compile Include="ACTION\SanPhamAC.cs" />
     <Compile Include="ACTION\ThanhToan.cs" />
+    <Compile Include="FormAddKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddKhachHang.Designer.cs">
+      <DependentUpon>FormAddKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormChonKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     <Compile Include="LoginDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAddKhachHang.resx">
+      <DependentUpon>FormAddKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormChonKhachHang.resx">
       <DependentUpon>FormChonKhachHang.cs</DependentUpon>
     </EmbeddedResource>

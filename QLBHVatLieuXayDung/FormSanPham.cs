@@ -214,6 +214,16 @@ namespace QLBHVatLieuXayDung
             }
         }
         #endregion
-        
+
+        private void btnSanPham_addLoaiSP_Click(object sender, EventArgs e)
+        {
+            FormLoaiSanPham f = new FormLoaiSanPham();
+            f.Show();
+        }
+
+        private void btnSanPham_reload_Click(object sender, EventArgs e)
+        {
+            LoadLoaiSPIntoCombobox(cbxSanPham_loaiSP);
+        }
     }
 }

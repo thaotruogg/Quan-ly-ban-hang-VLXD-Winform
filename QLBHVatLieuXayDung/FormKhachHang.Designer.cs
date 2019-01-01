@@ -178,9 +178,9 @@
             this.label7.Location = new System.Drawing.Point(13, 193);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 18);
+            this.label7.Size = new System.Drawing.Size(73, 18);
             this.label7.TabIndex = 10;
-            this.label7.Text = "Nợ cuối kì";
+            this.label7.Text = "Nợ hien tai";
             // 
             // txbNoDauKiOfKH
             // 
@@ -364,9 +364,9 @@
             this.btnDeleteKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteKhachHang.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnDeleteKhachHang.Image = global::QLBHVatLieuXayDung.Properties.Resources.Trash_Can_32px1;
-            this.btnDeleteKhachHang.Location = new System.Drawing.Point(222, 442);
+            this.btnDeleteKhachHang.Location = new System.Drawing.Point(264, 355);
             this.btnDeleteKhachHang.Name = "btnDeleteKhachHang";
-            this.btnDeleteKhachHang.Size = new System.Drawing.Size(142, 58);
+            this.btnDeleteKhachHang.Size = new System.Drawing.Size(100, 100);
             this.btnDeleteKhachHang.TabIndex = 20;
             this.btnDeleteKhachHang.UseVisualStyleBackColor = false;
             this.btnDeleteKhachHang.Click += new System.EventHandler(this.btnDeleteKhachHang_Click);
@@ -380,9 +380,9 @@
             this.btnEditKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditKhachHang.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnEditKhachHang.Image = global::QLBHVatLieuXayDung.Properties.Resources.Edit_32px1;
-            this.btnEditKhachHang.Location = new System.Drawing.Point(222, 377);
+            this.btnEditKhachHang.Location = new System.Drawing.Point(146, 355);
             this.btnEditKhachHang.Name = "btnEditKhachHang";
-            this.btnEditKhachHang.Size = new System.Drawing.Size(142, 58);
+            this.btnEditKhachHang.Size = new System.Drawing.Size(100, 100);
             this.btnEditKhachHang.TabIndex = 19;
             this.btnEditKhachHang.UseVisualStyleBackColor = false;
             this.btnEditKhachHang.Click += new System.EventHandler(this.btnEditKhachHang_Click);
@@ -396,9 +396,9 @@
             this.btnAddKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddKH.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnAddKH.Image = global::QLBHVatLieuXayDung.Properties.Resources.Add_32px1;
-            this.btnAddKH.Location = new System.Drawing.Point(222, 312);
+            this.btnAddKH.Location = new System.Drawing.Point(28, 355);
             this.btnAddKH.Name = "btnAddKH";
-            this.btnAddKH.Size = new System.Drawing.Size(142, 58);
+            this.btnAddKH.Size = new System.Drawing.Size(100, 100);
             this.btnAddKH.TabIndex = 18;
             this.btnAddKH.UseVisualStyleBackColor = false;
             this.btnAddKH.Click += new System.EventHandler(this.btnAddSP_Click);

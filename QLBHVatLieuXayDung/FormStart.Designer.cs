@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txbUserName = new System.Windows.Forms.TextBox();
             this.txbPassword = new System.Windows.Forms.TextBox();
@@ -44,6 +45,9 @@
             this.lbW = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lbTimer = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -234,14 +238,39 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(70, 220);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 17);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Time login:";
+            // 
+            // lbTimer
+            // 
+            this.lbTimer.AutoSize = true;
+            this.lbTimer.Location = new System.Drawing.Point(146, 220);
+            this.lbTimer.Name = "lbTimer";
+            this.lbTimer.Size = new System.Drawing.Size(146, 17);
+            this.lbTimer.TabIndex = 29;
+            this.lbTimer.Text = "dd-MM-yyyy hh:mm:ss tt";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FormStart
             // 
             this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(542, 250);
+            this.ClientSize = new System.Drawing.Size(538, 246);
             this.ControlBox = false;
+            this.Controls.Add(this.lbTimer);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnExitLogin);
@@ -286,5 +315,8 @@
         private System.Windows.Forms.Label lbW;
         private System.Windows.Forms.Panel panel2;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton_login;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbTimer;
+        private System.Windows.Forms.Timer timer1;
     }
 }

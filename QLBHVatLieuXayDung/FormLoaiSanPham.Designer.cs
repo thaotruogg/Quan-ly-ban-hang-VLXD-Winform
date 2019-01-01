@@ -134,13 +134,13 @@
             this.btnLoaiSP_clear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
             this.btnLoaiSP_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoaiSP_clear.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoaiSP_clear.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnLoaiSP_clear.Image = global::QLBHVatLieuXayDung.Properties.Resources.Delete_32px;
+            this.btnLoaiSP_clear.ForeColor = System.Drawing.Color.Black;
             this.btnLoaiSP_clear.Location = new System.Drawing.Point(88, 129);
             this.btnLoaiSP_clear.Margin = new System.Windows.Forms.Padding(4);
             this.btnLoaiSP_clear.Name = "btnLoaiSP_clear";
             this.btnLoaiSP_clear.Size = new System.Drawing.Size(80, 42);
             this.btnLoaiSP_clear.TabIndex = 24;
+            this.btnLoaiSP_clear.Text = "";
             this.btnLoaiSP_clear.UseVisualStyleBackColor = false;
             this.btnLoaiSP_clear.Click += new System.EventHandler(this.btnClearLoaiSP_Click);
             // 
@@ -148,16 +148,17 @@
             // 
             this.btnLoaiSP_save.BackColor = System.Drawing.Color.AliceBlue;
             this.btnLoaiSP_save.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoaiSP_save.FlatAppearance.BorderSize = 0;
             this.btnLoaiSP_save.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnLoaiSP_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoaiSP_save.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoaiSP_save.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnLoaiSP_save.Image = global::QLBHVatLieuXayDung.Properties.Resources.Save_32px;
+            this.btnLoaiSP_save.ForeColor = System.Drawing.Color.Black;
             this.btnLoaiSP_save.Location = new System.Drawing.Point(186, 129);
             this.btnLoaiSP_save.Margin = new System.Windows.Forms.Padding(4);
             this.btnLoaiSP_save.Name = "btnLoaiSP_save";
             this.btnLoaiSP_save.Size = new System.Drawing.Size(80, 42);
             this.btnLoaiSP_save.TabIndex = 23;
+            this.btnLoaiSP_save.Text = "";
             this.btnLoaiSP_save.UseVisualStyleBackColor = false;
             this.btnLoaiSP_save.Click += new System.EventHandler(this.btnSaveLoaiSP_Click);
             // 
@@ -170,9 +171,9 @@
             this.btnLoaiSP_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoaiSP_delete.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnLoaiSP_delete.Image = global::QLBHVatLieuXayDung.Properties.Resources.Trash_Can_32px1;
-            this.btnLoaiSP_delete.Location = new System.Drawing.Point(142, 335);
+            this.btnLoaiSP_delete.Location = new System.Drawing.Point(195, 250);
             this.btnLoaiSP_delete.Name = "btnLoaiSP_delete";
-            this.btnLoaiSP_delete.Size = new System.Drawing.Size(142, 58);
+            this.btnLoaiSP_delete.Size = new System.Drawing.Size(90, 90);
             this.btnLoaiSP_delete.TabIndex = 20;
             this.btnLoaiSP_delete.UseVisualStyleBackColor = false;
             this.btnLoaiSP_delete.Click += new System.EventHandler(this.btnDeleteLoaiSP_Click);
@@ -186,9 +187,9 @@
             this.btnLoaiSP_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoaiSP_edit.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnLoaiSP_edit.Image = global::QLBHVatLieuXayDung.Properties.Resources.Edit_32px1;
-            this.btnLoaiSP_edit.Location = new System.Drawing.Point(142, 269);
+            this.btnLoaiSP_edit.Location = new System.Drawing.Point(99, 250);
             this.btnLoaiSP_edit.Name = "btnLoaiSP_edit";
-            this.btnLoaiSP_edit.Size = new System.Drawing.Size(142, 58);
+            this.btnLoaiSP_edit.Size = new System.Drawing.Size(90, 90);
             this.btnLoaiSP_edit.TabIndex = 19;
             this.btnLoaiSP_edit.UseVisualStyleBackColor = false;
             this.btnLoaiSP_edit.Click += new System.EventHandler(this.btnEditLoaiSP_Click);
@@ -202,9 +203,9 @@
             this.btnLoaiSP_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoaiSP_add.ForeColor = System.Drawing.Color.AliceBlue;
             this.btnLoaiSP_add.Image = global::QLBHVatLieuXayDung.Properties.Resources.Add_32px1;
-            this.btnLoaiSP_add.Location = new System.Drawing.Point(142, 203);
+            this.btnLoaiSP_add.Location = new System.Drawing.Point(3, 250);
             this.btnLoaiSP_add.Name = "btnLoaiSP_add";
-            this.btnLoaiSP_add.Size = new System.Drawing.Size(142, 58);
+            this.btnLoaiSP_add.Size = new System.Drawing.Size(90, 90);
             this.btnLoaiSP_add.TabIndex = 18;
             this.btnLoaiSP_add.UseVisualStyleBackColor = false;
             this.btnLoaiSP_add.Click += new System.EventHandler(this.btnAddLoaiSP_Click);
@@ -314,14 +315,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel1.Location = new System.Drawing.Point(285, 195);
+            this.panel1.Location = new System.Drawing.Point(287, 195);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 206);
+            this.panel1.Size = new System.Drawing.Size(8, 206);
             this.panel1.TabIndex = 23;
             // 
             // FormLoaiSanPham
             // 
-            this.AcceptButton = this.btnLoaiSP_save;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;

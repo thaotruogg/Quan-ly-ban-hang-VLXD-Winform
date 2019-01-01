@@ -20,7 +20,7 @@ namespace QLBHVatLieuXayDung
             btnTT_save.TabStop = false;
             btnTT_save.FlatAppearance.BorderSize = 0;
         }
-        void LoadListKH(ComboBox box)
+        public void LoadListKH(ComboBox box)
         {
             box.DataSource = KhachHangAC.Instance.LoadListKhachHang();
             box.DisplayMember = "Tên khách hàng";
@@ -75,8 +75,18 @@ namespace QLBHVatLieuXayDung
 
         private void btnThanhToan_chonKH_Click(object sender, EventArgs e)
         {
-            FormChonKhachHang f = new FormChonKhachHang();
+            FormAddKhachHang f = new FormAddKhachHang();
             f.Show();
+        }
+
+        private void btnThanhToan_reload_Click(object sender, EventArgs e)
+        {
+            LoadListKH(cbxTT_maKH);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbTimer.Text = DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss tt");
         }
     }
 }

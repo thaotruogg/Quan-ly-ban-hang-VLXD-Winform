@@ -37,18 +37,18 @@
             this.label11 = new System.Windows.Forms.Label();
             this.btnBackThanhToan_list = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnThanhToan_delete = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.cbxThanhToan_maKH = new System.Windows.Forms.ComboBox();
             this.dtpThanhToan_ngayPhieu = new System.Windows.Forms.DateTimePicker();
             this.txbThanhToan_soTien = new System.Windows.Forms.TextBox();
             this.txbThanhToan_soPhieu = new System.Windows.Forms.TextBox();
+            this.btnThanhToan_clear = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnThanhToan_save = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnThanhToan_delete = new System.Windows.Forms.Button();
-            this.btnThanhToan_clear = new System.Windows.Forms.Button();
-            this.btnThanhToan_save = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThanhToan)).BeginInit();
             this.panel2.SuspendLayout();
@@ -169,6 +169,32 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết";
             // 
+            // btnThanhToan_delete
+            // 
+            this.btnThanhToan_delete.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnThanhToan_delete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThanhToan_delete.FlatAppearance.BorderSize = 0;
+            this.btnThanhToan_delete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
+            this.btnThanhToan_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThanhToan_delete.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan_delete.ForeColor = System.Drawing.Color.Transparent;
+            this.btnThanhToan_delete.Image = global::QLBHVatLieuXayDung.Properties.Resources.Trash_Can_32px1;
+            this.btnThanhToan_delete.Location = new System.Drawing.Point(523, 19);
+            this.btnThanhToan_delete.Name = "btnThanhToan_delete";
+            this.btnThanhToan_delete.Size = new System.Drawing.Size(142, 132);
+            this.btnThanhToan_delete.TabIndex = 33;
+            this.btnThanhToan_delete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThanhToan_delete.UseVisualStyleBackColor = false;
+            this.btnThanhToan_delete.Click += new System.EventHandler(this.btnThanhToan_delete_Click);
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel8.Location = new System.Drawing.Point(503, 9);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(10, 154);
+            this.panel8.TabIndex = 36;
+            // 
             // cbxThanhToan_maKH
             // 
             this.cbxThanhToan_maKH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -204,6 +230,22 @@
             this.txbThanhToan_soPhieu.Size = new System.Drawing.Size(194, 24);
             this.txbThanhToan_soPhieu.TabIndex = 4;
             // 
+            // btnThanhToan_clear
+            // 
+            this.btnThanhToan_clear.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnThanhToan_clear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThanhToan_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThanhToan_clear.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan_clear.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btnThanhToan_clear.Image = global::QLBHVatLieuXayDung.Properties.Resources.Delete_32px;
+            this.btnThanhToan_clear.Location = new System.Drawing.Point(402, 67);
+            this.btnThanhToan_clear.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThanhToan_clear.Name = "btnThanhToan_clear";
+            this.btnThanhToan_clear.Size = new System.Drawing.Size(100, 42);
+            this.btnThanhToan_clear.TabIndex = 34;
+            this.btnThanhToan_clear.UseVisualStyleBackColor = false;
+            this.btnThanhToan_clear.Click += new System.EventHandler(this.btnThanhToan_clear_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -212,6 +254,21 @@
             this.label4.Size = new System.Drawing.Size(46, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Số tiền";
+            // 
+            // btnThanhToan_save
+            // 
+            this.btnThanhToan_save.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnThanhToan_save.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThanhToan_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThanhToan_save.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan_save.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btnThanhToan_save.Image = global::QLBHVatLieuXayDung.Properties.Resources.Save_32px;
+            this.btnThanhToan_save.Location = new System.Drawing.Point(402, 17);
+            this.btnThanhToan_save.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThanhToan_save.Name = "btnThanhToan_save";
+            this.btnThanhToan_save.Size = new System.Drawing.Size(100, 42);
+            this.btnThanhToan_save.TabIndex = 35;
+            this.btnThanhToan_save.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -239,63 +296,6 @@
             this.label1.Size = new System.Drawing.Size(56, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Số phiếu";
-            // 
-            // btnThanhToan_delete
-            // 
-            this.btnThanhToan_delete.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnThanhToan_delete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThanhToan_delete.FlatAppearance.BorderSize = 0;
-            this.btnThanhToan_delete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnThanhToan_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThanhToan_delete.Font = new System.Drawing.Font("Noto Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhToan_delete.ForeColor = System.Drawing.Color.Transparent;
-            this.btnThanhToan_delete.Image = global::QLBHVatLieuXayDung.Properties.Resources.Trash_Can_32px1;
-            this.btnThanhToan_delete.Location = new System.Drawing.Point(523, 19);
-            this.btnThanhToan_delete.Name = "btnThanhToan_delete";
-            this.btnThanhToan_delete.Size = new System.Drawing.Size(142, 132);
-            this.btnThanhToan_delete.TabIndex = 33;
-            this.btnThanhToan_delete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThanhToan_delete.UseVisualStyleBackColor = false;
-            this.btnThanhToan_delete.Click += new System.EventHandler(this.btnThanhToan_delete_Click);
-            // 
-            // btnThanhToan_clear
-            // 
-            this.btnThanhToan_clear.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnThanhToan_clear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThanhToan_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThanhToan_clear.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhToan_clear.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnThanhToan_clear.Image = global::QLBHVatLieuXayDung.Properties.Resources.Delete_32px;
-            this.btnThanhToan_clear.Location = new System.Drawing.Point(402, 67);
-            this.btnThanhToan_clear.Margin = new System.Windows.Forms.Padding(4);
-            this.btnThanhToan_clear.Name = "btnThanhToan_clear";
-            this.btnThanhToan_clear.Size = new System.Drawing.Size(100, 42);
-            this.btnThanhToan_clear.TabIndex = 34;
-            this.btnThanhToan_clear.UseVisualStyleBackColor = false;
-            this.btnThanhToan_clear.Click += new System.EventHandler(this.btnThanhToan_clear_Click);
-            // 
-            // btnThanhToan_save
-            // 
-            this.btnThanhToan_save.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnThanhToan_save.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThanhToan_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThanhToan_save.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhToan_save.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnThanhToan_save.Image = global::QLBHVatLieuXayDung.Properties.Resources.Save_32px;
-            this.btnThanhToan_save.Location = new System.Drawing.Point(402, 17);
-            this.btnThanhToan_save.Margin = new System.Windows.Forms.Padding(4);
-            this.btnThanhToan_save.Name = "btnThanhToan_save";
-            this.btnThanhToan_save.Size = new System.Drawing.Size(100, 42);
-            this.btnThanhToan_save.TabIndex = 35;
-            this.btnThanhToan_save.UseVisualStyleBackColor = false;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel8.Location = new System.Drawing.Point(503, 9);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(10, 154);
-            this.panel8.TabIndex = 36;
             // 
             // FormThanhToan_List
             // 

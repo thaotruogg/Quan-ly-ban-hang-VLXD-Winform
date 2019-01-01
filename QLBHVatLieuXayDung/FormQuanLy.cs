@@ -218,7 +218,7 @@ namespace QLBHVatLieuXayDung
 
         private void btnShowKHQL_Click(object sender, EventArgs e)
         {
-            FormChonKhachHang f = new FormChonKhachHang();
+            FormAddKhachHang f = new FormAddKhachHang();
             f.Show();
         }
 
@@ -326,6 +326,15 @@ namespace QLBHVatLieuXayDung
             LoadSoHoaDon(cbxCTHD_maHoaDon);
             lbThemTB.Text = string.Empty;
             lbThemTC.Text = string.Empty;
+        }
+        private void btnHoaDon_reload_Click(object sender, EventArgs e)
+        {
+            LoadMaKHIntoCombobox(cbxMaKHOfHD);
+        }
+
+        private void btnCTHD_reload_Click(object sender, EventArgs e)
+        {
+            LoadMaSPIntoCombobox(cbxCTHD_maSP);
         }
         #endregion
 
@@ -552,7 +561,12 @@ namespace QLBHVatLieuXayDung
         }
 
 
+
         #endregion
-        
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbTimeLogin.Text = DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss tt");
+        }
     }
 }

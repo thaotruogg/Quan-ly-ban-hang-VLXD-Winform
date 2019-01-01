@@ -16,7 +16,7 @@ namespace QLBHVatLieuXayDung
 
         #region Methors
 
-        private void LoadListKH()
+        public void LoadListKH()
         {
             list.DataSource = KhachHangAC.Instance.LoadListKhachHang();
         }

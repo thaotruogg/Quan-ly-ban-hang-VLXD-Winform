@@ -99,5 +99,10 @@ namespace QLBHVatLieuXayDung
         {
             CheckBtnLogin();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbTimer.Text = DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss tt");
+        }
     }
 }
