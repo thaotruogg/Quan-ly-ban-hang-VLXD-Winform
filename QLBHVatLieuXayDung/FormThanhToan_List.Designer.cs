@@ -49,6 +49,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThanhToan)).BeginInit();
             this.panel2.SuspendLayout();
@@ -74,7 +75,7 @@
             this.lbThemTB.AutoSize = true;
             this.lbThemTB.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThemTB.ForeColor = System.Drawing.Color.Red;
-            this.lbThemTB.Location = new System.Drawing.Point(302, 325);
+            this.lbThemTB.Location = new System.Drawing.Point(214, 324);
             this.lbThemTB.Name = "lbThemTB";
             this.lbThemTB.Size = new System.Drawing.Size(226, 18);
             this.lbThemTB.TabIndex = 45;
@@ -85,7 +86,7 @@
             // 
             this.lbThemTC.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThemTC.ForeColor = System.Drawing.Color.Green;
-            this.lbThemTC.Location = new System.Drawing.Point(217, 325);
+            this.lbThemTC.Location = new System.Drawing.Point(129, 324);
             this.lbThemTC.Name = "lbThemTC";
             this.lbThemTC.Size = new System.Drawing.Size(393, 18);
             this.lbThemTC.TabIndex = 44;
@@ -147,6 +148,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.btnThanhToan_delete);
             this.groupBox2.Controls.Add(this.panel8);
             this.groupBox2.Controls.Add(this.cbxThanhToan_maKH);
@@ -234,15 +236,16 @@
             // 
             this.btnThanhToan_clear.BackColor = System.Drawing.Color.AliceBlue;
             this.btnThanhToan_clear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThanhToan_clear.FlatAppearance.BorderSize = 0;
             this.btnThanhToan_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThanhToan_clear.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhToan_clear.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnThanhToan_clear.Image = global::QLBHVatLieuXayDung.Properties.Resources.Delete_32px;
-            this.btnThanhToan_clear.Location = new System.Drawing.Point(402, 67);
+            this.btnThanhToan_clear.ForeColor = System.Drawing.Color.Black;
+            this.btnThanhToan_clear.Location = new System.Drawing.Point(402, 88);
             this.btnThanhToan_clear.Margin = new System.Windows.Forms.Padding(4);
             this.btnThanhToan_clear.Name = "btnThanhToan_clear";
             this.btnThanhToan_clear.Size = new System.Drawing.Size(100, 42);
             this.btnThanhToan_clear.TabIndex = 34;
+            this.btnThanhToan_clear.Text = "";
             this.btnThanhToan_clear.UseVisualStyleBackColor = false;
             this.btnThanhToan_clear.Click += new System.EventHandler(this.btnThanhToan_clear_Click);
             // 
@@ -259,15 +262,16 @@
             // 
             this.btnThanhToan_save.BackColor = System.Drawing.Color.AliceBlue;
             this.btnThanhToan_save.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThanhToan_save.FlatAppearance.BorderSize = 0;
             this.btnThanhToan_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThanhToan_save.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhToan_save.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnThanhToan_save.Image = global::QLBHVatLieuXayDung.Properties.Resources.Save_32px;
-            this.btnThanhToan_save.Location = new System.Drawing.Point(402, 17);
+            this.btnThanhToan_save.ForeColor = System.Drawing.Color.Black;
+            this.btnThanhToan_save.Location = new System.Drawing.Point(402, 38);
             this.btnThanhToan_save.Margin = new System.Windows.Forms.Padding(4);
             this.btnThanhToan_save.Name = "btnThanhToan_save";
             this.btnThanhToan_save.Size = new System.Drawing.Size(100, 42);
             this.btnThanhToan_save.TabIndex = 35;
+            this.btnThanhToan_save.Text = "";
             this.btnThanhToan_save.UseVisualStyleBackColor = false;
             // 
             // label3
@@ -296,6 +300,17 @@
             this.label1.Size = new System.Drawing.Size(56, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Số phiếu";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(316, 122);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 18);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "VNĐ";
             // 
             // FormThanhToan_List
             // 
@@ -348,5 +363,6 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label lbThemTB;
         private System.Windows.Forms.Label lbThemTC;
+        private System.Windows.Forms.Label label5;
     }
 }

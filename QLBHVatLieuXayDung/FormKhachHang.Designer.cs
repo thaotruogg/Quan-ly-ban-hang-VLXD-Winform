@@ -113,13 +113,14 @@
             this.btnClearKH.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
             this.btnClearKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearKH.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearKH.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnClearKH.Image = global::QLBHVatLieuXayDung.Properties.Resources.Delete_32px;
+            this.btnClearKH.ForeColor = System.Drawing.Color.Black;
             this.btnClearKH.Location = new System.Drawing.Point(136, 228);
             this.btnClearKH.Margin = new System.Windows.Forms.Padding(4);
             this.btnClearKH.Name = "btnClearKH";
             this.btnClearKH.Size = new System.Drawing.Size(100, 42);
             this.btnClearKH.TabIndex = 22;
+            this.btnClearKH.TabStop = false;
+            this.btnClearKH.Text = "";
             this.btnClearKH.UseVisualStyleBackColor = false;
             this.btnClearKH.Click += new System.EventHandler(this.btnClearKH_Click);
             // 
@@ -131,13 +132,14 @@
             this.btnSaveKH.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnSaveKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveKH.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveKH.ForeColor = System.Drawing.Color.AliceBlue;
-            this.btnSaveKH.Image = global::QLBHVatLieuXayDung.Properties.Resources.Save_32px;
+            this.btnSaveKH.ForeColor = System.Drawing.Color.Black;
             this.btnSaveKH.Location = new System.Drawing.Point(248, 228);
             this.btnSaveKH.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveKH.Name = "btnSaveKH";
             this.btnSaveKH.Size = new System.Drawing.Size(100, 42);
             this.btnSaveKH.TabIndex = 20;
+            this.btnSaveKH.TabStop = false;
+            this.btnSaveKH.Text = "";
             this.btnSaveKH.UseVisualStyleBackColor = false;
             this.btnSaveKH.Click += new System.EventHandler(this.btnSaveKH_Click);
             // 
