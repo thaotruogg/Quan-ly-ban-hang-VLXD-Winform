@@ -519,12 +519,12 @@ namespace QLBHVatLieuXayDung
                     }
                 }
             }
-            catch (System.FormatException)
+            catch (FormatException)
             {
                 lbThemTCCTHD.Text = string.Empty;
                 lbThemTBCTHD.Text = "<\\ Vui lòng nhập đầy đủ thông tin >";
             }
-            
+
             /**
             else if(coThemCTHD == false)
             {
@@ -576,6 +576,11 @@ namespace QLBHVatLieuXayDung
         private void timer1_Tick(object sender, EventArgs e)
         {
             lbTimeLogin.Text = DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss tt");
+        }
+
+        private void lbTimeLogin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

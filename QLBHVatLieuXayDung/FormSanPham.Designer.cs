@@ -63,11 +63,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.lbThemTB);
             this.groupBox2.Controls.Add(this.lbThemTC);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.btnSanPham_refresh);
             this.groupBox2.Controls.Add(this.dgvSanPham);
+            this.groupBox2.Controls.Add(this.lbThemTB);
             this.groupBox2.Location = new System.Drawing.Point(12, 233);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(556, 329);
@@ -77,12 +77,11 @@
             // 
             // lbThemTB
             // 
-            this.lbThemTB.AutoSize = true;
             this.lbThemTB.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThemTB.ForeColor = System.Drawing.Color.Red;
-            this.lbThemTB.Location = new System.Drawing.Point(218, 294);
+            this.lbThemTB.Location = new System.Drawing.Point(133, 294);
             this.lbThemTB.Name = "lbThemTB";
-            this.lbThemTB.Size = new System.Drawing.Size(226, 18);
+            this.lbThemTB.Size = new System.Drawing.Size(417, 18);
             this.lbThemTB.TabIndex = 41;
             this.lbThemTB.Text = "<\\\\ Vui lòng nhập đầy đủ thông tin >";
             this.lbThemTB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -92,7 +91,7 @@
             this.lbThemTC.AutoSize = true;
             this.lbThemTC.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThemTC.ForeColor = System.Drawing.Color.Green;
-            this.lbThemTC.Location = new System.Drawing.Point(243, 294);
+            this.lbThemTC.Location = new System.Drawing.Point(248, 294);
             this.lbThemTC.Name = "lbThemTC";
             this.lbThemTC.Size = new System.Drawing.Size(176, 18);
             this.lbThemTC.TabIndex = 40;

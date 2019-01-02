@@ -250,12 +250,11 @@
             // 
             // lbThemTB
             // 
-            this.lbThemTB.AutoSize = true;
             this.lbThemTB.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThemTB.ForeColor = System.Drawing.Color.Red;
-            this.lbThemTB.Location = new System.Drawing.Point(134, 318);
+            this.lbThemTB.Location = new System.Drawing.Point(127, 318);
             this.lbThemTB.Name = "lbThemTB";
-            this.lbThemTB.Size = new System.Drawing.Size(226, 18);
+            this.lbThemTB.Size = new System.Drawing.Size(233, 18);
             this.lbThemTB.TabIndex = 39;
             this.lbThemTB.Text = "<\\\\ Vui lòng nhập đầy đủ thông tin >";
             this.lbThemTB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -265,7 +264,7 @@
             this.lbThemTC.AutoSize = true;
             this.lbThemTC.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThemTC.ForeColor = System.Drawing.Color.Green;
-            this.lbThemTC.Location = new System.Drawing.Point(159, 318);
+            this.lbThemTC.Location = new System.Drawing.Point(158, 318);
             this.lbThemTC.Name = "lbThemTC";
             this.lbThemTC.Size = new System.Drawing.Size(176, 18);
             this.lbThemTC.TabIndex = 38;
@@ -274,11 +273,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.lbThemTB);
             this.groupBox2.Controls.Add(this.lbThemTC);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.btnLoaiSP_refresh);
             this.groupBox2.Controls.Add(this.dgvLoaiSP);
+            this.groupBox2.Controls.Add(this.lbThemTB);
             this.groupBox2.Location = new System.Drawing.Point(301, 38);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(371, 355);

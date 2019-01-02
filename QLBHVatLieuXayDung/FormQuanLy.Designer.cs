@@ -251,6 +251,7 @@
             this.lbTimeLogin.Size = new System.Drawing.Size(42, 17);
             this.lbTimeLogin.TabIndex = 24;
             this.lbTimeLogin.Text = "label2";
+            this.lbTimeLogin.Click += new System.EventHandler(this.lbTimeLogin_Click);
             // 
             // btnExit
             // 
@@ -413,11 +414,11 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.lbThemTBCTHD);
             this.groupBox4.Controls.Add(this.lbThemTCCTHD);
             this.groupBox4.Controls.Add(this.label17);
             this.groupBox4.Controls.Add(this.btnRefreshCTHD);
             this.groupBox4.Controls.Add(this.dgvCTHD);
+            this.groupBox4.Controls.Add(this.lbThemTBCTHD);
             this.groupBox4.Location = new System.Drawing.Point(6, 162);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(533, 370);
@@ -427,23 +428,23 @@
             // 
             // lbThemTBCTHD
             // 
-            this.lbThemTBCTHD.AutoSize = true;
             this.lbThemTBCTHD.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThemTBCTHD.ForeColor = System.Drawing.Color.Red;
-            this.lbThemTBCTHD.Location = new System.Drawing.Point(220, 335);
+            this.lbThemTBCTHD.Location = new System.Drawing.Point(138, 335);
             this.lbThemTBCTHD.Name = "lbThemTBCTHD";
-            this.lbThemTBCTHD.Size = new System.Drawing.Size(226, 18);
+            this.lbThemTBCTHD.Size = new System.Drawing.Size(386, 18);
             this.lbThemTBCTHD.TabIndex = 45;
             this.lbThemTBCTHD.Text = "<\\\\ Vui lòng nhập đầy đủ thông tin >";
             this.lbThemTBCTHD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbThemTCCTHD
             // 
+            this.lbThemTCCTHD.AutoSize = true;
             this.lbThemTCCTHD.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThemTCCTHD.ForeColor = System.Drawing.Color.Green;
-            this.lbThemTCCTHD.Location = new System.Drawing.Point(135, 335);
+            this.lbThemTCCTHD.Location = new System.Drawing.Point(240, 335);
             this.lbThemTCCTHD.Name = "lbThemTCCTHD";
-            this.lbThemTCCTHD.Size = new System.Drawing.Size(393, 18);
+            this.lbThemTCCTHD.Size = new System.Drawing.Size(176, 18);
             this.lbThemTCCTHD.TabIndex = 44;
             this.lbThemTCCTHD.Text = "Thêm sản phẩm thành công";
             this.lbThemTCCTHD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -669,8 +670,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.lbThemTB);
             this.groupBox3.Controls.Add(this.lbThemTC);
+            this.groupBox3.Controls.Add(this.lbThemTB);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.btnRefreshHD);
             this.groupBox3.Controls.Add(this.dgvHoaDon);
@@ -683,23 +684,23 @@
             // 
             // lbThemTB
             // 
-            this.lbThemTB.AutoSize = true;
             this.lbThemTB.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThemTB.ForeColor = System.Drawing.Color.Red;
-            this.lbThemTB.Location = new System.Drawing.Point(218, 362);
+            this.lbThemTB.Location = new System.Drawing.Point(133, 362);
             this.lbThemTB.Name = "lbThemTB";
-            this.lbThemTB.Size = new System.Drawing.Size(226, 18);
+            this.lbThemTB.Size = new System.Drawing.Size(384, 18);
             this.lbThemTB.TabIndex = 43;
             this.lbThemTB.Text = "<\\\\ Vui lòng nhập đầy đủ thông tin >";
             this.lbThemTB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbThemTC
             // 
+            this.lbThemTC.AutoSize = true;
             this.lbThemTC.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThemTC.ForeColor = System.Drawing.Color.Green;
-            this.lbThemTC.Location = new System.Drawing.Point(133, 362);
+            this.lbThemTC.Location = new System.Drawing.Point(235, 362);
             this.lbThemTC.Name = "lbThemTC";
-            this.lbThemTC.Size = new System.Drawing.Size(384, 18);
+            this.lbThemTC.Size = new System.Drawing.Size(176, 18);
             this.lbThemTC.TabIndex = 42;
             this.lbThemTC.Text = "Thêm sản phẩm thành công";
             this.lbThemTC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

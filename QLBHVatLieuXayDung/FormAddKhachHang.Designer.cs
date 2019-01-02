@@ -296,25 +296,27 @@
             // 
             // lbThemTB
             // 
-            this.lbThemTB.AutoSize = true;
+            this.lbThemTB.BackColor = System.Drawing.Color.Transparent;
+            this.lbThemTB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbThemTB.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThemTB.ForeColor = System.Drawing.Color.Red;
-            this.lbThemTB.Location = new System.Drawing.Point(83, 297);
+            this.lbThemTB.Location = new System.Drawing.Point(0, 288);
             this.lbThemTB.Name = "lbThemTB";
-            this.lbThemTB.Size = new System.Drawing.Size(226, 18);
+            this.lbThemTB.Size = new System.Drawing.Size(388, 38);
             this.lbThemTB.TabIndex = 47;
             this.lbThemTB.Text = "<\\\\ Vui lòng nhập đầy đủ thông tin >";
             this.lbThemTB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbThemTC
             // 
+            this.lbThemTC.AutoSize = true;
             this.lbThemTC.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThemTC.ForeColor = System.Drawing.Color.Green;
-            this.lbThemTC.Location = new System.Drawing.Point(0, 297);
+            this.lbThemTC.Location = new System.Drawing.Point(83, 298);
             this.lbThemTC.Name = "lbThemTC";
-            this.lbThemTC.Size = new System.Drawing.Size(388, 18);
+            this.lbThemTC.Size = new System.Drawing.Size(219, 18);
             this.lbThemTC.TabIndex = 46;
-            this.lbThemTC.Text = "Thêm sản phẩm thành công";
+            this.lbThemTC.Text = "<\\\\ Thêm khách hàng thành công >";
             this.lbThemTC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormAddKhachHang
@@ -323,8 +325,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(388, 366);
-            this.Controls.Add(this.lbThemTB);
             this.Controls.Add(this.lbThemTC);
+            this.Controls.Add(this.lbThemTB);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -365,7 +367,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAddKH_close;
-        private System.Windows.Forms.Label lbThemTB;
         private System.Windows.Forms.Label lbThemTC;
+        private System.Windows.Forms.Label lbThemTB;
     }
 }

@@ -271,7 +271,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(534, 242);
+            this.ClientSize = new System.Drawing.Size(530, 238);
             this.ControlBox = false;
             this.Controls.Add(this.lbTimer);
             this.Controls.Add(this.label7);

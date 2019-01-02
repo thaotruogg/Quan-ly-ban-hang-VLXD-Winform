@@ -45,9 +45,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbTimer = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnBackThanhToan = new System.Windows.Forms.Button();
-            this.lbTimer = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -67,7 +67,6 @@
             // 
             this.groupBox1.Controls.Add(this.btnThanhToan_reload);
             this.groupBox1.Controls.Add(this.btnThanhToan_chonKH);
-            this.groupBox1.Controls.Add(this.lbThemTB);
             this.groupBox1.Controls.Add(this.lbThemTC);
             this.groupBox1.Controls.Add(this.dtpTT_ngayPhieu);
             this.groupBox1.Controls.Add(this.cbxTT_maKH);
@@ -77,6 +76,7 @@
             this.groupBox1.Controls.Add(this.txbTT_soTien);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lbThemTB);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox1.Location = new System.Drawing.Point(12, 53);
             this.groupBox1.Name = "groupBox1";
@@ -115,23 +115,23 @@
             // 
             // lbThemTB
             // 
-            this.lbThemTB.AutoSize = true;
             this.lbThemTB.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThemTB.ForeColor = System.Drawing.Color.Red;
-            this.lbThemTB.Location = new System.Drawing.Point(62, 213);
+            this.lbThemTB.Location = new System.Drawing.Point(6, 213);
             this.lbThemTB.Name = "lbThemTB";
-            this.lbThemTB.Size = new System.Drawing.Size(226, 18);
+            this.lbThemTB.Size = new System.Drawing.Size(313, 18);
             this.lbThemTB.TabIndex = 47;
             this.lbThemTB.Text = "<\\\\ Vui lòng nhập đầy đủ thông tin >";
             this.lbThemTB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbThemTC
             // 
+            this.lbThemTC.AutoSize = true;
             this.lbThemTC.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThemTC.ForeColor = System.Drawing.Color.Green;
-            this.lbThemTC.Location = new System.Drawing.Point(26, 213);
+            this.lbThemTC.Location = new System.Drawing.Point(80, 213);
             this.lbThemTC.Name = "lbThemTC";
-            this.lbThemTC.Size = new System.Drawing.Size(293, 18);
+            this.lbThemTC.Size = new System.Drawing.Size(176, 18);
             this.lbThemTC.TabIndex = 46;
             this.lbThemTC.Text = "Thêm sản phẩm thành công";
             this.lbThemTC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -239,6 +239,15 @@
             this.panel1.Size = new System.Drawing.Size(350, 40);
             this.panel1.TabIndex = 4;
             // 
+            // lbTimer
+            // 
+            this.lbTimer.AutoSize = true;
+            this.lbTimer.Location = new System.Drawing.Point(192, 12);
+            this.lbTimer.Name = "lbTimer";
+            this.lbTimer.Size = new System.Drawing.Size(146, 17);
+            this.lbTimer.TabIndex = 7;
+            this.lbTimer.Text = "dd-MM-yyyy hh:mm:ss tt";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -265,15 +274,6 @@
             this.btnBackThanhToan.TabIndex = 5;
             this.btnBackThanhToan.UseVisualStyleBackColor = false;
             this.btnBackThanhToan.Click += new System.EventHandler(this.btnBackThanhToan_Click);
-            // 
-            // lbTimer
-            // 
-            this.lbTimer.AutoSize = true;
-            this.lbTimer.Location = new System.Drawing.Point(192, 12);
-            this.lbTimer.Name = "lbTimer";
-            this.lbTimer.Size = new System.Drawing.Size(146, 17);
-            this.lbTimer.TabIndex = 7;
-            this.lbTimer.Text = "dd-MM-yyyy hh:mm:ss tt";
             // 
             // timer1
             // 

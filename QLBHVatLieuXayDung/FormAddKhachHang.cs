@@ -39,10 +39,11 @@ namespace QLBHVatLieuXayDung
                     lbThemTB.Text = string.Empty;
                     lbThemTC.Text = "<\\ Thêm khách hàng thành công >";
                     f.LoadListKH();
-                    Close();
+                    //Close();
                 }
                 else
                 {
+                    lbThemTC.Text = string.Empty;
                     lbThemTB.Text = "Thêm khách hàng thất bại!";
                 }
             }
@@ -57,7 +58,7 @@ namespace QLBHVatLieuXayDung
                 else
                 {
                     lbThemTB.Text = string.Empty;
-                    lbThemTB.Text = "<\\ Lỗi nhập thông tin khách hàng >";
+                    lbThemTB.Text = "<\\ Khách hàng đã tồn tại >";
                 }
             }
             catch (FormatException)

@@ -142,7 +142,7 @@ namespace QLBHVatLieuXayDung
                         else
                         {
                             lbThemTB.Text = string.Empty;
-                            lbThemTB.Text = "<\\ Lỗi nhập thông tin khách hàng >";
+                            lbThemTB.Text = "<\\ Khách hàng đã tồn tại >";
                         }
                     }
                     catch (FormatException)

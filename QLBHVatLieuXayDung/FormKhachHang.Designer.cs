@@ -172,6 +172,7 @@
             this.txbNoCuoiKiOfKH.Name = "txbNoCuoiKiOfKH";
             this.txbNoCuoiKiOfKH.Size = new System.Drawing.Size(171, 25);
             this.txbNoCuoiKiOfKH.TabIndex = 5;
+            this.txbNoCuoiKiOfKH.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label7
             // 
@@ -191,6 +192,7 @@
             this.txbNoDauKiOfKH.Name = "txbNoDauKiOfKH";
             this.txbNoDauKiOfKH.Size = new System.Drawing.Size(171, 25);
             this.txbNoDauKiOfKH.TabIndex = 4;
+            this.txbNoDauKiOfKH.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label6
             // 
@@ -271,12 +273,11 @@
             // 
             // lbThemTB
             // 
-            this.lbThemTB.AutoSize = true;
             this.lbThemTB.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThemTB.ForeColor = System.Drawing.Color.Red;
-            this.lbThemTB.Location = new System.Drawing.Point(359, 415);
+            this.lbThemTB.Location = new System.Drawing.Point(134, 415);
             this.lbThemTB.Name = "lbThemTB";
-            this.lbThemTB.Size = new System.Drawing.Size(169, 18);
+            this.lbThemTB.Size = new System.Drawing.Size(646, 18);
             this.lbThemTB.TabIndex = 37;
             this.lbThemTB.Text = "Them khach hang that bai!";
             this.lbThemTB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -286,7 +287,7 @@
             this.lbThemTC.AutoSize = true;
             this.lbThemTC.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThemTC.ForeColor = System.Drawing.Color.Green;
-            this.lbThemTC.Location = new System.Drawing.Point(350, 415);
+            this.lbThemTC.Location = new System.Drawing.Point(353, 415);
             this.lbThemTC.Name = "lbThemTC";
             this.lbThemTC.Size = new System.Drawing.Size(187, 18);
             this.lbThemTC.TabIndex = 36;
@@ -306,11 +307,11 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.White;
-            this.groupBox2.Controls.Add(this.lbThemTB);
-            this.groupBox2.Controls.Add(this.lbThemTC);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.dgvKhachHang);
             this.groupBox2.Controls.Add(this.btnRefreshKH);
+            this.groupBox2.Controls.Add(this.lbThemTC);
+            this.groupBox2.Controls.Add(this.lbThemTB);
             this.groupBox2.Location = new System.Drawing.Point(384, 53);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
