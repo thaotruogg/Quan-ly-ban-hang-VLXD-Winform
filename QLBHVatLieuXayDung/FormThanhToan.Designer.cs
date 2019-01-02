@@ -34,7 +34,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnThanhToan_reload = new System.Windows.Forms.Button();
             this.btnThanhToan_chonKH = new System.Windows.Forms.Button();
-            this.lbThemTB = new System.Windows.Forms.Label();
             this.lbThemTC = new System.Windows.Forms.Label();
             this.dtpTT_ngayPhieu = new System.Windows.Forms.DateTimePicker();
             this.cbxTT_maKH = new System.Windows.Forms.ComboBox();
@@ -43,6 +42,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txbTT_soTien = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.lbThemTB = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbTimer = new System.Windows.Forms.Label();
@@ -113,17 +113,6 @@
             this.btnThanhToan_chonKH.UseVisualStyleBackColor = true;
             this.btnThanhToan_chonKH.Click += new System.EventHandler(this.btnThanhToan_chonKH_Click);
             // 
-            // lbThemTB
-            // 
-            this.lbThemTB.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbThemTB.ForeColor = System.Drawing.Color.Red;
-            this.lbThemTB.Location = new System.Drawing.Point(6, 213);
-            this.lbThemTB.Name = "lbThemTB";
-            this.lbThemTB.Size = new System.Drawing.Size(313, 18);
-            this.lbThemTB.TabIndex = 47;
-            this.lbThemTB.Text = "<\\\\ Vui lòng nhập đầy đủ thông tin >";
-            this.lbThemTB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lbThemTC
             // 
             this.lbThemTC.AutoSize = true;
@@ -148,9 +137,11 @@
             // 
             // cbxTT_maKH
             // 
+            this.cbxTT_maKH.BackColor = System.Drawing.Color.Silver;
             this.cbxTT_maKH.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbxTT_maKH.DropDownHeight = 120;
             this.cbxTT_maKH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxTT_maKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxTT_maKH.FormattingEnabled = true;
             this.cbxTT_maKH.IntegralHeight = false;
             this.cbxTT_maKH.Location = new System.Drawing.Point(113, 31);
@@ -215,6 +206,17 @@
             this.label3.Size = new System.Drawing.Size(71, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Ngày phiếu";
+            // 
+            // lbThemTB
+            // 
+            this.lbThemTB.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThemTB.ForeColor = System.Drawing.Color.Red;
+            this.lbThemTB.Location = new System.Drawing.Point(6, 213);
+            this.lbThemTB.Name = "lbThemTB";
+            this.lbThemTB.Size = new System.Drawing.Size(313, 18);
+            this.lbThemTB.TabIndex = 47;
+            this.lbThemTB.Text = "<\\\\ Vui lòng nhập đầy đủ thông tin >";
+            this.lbThemTB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 

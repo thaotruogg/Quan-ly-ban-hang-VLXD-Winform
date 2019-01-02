@@ -318,7 +318,6 @@
         private System.Windows.Forms.Label lbCheckLogin;
         private System.Windows.Forms.Label lbW;
         private System.Windows.Forms.Panel panel2;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton_login;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbTimer;
         private System.Windows.Forms.Timer timer1;

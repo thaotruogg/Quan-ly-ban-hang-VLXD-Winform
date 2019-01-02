@@ -52,11 +52,11 @@
             this.btnCTHD_edit = new System.Windows.Forms.Button();
             this.btnCTHD_add = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.lbThemTBCTHD = new System.Windows.Forms.Label();
             this.lbThemTCCTHD = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.btnRefreshCTHD = new System.Windows.Forms.Button();
             this.dgvCTHD = new System.Windows.Forms.DataGridView();
+            this.lbThemTBCTHD = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnCTHD_reload = new System.Windows.Forms.Button();
             this.cbxCTHD_maHoaDon = new System.Windows.Forms.ComboBox();
@@ -72,8 +72,8 @@
             this.tabPageHoaDon = new System.Windows.Forms.TabPage();
             this.btnClearHoaDon = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lbThemTB = new System.Windows.Forms.Label();
             this.lbThemTC = new System.Windows.Forms.Label();
+            this.lbThemTB = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.btnRefreshHD = new System.Windows.Forms.Button();
             this.dgvHoaDon = new System.Windows.Forms.DataGridView();
@@ -426,17 +426,6 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Danh sách hóa đơn";
             // 
-            // lbThemTBCTHD
-            // 
-            this.lbThemTBCTHD.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbThemTBCTHD.ForeColor = System.Drawing.Color.Red;
-            this.lbThemTBCTHD.Location = new System.Drawing.Point(138, 335);
-            this.lbThemTBCTHD.Name = "lbThemTBCTHD";
-            this.lbThemTBCTHD.Size = new System.Drawing.Size(386, 18);
-            this.lbThemTBCTHD.TabIndex = 45;
-            this.lbThemTBCTHD.Text = "<\\\\ Vui lòng nhập đầy đủ thông tin >";
-            this.lbThemTBCTHD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lbThemTCCTHD
             // 
             this.lbThemTCCTHD.AutoSize = true;
@@ -487,6 +476,17 @@
             this.dgvCTHD.TabIndex = 0;
             this.dgvCTHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTHD_CellClick);
             // 
+            // lbThemTBCTHD
+            // 
+            this.lbThemTBCTHD.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThemTBCTHD.ForeColor = System.Drawing.Color.Red;
+            this.lbThemTBCTHD.Location = new System.Drawing.Point(138, 335);
+            this.lbThemTBCTHD.Name = "lbThemTBCTHD";
+            this.lbThemTBCTHD.Size = new System.Drawing.Size(386, 18);
+            this.lbThemTBCTHD.TabIndex = 45;
+            this.lbThemTBCTHD.Text = "<\\\\ Vui lòng nhập đầy đủ thông tin >";
+            this.lbThemTBCTHD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnCTHD_reload);
@@ -524,8 +524,10 @@
             // 
             // cbxCTHD_maHoaDon
             // 
+            this.cbxCTHD_maHoaDon.BackColor = System.Drawing.Color.Silver;
             this.cbxCTHD_maHoaDon.DropDownHeight = 100;
             this.cbxCTHD_maHoaDon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCTHD_maHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxCTHD_maHoaDon.FormattingEnabled = true;
             this.cbxCTHD_maHoaDon.IntegralHeight = false;
             this.cbxCTHD_maHoaDon.Location = new System.Drawing.Point(124, 23);
@@ -567,6 +569,7 @@
             this.cbxCTHD_maSP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbxCTHD_maSP.DropDownHeight = 100;
             this.cbxCTHD_maSP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCTHD_maSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxCTHD_maSP.FormattingEnabled = true;
             this.cbxCTHD_maSP.IntegralHeight = false;
             this.cbxCTHD_maSP.Location = new System.Drawing.Point(124, 54);
@@ -682,17 +685,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách hóa đơn";
             // 
-            // lbThemTB
-            // 
-            this.lbThemTB.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbThemTB.ForeColor = System.Drawing.Color.Red;
-            this.lbThemTB.Location = new System.Drawing.Point(133, 362);
-            this.lbThemTB.Name = "lbThemTB";
-            this.lbThemTB.Size = new System.Drawing.Size(384, 18);
-            this.lbThemTB.TabIndex = 43;
-            this.lbThemTB.Text = "<\\\\ Vui lòng nhập đầy đủ thông tin >";
-            this.lbThemTB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lbThemTC
             // 
             this.lbThemTC.AutoSize = true;
@@ -704,6 +696,17 @@
             this.lbThemTC.TabIndex = 42;
             this.lbThemTC.Text = "Thêm sản phẩm thành công";
             this.lbThemTC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbThemTB
+            // 
+            this.lbThemTB.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThemTB.ForeColor = System.Drawing.Color.Red;
+            this.lbThemTB.Location = new System.Drawing.Point(133, 362);
+            this.lbThemTB.Name = "lbThemTB";
+            this.lbThemTB.Size = new System.Drawing.Size(384, 18);
+            this.lbThemTB.TabIndex = 43;
+            this.lbThemTB.Text = "<\\\\ Vui lòng nhập đầy đủ thông tin >";
+            this.lbThemTB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label14
             // 
@@ -899,6 +902,7 @@
             this.cbxMaKHOfHD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbxMaKHOfHD.DropDownHeight = 160;
             this.cbxMaKHOfHD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxMaKHOfHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxMaKHOfHD.FormattingEnabled = true;
             this.cbxMaKHOfHD.IntegralHeight = false;
             this.cbxMaKHOfHD.Location = new System.Drawing.Point(125, 53);

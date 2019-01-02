@@ -37,6 +37,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.btnBackThanhToan_list = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnThanhToan_delete = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.cbxThanhToan_maKH = new System.Windows.Forms.ComboBox();
@@ -49,7 +50,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThanhToan)).BeginInit();
             this.panel2.SuspendLayout();
@@ -171,6 +171,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(316, 122);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 18);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "VNĐ";
+            // 
             // btnThanhToan_delete
             // 
             this.btnThanhToan_delete.BackColor = System.Drawing.Color.AliceBlue;
@@ -200,6 +211,7 @@
             // cbxThanhToan_maKH
             // 
             this.cbxThanhToan_maKH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxThanhToan_maKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxThanhToan_maKH.FormattingEnabled = true;
             this.cbxThanhToan_maKH.Location = new System.Drawing.Point(159, 56);
             this.cbxThanhToan_maKH.Name = "cbxThanhToan_maKH";
@@ -300,17 +312,6 @@
             this.label1.Size = new System.Drawing.Size(56, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Số phiếu";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(316, 122);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 18);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "VNĐ";
             // 
             // FormThanhToan_List
             // 

@@ -276,6 +276,7 @@ namespace QLBHVatLieuXayDung
             {
 
             }
+            catch (InvalidCastException) { }
         }
 
         private void tabPageHoaDon_Click(object sender, EventArgs e)

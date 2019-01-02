@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSanPham));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lbThemTB = new System.Windows.Forms.Label();
             this.lbThemTC = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.btnSanPham_refresh = new System.Windows.Forms.Button();
             this.dgvSanPham = new System.Windows.Forms.DataGridView();
+            this.lbThemTB = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.btnBackHoaDon = new System.Windows.Forms.Button();
@@ -74,17 +74,6 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh mục sản phẩm";
-            // 
-            // lbThemTB
-            // 
-            this.lbThemTB.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbThemTB.ForeColor = System.Drawing.Color.Red;
-            this.lbThemTB.Location = new System.Drawing.Point(133, 294);
-            this.lbThemTB.Name = "lbThemTB";
-            this.lbThemTB.Size = new System.Drawing.Size(417, 18);
-            this.lbThemTB.TabIndex = 41;
-            this.lbThemTB.Text = "<\\\\ Vui lòng nhập đầy đủ thông tin >";
-            this.lbThemTB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbThemTC
             // 
@@ -135,6 +124,17 @@
             this.dgvSanPham.TabIndex = 0;
             this.dgvSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellClick);
             this.dgvSanPham.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellContentClick);
+            // 
+            // lbThemTB
+            // 
+            this.lbThemTB.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThemTB.ForeColor = System.Drawing.Color.Red;
+            this.lbThemTB.Location = new System.Drawing.Point(133, 294);
+            this.lbThemTB.Name = "lbThemTB";
+            this.lbThemTB.Size = new System.Drawing.Size(417, 18);
+            this.lbThemTB.TabIndex = 41;
+            this.lbThemTB.Text = "<\\\\ Vui lòng nhập đầy đủ thông tin >";
+            this.lbThemTB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -303,9 +303,11 @@
             // 
             // cbxSanPham_loaiSP
             // 
+            this.cbxSanPham_loaiSP.BackColor = System.Drawing.Color.Silver;
             this.cbxSanPham_loaiSP.DisplayMember = "maSanPham";
             this.cbxSanPham_loaiSP.DropDownHeight = 100;
             this.cbxSanPham_loaiSP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxSanPham_loaiSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxSanPham_loaiSP.FormattingEnabled = true;
             this.cbxSanPham_loaiSP.IntegralHeight = false;
             this.cbxSanPham_loaiSP.ItemHeight = 17;
