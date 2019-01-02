@@ -6,6 +6,7 @@ namespace QLBHVatLieuXayDung
 {
     public partial class FormSanPham : Form
     {
+        private FormQuanLy f = new FormQuanLy();
         private BindingSource list = new BindingSource();
         private bool coThem;
         public FormSanPham()
@@ -89,6 +90,8 @@ namespace QLBHVatLieuXayDung
             lbThemTB.Text = string.Empty;
             SetBtnLock(false);
             SetLock(false);
+            f.ReTextBtn(btnSanPham_save, btnSanPham_clear);
+            f.ReFontBtn(btnSanPham_save, btnSanPham_clear);
         }
 
         private void btnAddSP_Click(object sender, EventArgs e)
@@ -98,6 +101,8 @@ namespace QLBHVatLieuXayDung
             SetBtnLock(true);
             SetLock(true);
             coThem = true;
+            f.TextBtnSave(btnSanPham_save, btnSanPham_clear);
+            f.FontBtn(btnSanPham_save, btnSanPham_clear);
         }
 
         private void btnEditSP_Click(object sender, EventArgs e)
@@ -106,6 +111,8 @@ namespace QLBHVatLieuXayDung
             SetLock(true);
             txbSanPham_maSP.ReadOnly = true;
             coThem = false;
+            f.TextBtnEdit(btnSanPham_save, btnSanPham_clear);
+            f.FontBtn(btnSanPham_save, btnSanPham_clear);
         }
         private void dgvSanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

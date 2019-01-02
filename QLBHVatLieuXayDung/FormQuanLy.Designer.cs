@@ -309,7 +309,7 @@
             this.btnCTHD_save.BackColor = System.Drawing.Color.AliceBlue;
             this.btnCTHD_save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCTHD_save.FlatAppearance.BorderSize = 0;
-            this.btnCTHD_save.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnCTHD_save.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnCTHD_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCTHD_save.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCTHD_save.ForeColor = System.Drawing.Color.Black;
@@ -849,7 +849,7 @@
             this.btnSaveHoaDon.BackColor = System.Drawing.Color.AliceBlue;
             this.btnSaveHoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSaveHoaDon.FlatAppearance.BorderSize = 0;
-            this.btnSaveHoaDon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSaveHoaDon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnSaveHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveHoaDon.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveHoaDon.ForeColor = System.Drawing.Color.Black;

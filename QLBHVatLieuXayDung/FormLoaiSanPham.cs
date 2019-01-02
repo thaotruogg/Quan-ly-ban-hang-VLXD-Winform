@@ -6,6 +6,7 @@ namespace QLBHVatLieuXayDung
 {
     public partial class FormLoaiSanPham : Form
     {
+        private FormQuanLy f = new FormQuanLy();
         private BindingSource list = new BindingSource();
         private bool coThem;
         public FormLoaiSanPham()
@@ -95,6 +96,8 @@ namespace QLBHVatLieuXayDung
             SetLock(true);
             SetBtnLock(false);
             coThem = true;
+            f.TextBtnSave(btnLoaiSP_save, btnLoaiSP_clear);
+            f.FontBtn(btnLoaiSP_save, btnLoaiSP_clear);
         }
 
         private void btnSaveLoaiSP_Click(object sender, EventArgs e)
@@ -156,6 +159,8 @@ namespace QLBHVatLieuXayDung
             SetNULL();
             SetLock(false);
             SetBtnLock(true);
+            f.ReTextBtn(btnLoaiSP_save, btnLoaiSP_clear);
+            f.ReFontBtn(btnLoaiSP_save, btnLoaiSP_clear);
         }
 
         private void btnEditLoaiSP_Click(object sender, EventArgs e)
@@ -164,6 +169,8 @@ namespace QLBHVatLieuXayDung
             SetBtnLock(false);
             txbLoaiSP_maLoai.ReadOnly = true;
             coThem = false;
+            f.TextBtnEdit(btnLoaiSP_save, btnLoaiSP_clear);
+            f.FontBtn(btnLoaiSP_save, btnLoaiSP_clear);
         }
 
         private void btnDeleteLoaiSP_Click(object sender, EventArgs e)

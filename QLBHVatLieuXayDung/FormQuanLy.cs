@@ -1,5 +1,6 @@
 ﻿using QLBHVatLieuXayDung.DAO;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace QLBHVatLieuXayDung
@@ -15,6 +16,32 @@ namespace QLBHVatLieuXayDung
             InitializeComponent();
             LoadList();
             LoadButtonDesign();
+        }
+        public void TextBtnSave(Button b1, Button b2)
+        {
+            b1.Text = "Lưu";
+            b2.Text = "Hủy";
+        }
+        public void TextBtnEdit(Button b1, Button b2)
+        {
+            b1.Text = "Cập nhật";
+            b2.Text = "Hủy";
+        }
+        public void ReTextBtn(Button b1, Button b2)
+        {
+            b1.Text = "";
+            b2.Text = "";
+        }
+        public void FontBtn(Button b1, Button b2)
+        {
+            b1.Font = new Font("Roboto", 9);
+            b2.Font = new Font("Roboto", 9);
+        }
+
+        public void ReFontBtn(Button b1, Button b2)
+        {
+            b1.Font = new Font("Segoe MDL2 Assets", 12);
+            b2.Font = new Font("Segoe MDL2 Assets", 12);
         }
 
         void LoadButtonDesign()
@@ -342,6 +369,9 @@ namespace QLBHVatLieuXayDung
         #region Events HoaDon
         private void btnAddHD_Click(object sender, EventArgs e)
         {
+            FontBtn(btnSaveHoaDon, btnClearHoaDon);
+            btnSaveHoaDon.Text = "Lưu";
+            btnClearHoaDon.Text = "Hủy";
             SetBtnLockHoaDon(true);
             SetLockHoaDon(true);
             SetNULLHoaDon();
@@ -354,6 +384,8 @@ namespace QLBHVatLieuXayDung
             SetBtnLockHoaDon(false);
             SetLockHoaDon(false);
             SetNULLHoaDon();
+            ReFontBtn(btnSaveHoaDon, btnClearHoaDon);
+            ReTextBtn(btnSaveHoaDon, btnClearHoaDon);
         }
 
         private void btnEditHD_Click(object sender, EventArgs e)
@@ -362,15 +394,20 @@ namespace QLBHVatLieuXayDung
             SetBtnLockHoaDon(true);
             SetLockHoaDon(true);
             coThem = false;
+            FontBtn(btnSaveHoaDon, btnClearHoaDon);
+            btnSaveHoaDon.Text = "Cập nhật";
+            btnClearHoaDon.Text = "Hủy";
         }
 
         private void btnSaveHoaDon_Click(object sender, EventArgs e)
         {
+            
             string soHoaDon = txbMaHD.Text;
             string maKH = cbxMaKHOfHD.SelectedValue.ToString();
             string ngayHoaDon = string.Format("{0:MM/dd/yyyy}", dtpNgayHD.Value);
             if (coThem == true)
             {
+                
                 try
                 {
                     if (txbMaHD.Text == string.Empty || txbMaHD.Text == "HD")
@@ -456,6 +493,8 @@ namespace QLBHVatLieuXayDung
             //txbMaCTHD.Text = "HD";
             txbCTDH_donGia.Text = "0";
             coThemCTHD = true;
+            TextBtnSave(btnCTHD_save, btnCTHD_clear);
+            FontBtn(btnCTHD_save, btnCTHD_clear);
         }
 
         private void btnClearCTHD_Click(object sender, EventArgs e)
@@ -465,6 +504,8 @@ namespace QLBHVatLieuXayDung
             SetLockCTHD(false);
             SetNULLCTHD();
             LableThem();
+            ReTextBtn(btnCTHD_save, btnCTHD_clear);
+            ReFontBtn(btnCTHD_save, btnCTHD_clear);
         }
 
         private void btnEditCTHD_Click(object sender, EventArgs e)

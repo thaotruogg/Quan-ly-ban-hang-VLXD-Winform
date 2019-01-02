@@ -6,6 +6,7 @@ namespace QLBHVatLieuXayDung
 {
     public partial class FormKhachHang : Form
     {
+        private FormQuanLy f = new FormQuanLy();
         public BindingSource list = new BindingSource();
         public bool coThem;
         public FormKhachHang()
@@ -101,6 +102,8 @@ namespace QLBHVatLieuXayDung
             SetLock(true);
             SetBtn(false);
             coThem = true;
+            f.TextBtnSave(btnSaveKH, btnClearKH);
+            f.FontBtn(btnSaveKH, btnClearKH);
         }
 
         private void btnSaveKH_Click(object sender, EventArgs e)
@@ -182,6 +185,8 @@ namespace QLBHVatLieuXayDung
             SetBtn(false);
             txbMaKHOfKH.ReadOnly = true;
             coThem = false;
+            f.TextBtnEdit(btnSaveKH, btnClearKH);
+            f.FontBtn(btnSaveKH, btnClearKH);
         }
 
         private void btnDeleteKhachHang_Click(object sender, EventArgs e)
@@ -210,6 +215,8 @@ namespace QLBHVatLieuXayDung
             SetNULL();
             SetLock(false);
             SetBtn(true);
+            f.ReTextBtn(btnSaveKH, btnClearKH);
+            f.ReFontBtn(btnSaveKH, btnClearKH);
         }
 
         private void btnRefreshKH_Click(object sender, EventArgs e)
